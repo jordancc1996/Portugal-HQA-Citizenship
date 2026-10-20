@@ -1,0 +1,197 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Table from "../components/Table.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/hqa-visa-status");
+
+const description =
+  "Is the HQA visa still available in 2026? Yes. See the current status, every law change since October 2025 and the open questions we are still tracking.";
+
+const headline = "Is the HQA Visa Still Available? Status and Law Changes";
+const lead =
+  "Is the HQA visa still available? Yes. The residence visa and permit for highly qualified activity remain in Portuguese law, and private providers still sell investment packages. What has changed is the path around it: family rules, AIMA deadlines and, above all, the time to citizenship. This page tracks every change and what we are still waiting for.";
+const pageUrl = "https://portugalhqacitizenship.com/hqa-visa-status";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+---
+
+<BaseLayout
+  title="Is the HQA Visa Still Available - Status and Law Changes"
+  metaTitle="Is the HQA Visa Still Available - Status and Law Changes | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/hqa-visa-status"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/hqa-visa-status"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "HQA visa status", href: "/hqa-visa-status" },
+      ]}
+  />
+  <p class="lead" slot="lead">{lead}</p>
+</PageIntro>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>Current status</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D3 visa and article 90 permit</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>Investment packages</td>
+              <td>Offered by private providers</td>
+            </tr>
+            <tr>
+              <td>Legal minimum investment</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td>Family 2-year wait</td>
+              <td>Not applied to article 90 permit holders</td>
+            </tr>
+            <tr>
+              <td>Citizenship</td>
+              <td>10 years of legal residence (7 for EU and CPLP nationals)</td>
+            </tr>
+            <tr>
+              <td>AIMA decision deadline</td>
+              <td>90 days, extendable by 30</td>
+            </tr>
+            <tr>
+              <td>Government fees</td>
+              <td>Changed on 1 March 2026; new amounts not yet confirmed by us</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The family rule is explained on the <a href="/hqa-visa-family">family page</a>. The citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Law changes</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Change</th>
+              <th>What it means for HQA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>23 October 2025</td>
+              <td>Lei 61/2025 changed the foreigners law</td>
+              <td>A 2-year wait for most family reunification; article 90 families exempt</td>
+            </tr>
+            <tr>
+              <td>15 December 2025</td>
+              <td>Constitutional Court struck down 4 rules of a draft nationality law</td>
+              <td>The final law had to be revised</td>
+            </tr>
+            <tr>
+              <td>1 March 2026</td>
+              <td>New AIMA fee table</td>
+              <td>Government fees changed; exact amounts not yet confirmed</td>
+            </tr>
+            <tr>
+              <td>19 May 2026</td>
+              <td>Lei Orgânica 1/2026 in force</td>
+              <td>Citizenship after 10 years for most nationals</td>
+            </tr>
+            <tr>
+              <td>11 September 2026</td>
+              <td>Lei 62/2026 in force</td>
+              <td>AIMA must decide residence applications within 90 days, extendable by 30</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What we are waiting for</h2>
+      <ul>
+        <li><strong>The new nationality regulation.</strong> It will set the language level and test format for citizenship, and may clarify when the residence clock starts.</li>
+        <li><strong>Official AIMA fee amounts.</strong> We will publish them once we can confirm them from an official source.</li>
+        <li><strong>Clear guidance on presence for package holders.</strong> We have not found official guidance on "no minimum stay" claims. The <a href="/guides/hqa-visa-presence-requirements">absence limits in the law</a> are explained separately.</li>
+      </ul>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Get notified when the rules change"
+    paragraph="Our free HQA due diligence checklist comes with an optional email when the rules change."
+  >
+    <ChecklistForm idPrefix="status-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Rules change. Speak to a qualified Portuguese lawyer before you commit money.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

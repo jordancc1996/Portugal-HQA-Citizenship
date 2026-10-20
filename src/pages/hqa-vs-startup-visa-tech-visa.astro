@@ -1,0 +1,251 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Button from "../components/Button.astro";
+import PageIntro from "../components/PageIntro.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/hqa-vs-startup-visa-tech-visa");
+
+const description =
+  "HQA vs Startup Visa Portugal in 2026: how investment packages, the StartUP Visa and the Tech Visa differ in cost, legal basis, family rules and who they suit.";
+
+const headline = "HQA vs StartUP Visa Portugal: And the Tech Visa";
+const pageUrl = "https://portugalhqacitizenship.com/hqa-vs-startup-visa-tech-visa";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "What is the difference between the HQA visa and the StartUP Visa?",
+    answer:
+      "The HQA route uses article 90 (highly qualified activity). The StartUP Visa uses article 89 and needs acceptance by an IAPMEI-certified incubator. The family rules differ.",
+  },
+  {
+    question: "Is the StartUP Visa cheaper?",
+    answer: "There is no investment minimum, but you build and fund your own startup, and incubators may charge fees.",
+  },
+  {
+    question: "What is the Tech Visa?",
+    answer: "A route for skilled workers hired by a company certified for the Tech Visa by IAPMEI. It does not need an investment.",
+  },
+  {
+    question: "Which route gets citizenship fastest?",
+    answer: "None. All three need 10 years of legal residence for most nationals.",
+  },
+  {
+    question: "Can I switch from the StartUP Visa to an HQA permit later?",
+    answer:
+      "Possibly, if you later meet the highly qualified activity conditions. Ask a Portuguese lawyer, because a change of permit type has its own requirements.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA vs Startup Visa Portugal - And the Tech Visa"
+  metaTitle="HQA vs Startup Visa Portugal - And the Tech Visa | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/hqa-vs-startup-visa-tech-visa"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA vs Startup Visa Portugal is a common comparison because the routes look alike: both involve a young company and an incubator. The difference is in the legal basis. HQA packages aim for a residence permit for highly qualified activity under article 90. The StartUP Visa uses article 89, which has different family rules. The Tech Visa is a third route, for people hired by a certified company.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/hqa-vs-startup-visa-tech-visa"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "HQA vs Startup Visa and Tech Visa", href: "/hqa-vs-startup-visa-tech-visa" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      HQA vs Startup Visa Portugal is a common comparison because the routes look alike: both involve a young company and an incubator. The difference is in the legal basis. HQA packages aim for a residence permit for highly qualified activity under article 90. The StartUP Visa uses article 89, which has different family rules. The Tech Visa is a third route, for people hired by a certified company.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "Different articles.",
+          text: "HQA uses article 90, the StartUP Visa uses article 89, the Tech Visa uses article 90 through a certified company.",
+        },
+        {
+          lead: "Family rules differ.",
+          text: "Article 90 families skip the 2-year wait. Article 89 families do not.",
+        },
+        {
+          lead: "Different costs.",
+          text: "HQA packages cost about €175,000. The StartUP Visa has no investment minimum.",
+        },
+        {
+          lead: "All lead to the same citizenship rule.",
+          text: "10 years of legal residence for most nationals.",
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <section class="container section">
+    <div class="measure">
+      <p>Article 90 families and the 2-year wait are explained on the <a href="/hqa-visa-family">family page</a>. The package price is explained on the <a href="/hqa-visa-cost">cost page</a>. The shared citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
+    </div>
+  </section>
+
+  <section class="container section">
+<div class="measure">
+<h2>The three routes side by side</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <colgroup>
+            <col class="label-col" />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th></th>
+              <th>HQA investment package</th>
+              <th>StartUP Visa</th>
+              <th>Tech Visa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Legal basis</th>
+              <td>Articles 61 and 90</td>
+              <td>Article 89</td>
+              <td>Article 90, Portaria 328/2018</td>
+            </tr>
+            <tr>
+              <th scope="row">Who it is for</th>
+              <td>Investors taking a highly qualified role in a funded project</td>
+              <td>Founders with their own startup idea</td>
+              <td>Skilled workers hired by a certified company</td>
+            </tr>
+            <tr>
+              <th scope="row">Who approves the company</th>
+              <td>Provider and its partners</td>
+              <td>An incubator certified by IAPMEI</td>
+              <td>IAPMEI certifies the employer</td>
+            </tr>
+            <tr>
+              <th scope="row">Investment</th>
+              <td>About €175,000 (private price)</td>
+              <td>No minimum; you need funds to support yourself</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th scope="row">Family 2-year wait</th>
+              <td>Exempt</td>
+              <td>Not exempt</td>
+              <td>Exempt</td>
+            </tr>
+            <tr>
+              <th scope="row">Citizenship</th>
+              <td>10 years (7 for EU and CPLP nationals)</td>
+              <td>10 years (7 for EU and CPLP nationals)</td>
+              <td>10 years (7 for EU and CPLP nationals)</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+    </div>
+</section>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+      <h2>Which one fits you</h2>
+      <h3>HQA investment package</h3>
+      <ul>
+        <li>You want a ready-made structure and are willing to pay for it</li>
+        <li>You plan to live in Portugal</li>
+        <li>You want family members exempt from the 2-year wait</li>
+      </ul>
+      <h3>StartUP Visa</h3>
+      <ul>
+        <li>You have your own business idea and want to build it</li>
+        <li>You can get accepted by a certified incubator</li>
+        <li>You accept the 2-year wait for family members</li>
+      </ul>
+      <h3>Tech Visa</h3>
+      <ul>
+        <li>You have a job offer from a Portuguese company certified for the Tech Visa</li>
+        <li>You want residence without investing</li>
+      </ul>
+      <div class="unknowns">
+        <UnknownsBox level={3}>
+          <p>Some providers describe their packages in ways that sound like the StartUP Visa. Ask in writing which article your application will use. It changes the family rules.</p>
+        </UnknownsBox>
+      </div>
+      <p class="action-line"><Button href="/guides/what-is-hqa-visa" variant="text">What is the HQA visa?</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Compare before you commit"
+    paragraph="Our free HQA due diligence checklist helps you compare any package with the StartUP Visa and Tech Visa."
+  >
+    <ChecklistForm idPrefix="startup-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer before you choose a route.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

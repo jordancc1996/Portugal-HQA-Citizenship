@@ -1,0 +1,256 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import PageIntro from "../components/PageIntro.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/hqa-visa-due-diligence");
+
+const description =
+  "Is the HQA visa legit? The legal route is real, but €175,000 packages vary. Use our 2026 due diligence guide: 15 questions, red flags and how to check claims.";
+
+const headline = "Is the HQA Visa Legit? A Due Diligence Guide";
+const pageUrl = "https://portugalhqacitizenship.com/hqa-visa-due-diligence";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "Is the HQA visa a scam?",
+    answer:
+      "No. The legal visa and permit are real. The investment packages are private products, so judge each provider on its contract, partners and answers.",
+  },
+  {
+    question: "How do I know if an incubator is certified?",
+    answer: "Ask for the certification document and confirm it with IAPMEI, the Portuguese agency that certifies incubators.",
+  },
+  {
+    question: "Should I use the provider's lawyer?",
+    answer: "Use your own. A lawyer who works for you can review the provider's contract without a conflict of interest.",
+  },
+  {
+    question: "What happens if the startup fails?",
+    answer:
+      "You can lose the money, and your next permit renewal may be at risk. Ask the provider and your lawyer what happens in that case before you sign.",
+  },
+  {
+    question: "Are there official reviews of HQA providers?",
+    answer: "Not that we have found. Portugal does not publish ratings of private providers.",
+  },
+];
+---
+
+<BaseLayout
+  title="Is the HQA Visa Legit - A Due Diligence Guide"
+  metaTitle="Is the HQA Visa Legit - A Due Diligence Guide | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/hqa-visa-due-diligence"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "Is the HQA visa legit? The legal route is real: Portugal's immigration law has a residence visa and permit for highly qualified activity. The €175,000 investment packages are private products, and their quality varies. This guide shows you how to check a provider before you pay, what to ask and which claims should make you stop.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/hqa-visa-due-diligence"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "HQA visa due diligence", href: "/hqa-visa-due-diligence" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      Is the HQA visa legit? The legal route is real: Portugal's immigration law has a residence visa and permit for highly qualified activity. The €175,000 investment packages are private products, and their quality varies. This guide shows you how to check a provider before you pay, what to ask and which claims should make you stop.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or investment advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "The route is real.",
+          text: "Articles 61 and 90 of Lei 23/2007 set out the visa and the permit.",
+        },
+        {
+          lead: "The packages are private.",
+          text: "No government body sets their price or approves them.",
+        },
+        {
+          lead: "The money is at risk.",
+          text: "In the packages we researched, it funds a company and a research project.",
+        },
+        {
+          lead: "You can check many claims yourself.",
+          text: "Lawyers, incubators and universities can be verified.",
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>How to check a provider's claims</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Claim</th>
+              <th>How to check it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>"Our incubator is certified"</td>
+              <td>Ask for the certification and check it with IAPMEI</td>
+            </tr>
+            <tr>
+              <td>"We work with a Portuguese university"</td>
+              <td>Contact the university directly and ask whether the partnership exists</td>
+            </tr>
+            <tr>
+              <td>"Our lawyers handle your case"</td>
+              <td>Check the lawyer on the Ordem dos Advogados (Portuguese Bar) register</td>
+            </tr>
+            <tr>
+              <td>"Our startups are certified"</td>
+              <td>Ask for the startup certification issued under Lei 21/2023</td>
+            </tr>
+            <tr>
+              <td>"Applications are approved in 90 days"</td>
+              <td>Ask for the basis. AIMA's legal deadline is 90 days plus 30, but real times vary</td>
+            </tr>
+            <tr>
+              <td>"Citizenship in 5 years"</td>
+              <td>Out of date. Most applicants now need 10 years</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The package price is explained on the <a href="/hqa-visa-cost">cost page</a>. The 10-year citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>15 questions to ask before you pay</h2>
+      <h3>About the legal structure</h3>
+      <ol>
+        <li>Which legal article will my residence application use: article 90 or article 89?</li>
+        <li>What is my role in the company or project, and how does it meet the highly qualified activity conditions?</li>
+        <li>Will my family be exempt from the 2-year family reunification wait?</li>
+      </ol>
+      <h3>About the money</h3>
+      <ol start="4">
+        <li>What exactly does the price pay for, line by line?</li>
+        <li>Where is the money held before it is spent, and who controls it?</li>
+        <li>What is refunded if the visa is refused, and when?</li>
+        <li>Can I pay in stages, tied to milestones?</li>
+      </ol>
+      <h3>About ownership and risk</h3>
+      <ol start="8">
+        <li>Who owns the company and its shares?</li>
+        <li>Who owns the research results and any intellectual property?</li>
+        <li>What happens to my permit if the company or research fails?</li>
+        <li>What happens when the incubator period ends?</li>
+      </ol>
+      <h3>About living in Portugal</h3>
+      <ol start="12">
+        <li>How many months a year must I spend in Portugal?</li>
+        <li>What do renewals require, and what will they cost?</li>
+      </ol>
+      <h3>About the people</h3>
+      <ol start="14">
+        <li>Who is my lawyer, and do they act for me or for the provider?</li>
+        <li>Can I speak to past clients, and how many applications have been approved, with evidence?</li>
+      </ol>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Red flags</h2>
+      <ul>
+        <li>Claims to act "under the authority" of the Portuguese government</li>
+        <li>Promises of approval, of a fixed return or of a buyback</li>
+        <li>"Citizenship in 5 years" or "no minimum stay" with no legal explanation</li>
+        <li>References to SEF, the immigration service replaced by AIMA in October 2023</li>
+        <li>A trademark symbol on "HQA", as if one company owned the route</li>
+        <li>Pressure to pay quickly, or "limited spots"</li>
+        <li>No written contract before payment</li>
+        <li>A lawyer who works only for the provider and not for you</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Use your own lawyer</h2>
+      <p>The single most useful step is to hire an independent Portuguese lawyer who works for you, not for the provider. They can check the contract, the legal article, the refund terms and the family position before you pay. Check them on the Ordem dos Advogados register.</p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Download the checklist"
+    paragraph="All 15 questions, the red flags and the verification steps in one printable PDF."
+  >
+    <ChecklistForm idPrefix="diligence-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal or investment advice. We take no fees from any provider. Speak to an independent Portuguese lawyer before you commit money.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

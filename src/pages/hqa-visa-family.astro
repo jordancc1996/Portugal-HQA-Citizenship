@@ -1,0 +1,276 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import PageHero from "../components/PageHero.astro";
+import Button from "../components/Button.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import hero from "../assets/images/cascais-town-square.webp";
+
+const lastVerified = verifiedOn("/hqa-visa-family");
+
+const description =
+  "HQA visa family rules for 2026: who can join you, why article 90 holders skip the 2-year wait introduced in October 2025, what it costs and what to check.";
+
+const heroAlt = "Town square in Cascais, Portugal";
+const headline = "HQA Visa Family: Spouse, Children and Parents";
+const pageUrl = "https://portugalhqacitizenship.com/hqa-visa-family";
+
+const ogImage = await getImage({
+  src: hero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "Can my family come with me on the HQA visa?",
+    answer:
+      "Yes. Family members of article 90 permit holders are exempt from the 2-year waiting period introduced in October 2025.",
+  },
+  {
+    question: "Do I have to wait 2 years to bring my spouse?",
+    answer: "Not if your permit is under article 90. Golden Visa and EU Blue Card families are exempt too, as are minors, incapacitated dependants, and a spouse or partner who shares a dependent child with the holder. Article 89 is not on that list, so most article 89 families wait 2 years, or 15 months for a spouse who lived with the holder for 18 months, unless an exception applies.",
+  },
+  {
+    question: "Can my parents come?",
+    answer: "Dependent parents can usually be included. Confirm their case with a Portuguese lawyer, because the definitions are specific.",
+  },
+  {
+    question: "How much does it cost to add a family member?",
+    answer: "Providers quote about €2,500 to €5,000 per person, plus government fees and document costs.",
+  },
+  {
+    question: "Do family members also get citizenship after 10 years?",
+    answer: "Each person builds up their own legal residence. Most need 10 years, or 7 for EU and CPLP nationals.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA Visa Family - Spouse, Children and Parents"
+  metaTitle="HQA Visa Family - Spouse, Children and Parents | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/hqa-visa-family"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={heroAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA visa family rules changed in October 2025. Since October 2025, most residence permit holders in Portugal must wait 2 years before bringing family members. Families of people holding a residence permit for highly qualified activity under article 90 are exempt from that wait. The exemption depends on which legal article your file uses, so check it before you sign.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageHero
+    title={headline}
+    photo={hero}
+    photoAlt={heroAlt}
+    verified={lastVerified}
+    path="/hqa-visa-family"
+    maxWidth={960}
+    priority
+  >
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "HQA visa family", href: "/hqa-visa-family" },
+      ]}
+    />
+    <p class="lead" slot="lead">
+      HQA visa family rules changed in October 2025. Since October 2025, most residence permit holders in Portugal must wait 2 years before bringing family members. Families of people holding a residence permit for highly qualified activity under article 90 are exempt from that wait. The exemption depends on which legal article your file uses, so check it before you sign.
+    </p>
+    <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
+  </PageHero>
+
+  <div class="container facts">
+<div class="wide">
+<KeyFacts
+      items={[
+        {
+          lead: "No 2-year wait for article 90 families.",
+          text: "Lei 61/2025, in force since 23 October 2025, exempts them.",
+        },
+        {
+          lead: "Article 89 families do wait.",
+          text: "Holders under the StartUP Visa route are not on the exemption list.",
+        },
+        {
+          lead: "Family costs extra.",
+          text: "Providers quote about €2,500 to €5,000 per family member, plus government fees.",
+        },
+        {
+          lead: "Each family member gets a permit.",
+          text: "It runs for the same length as the main applicant's permit.",
+        },
+      ]}
+    />
+    </div>
+<div class="measure">
+<p class="sources">Source: Lei 61/2025, Diário da República n.º 204/2025. Provider fees are reported by providers, not set by that law.</p>
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>The 2-year rule and who is exempt</h2>
+      <p>In October 2025, Portugal changed its family reunification rules. Most permit holders must now hold their permit for 2 years before applying for family members. A spouse or partner who lived with the holder for at least 18 months before entering Portugal can apply after 15 months.</p>
+      <p>Some groups are exempt from the wait:</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Exempt from the wait?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Minor or incapacitated children</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Family of article 90 holders (highly qualified activity)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Family of article 90-A holders (Golden Visa)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Family of article 121-A holders (EU Blue Card)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Family of article 89 holders (StartUP Visa, independent activity)</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Who counts as family</h2>
+      <p>Providers usually list:</p>
+      <ul>
+        <li>Your spouse or registered partner</li>
+        <li>Children under 18</li>
+        <li>Adult children who are dependent on you, unmarried and studying</li>
+        <li>Dependent parents</li>
+      </ul>
+      <p>Portuguese law sets the exact definitions, and they can depend on your situation. Confirm each family member with your lawyer before you apply.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>What family members cost</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Cost</th>
+              <th>Typical amount</th>
+              <th>How sure we are</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Provider fee per family member</td>
+              <td>€2,500 to €5,000</td>
+              <td>Reported by providers</td>
+            </tr>
+            <tr>
+              <td>Government fees per person</td>
+              <td>Several hundred euros</td>
+              <td>Not confirmed (new fee table since March 2026)</td>
+            </tr>
+            <tr>
+              <td>Documents per person</td>
+              <td>Birth and marriage certificates, translations, apostilles</td>
+              <td>Varies</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p class="action-line"><Button href="/hqa-visa-cost" variant="text">Full cost breakdown</Button></p>
+    </div>
+</section>
+
+    <div class="container section">
+<div class="measure">
+      <p>After the family permit is granted, family members must take Portuguese language training and training on constitutional values, and children must attend compulsory school. Renewal depends on that training, with a humanitarian exception. The article 90 exemption from the waiting period is not repeated in this rule.</p>
+      <p>AIMA must decide a family reunification request within 9 months. For article 90 families, AIMA can extend that once by the same period in exceptional cases and must tell the applicant.</p>
+      <UnknownsBox level={2}>
+        <ul>
+          <li><strong>Which article your file uses.</strong> Some packages may use article 90, others article 89. Article 90 families are exempt from the 2-year wait, as are Golden Visa and EU Blue Card families, minors and incapacitated dependants, and a spouse or partner who shares a dependent child with the holder. Article 89 is not on that list, so most article 89 families wait 2 years, or 15 months for a spouse who lived with the holder for 18 months, unless an exception applies. Ask your provider in writing.</li>
+          <li><strong>How AIMA applies the training.</strong> The training duty is in the law. How AIMA applies it in practice is not settled.</li>
+        </ul>
+      </UnknownsBox>
+    </div>
+</div>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Living in Portugal as a family</h2>
+      <p>Family members hold their own residence permits and can live, study and, in most cases, work in Portugal. The same absence limits apply to them. Children can attend Portuguese public schools or the many international schools around Lisbon, Cascais, Porto and the Algarve.</p>
+      <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Family questions to ask a provider"
+    paragraph="Our free HQA due diligence checklist includes the family questions to ask before you pay."
+  >
+    <ChecklistForm idPrefix="family-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+      <p>The 10-year rule for each family member is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your family's situation.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

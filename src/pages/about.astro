@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Button from "../components/Button.astro";
+import PageIntro from "../components/PageIntro.astro";
+import { getImage } from "astro:assets";
+import { siteConfig } from "../data/site";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const description =
+  "About Portugal HQA Citizenship: an independent site explaining Portugal's HQA visa route in plain English, with legally reviewed pages and no provider fees.";
+
+const headline = "About Portugal HQA Citizenship: Independent Information";
+const lead =
+  "About Portugal HQA Citizenship: we are an independent information site about Portugal's residence route for highly qualified activity, and the investment packages sold around it. We started this site because most of what we read was out of date, written to sell, or both.";
+const pageUrl = "https://portugalhqacitizenship.com/about";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const mailto = `mailto:${siteConfig.contactEmail}`;
+const lastVerified = verifiedOn("/about");
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+---
+
+<BaseLayout
+  title="About Portugal HQA Citizenship - Independent Information"
+  metaTitle="About Portugal HQA Citizenship - Independent Information | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/about"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/about"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
+      ]}
+  />
+  <p class="lead" slot="lead">{lead}</p>
+</PageIntro>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure">
+      <h2>What we do</h2>
+      <ul>
+        <li>Explain the HQA route in plain English, with links to the law</li>
+        <li>Show what the investment packages cost and what they do not cover</li>
+        <li>Say clearly what is not yet known</li>
+        <li>Keep every page dated and legally reviewed</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What we are not</h2>
+      <ul>
+        <li><strong>Not a law firm.</strong> We do not give legal advice.</li>
+        <li><strong>Not a provider.</strong> We do not sell investment packages.</li>
+        <li><strong>Not a government body.</strong> We are not connected to AIMA, IAPMEI or any Portuguese authority.</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>How we are independent</h2>
+      <p>We take no referral fees or commissions from any provider, incubator, university, law firm or advisor.</p>
+      <p>If you request a consultation, we may introduce you to advisors or providers who can help with your situation. We do this only with your consent, and we are not paid for the introduction.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Legal review</h2>
+      <p>An independent Portuguese lawyer reviews every page and stays anonymous at their request. Each page shows the date of its last legal review.</p>
+      <p class="action-line"><Button href="/methodology" variant="text">How we verify information</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Contact</h2>
+      <p>Email <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
+      <p class="action-line"><Button href="/contact" variant="text">Contact</Button></p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

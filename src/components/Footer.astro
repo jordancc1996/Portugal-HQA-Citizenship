@@ -1,0 +1,86 @@
+---
+import { siteConfig } from "../data/site";
+
+const links = [
+  { href: "/methodology", label: "Methodology" },
+  { href: "/hqa-visa-status", label: "Status updates" },
+  { href: "/image-credits", label: "Image credits" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<footer class="site-footer">
+  <div class="container inner">
+    <p>
+      {siteConfig.siteName} is an independent information site. We take no referral fees or
+      commissions from any provider, incubator, university or law firm.
+    </p>
+    <p>
+      This site gives general information, not legal, tax or investment advice. Rules change. Speak
+      to a qualified Portuguese lawyer before you commit money.
+    </p>
+    <nav aria-label="Footer">
+      <ul>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <p class="copyright">© 2026 {siteConfig.siteName}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-rule);
+    background: var(--color-paper);
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
+  .inner {
+    padding-block: 3rem 4rem;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+
+  a {
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  @media (min-width: 64rem) {
+    .inner {
+      padding-block: 4rem 5rem;
+    }
+  }
+</style>

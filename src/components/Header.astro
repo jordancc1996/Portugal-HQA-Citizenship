@@ -1,0 +1,211 @@
+---
+import { siteConfig } from "../data/site";
+
+const links = [
+  { href: "/portugal-hqa-visa-investment", label: "Investment" },
+  { href: "/hqa-visa-cost", label: "Costs" },
+  { href: "/hqa-visa-requirements", label: "Requirements" },
+  { href: "/guides/hqa-visa-citizenship-10-year-rule", label: "Citizenship" },
+  { href: "/guides", label: "Guides" },
+  { href: "/about", label: "About" },
+  { href: "/consultation", label: "Request a consultation", consult: true },
+];
+
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="wordmark" href="/">{siteConfig.siteName}</a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <ul class="links">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class={link.consult ? "consult" : undefined}
+                aria-current={current === link.href ? "page" : undefined}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <details class="menu">
+      <summary>
+        <span class="label-closed">Menu</span>
+        <span class="label-open">Close</span>
+      </summary>
+      <nav class="panel" aria-label="Primary">
+        <ul class="links">
+          {
+            links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class={link.consult ? "consult" : undefined}
+                  aria-current={current === link.href ? "page" : undefined}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  const menu = document.querySelector(".site-header .menu");
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !(menu instanceof HTMLDetailsElement)) return;
+    menu.open = false;
+  });
+</script>
+
+<style>
+  .site-header {
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.25rem;
+  }
+
+  .wordmark {
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  summary {
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    list-style: none;
+    cursor: pointer;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-paper);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .label-open {
+    display: none;
+  }
+
+  details[open] .label-closed {
+    display: none;
+  }
+
+  details[open] .label-open {
+    display: inline;
+  }
+
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .links a {
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    text-decoration: none;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    transition: text-decoration-color 150ms ease-out;
+  }
+
+  .links a:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .consult {
+    color: var(--color-atlantic);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 63.99rem) {
+    .panel {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: var(--color-paper);
+      padding: 5.5rem var(--gutter) 2rem;
+      overflow: auto;
+    }
+
+    details[open] summary {
+      position: fixed;
+      top: 1.25rem;
+      right: var(--gutter);
+      z-index: 40;
+      padding-inline: 0.25rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bar {
+      padding-block: 1.5rem;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .desktop-nav {
+      display: block;
+    }
+
+    .desktop-nav .links {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.25rem 1.5rem;
+    }
+
+    .desktop-nav .links a {
+      min-height: 0;
+    }
+  }
+</style>

@@ -1,0 +1,160 @@
+{
+  "lastVerified": "2026-10-20",
+  "facts": {
+    "legalBasis": {
+      "value": "Residence visa for highly qualified activity and residence permit for highly qualified activity (articles 61 and 90 of Lei 23/2007, as amended, latest by Lei 62/2026)",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "legalMinimumInvestment": {
+      "value": "None. Portuguese law sets no minimum investment for the highly qualified activity route.",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "packagePriceReported": {
+      "value": "About €170,000 to €200,000 for private incubator and university R&D packages, often quoted at €175,000",
+      "status": "REPORTED",
+      "source": "Provider and law firm websites; not set by law"
+    },
+    "permitValidity": {
+      "value": "2 years from issue, then renewable for successive 3-year periods",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "absenceLimit": {
+      "value": "A temporary permit can be cancelled after more than 6 consecutive months or 8 non-consecutive months outside Portugal during its validity without good reason (article 85(2)). It is not cancelled if the holder proves professional, business, cultural or social activity during the absence (article 85(4)). A longer absence should be justified to AIMA before leaving, or afterwards in exceptional cases (article 85(3)).",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "goldenVisaStay": {
+      "value": "Golden Visa holders need at least 7 days in the first year, then 14 days. This lighter rule does not apply to the highly qualified activity permit.",
+      "status": "CURRENT",
+      "source": "https://sites.google.com/site/leximigratoria/artigo-90-o-a-autorizacao-de-residencia-para-atividade-de-investimento"
+    },
+    "familyReunification": {
+      "value": "The 2-year wait (article 98(1)) does not apply to minors or incapacitated dependants, to a spouse or partner who is a parent or adopter of a dependent child with the holder, or to family of holders under articles 90, 90-A or 121-A (article 98(3)). Article 89 holders are not in that list. The wait can be waived or reduced in exceptional cases (article 98(4)).",
+      "status": "CONFIRMED",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "familyDecisionDeadline": {
+      "value": "AIMA must decide a family reunification request within 9 months. Except for the ordinary 2-year and 15-month cases, it can extend once by the same period in exceptional circumstances and must tell the applicant (article 105).",
+      "status": "CONFIRMED",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "familyIntegration": {
+      "value": "After the family permit is granted, family members must take Portuguese language and constitutional values training, and children must attend compulsory school. Renewal depends on it, with a humanitarian exception (article 101(3) to (5)). The article 90 exemption from the waiting period is not repeated here.",
+      "status": "CONFIRMED",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "permanentResidence": {
+      "value": "After 5 years of temporary residence, with no sentence over 1 year in prison in the last 5 years, means of subsistence, housing and basic Portuguese (article 80). The permanent permit has no expiry, but the card is renewed every 5 years (article 76).",
+      "status": "CONFIRMED",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "citizenshipYears": {
+      "value": "10 years of legal residence for most nationals, 7 years for EU and CPLP nationals",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
+    "nationalityLawInForce": {
+      "value": "Lei Orgânica n.º 1/2026, published 18 May 2026, in force 19 May 2026",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
+    "nationalityTransition": {
+      "value": "Applications already pending on 19 May 2026 are decided under the previous rules",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
+    "citizenshipClockStart": {
+      "value": "Not settled. The old rule counting time from the permit application was revoked. Several law firms say time now counts from the first residence card. The law text does not say this expressly.",
+      "status": "UNVERIFIED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
+    "ificiRate": {
+      "value": "20% tax on eligible Portuguese work income for 10 years, with most foreign income exempt. Not automatic for highly qualified activity permit holders: it depends on the employer and the role.",
+      "status": "CONFIRMED",
+      "source": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Folhetos_informativos/Documents/incentivos_investigacao.pdf"
+    },
+    "ificiDeadline": {
+      "value": "Register by 15 January of the year after becoming tax resident",
+      "status": "CONFIRMED",
+      "source": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Folhetos_informativos/Documents/incentivos_investigacao.pdf"
+    },
+    "goldenVisaOptions": {
+      "value": "€500,000 in qualifying investment funds, €500,000 for scientific research, €250,000 for arts and culture, €500,000 company investment with 5 jobs, or creating 10 jobs. Real estate routes closed since 7 October 2023.",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "goldenVisaRenewal": {
+      "value": "The Golden Visa permit (article 90-A) is renewed for periods of 2 years (article 90-A(2)). The highly qualified activity permit is renewed for periods of 3 years (article 75(1)).",
+      "status": "CONFIRMED",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "goldenVisaLowDensity": {
+      "value": "The job-creation, research and arts and culture amounts can be 20% lower in low-density territories. The fund and company routes are not reduced (article 3(2) and (3)).",
+      "status": "CONFIRMED",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "aimaDecisionDeadline": {
+      "value": "90 days, extendable by 30 days. This is a legal deadline, not a measured average.",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/09/17600/0006000111.pdf"
+    },
+    "governmentFees": {
+      "value": "AIMA fees changed on 1 March 2026. Exact current amounts not yet confirmed.",
+      "status": "UNVERIFIED",
+      "source": "https://aima.gov.pt"
+    },
+    "residenceWindow": {
+      "value": "All periods of legal residence are added together if they fall within 12 years (9 years for EU and CPLP nationals)",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
+    "spouseException": {
+      "value": "Under the general 2-year rule, a spouse or partner who lived with the holder for at least 18 months before entry can apply after 15 months",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2025/10/20400/0000900017.pdf"
+    },
+    "goldenVisaFamilyExempt": {
+      "value": "Family members of article 90-A (Golden Visa) holders are exempt from the 2-year family reunification wait",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2025/10/20400/0000900017.pdf"
+    },
+    "residenceVisaValidity": {
+      "value": "The D3 residence visa allows two entries and a stay of up to 4 months (article 58(2))",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "iasMonthly2026": {
+      "value": "IAS (social support index) is €537.13 a month in 2026",
+      "status": "CONFIRMED",
+      "source": "https://apcmc.pt/legislacao/ias-para-2026-fixado-em-e-53713/"
+    },
+    "techVisaQualification": {
+      "value": "Tech Visa workers need an ISCED level 6 qualification, or a level 5 higher technical course plus at least 5 years of specialized experience (Portaria 328/2018, as amended)",
+      "status": "CURRENT",
+      "source": "https://arquivo.pt/wayback/20231215195537mp_/https://imigrante.sef.pt/en/solicitar/trabalhar/art90-techvisa"
+    },
+    "naturalisationCriminalBar": {
+      "value": "A final conviction with an effective prison sentence of more than 3 years for certain serious crimes blocks naturalisation",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
+    "constitutionalCourtRuling": {
+      "value": "Acórdão 1133/2025 of 15 December 2025 found 4 rules of the draft nationality law unconstitutional",
+      "status": "CONFIRMED",
+      "source": "https://www.cortecostituzionale.it/uploads/report/12-Portogallo-TC-sentenza-1133-2025-694c02fd1bb3d.pdf"
+    },
+    "familyPermitDuration": {
+      "value": "A family member's residence permit runs for the same length as the main applicant's permit (article 107 of Lei 23/2007)",
+      "status": "CURRENT",
+      "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+    },
+    "feie2026": {
+      "value": "US foreign earned income exclusion is up to $132,900 for 2026",
+      "status": "CONFIRMED",
+      "source": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill"
+    }
+  }
+}

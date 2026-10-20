@@ -1,0 +1,82 @@
+---
+interface Item {
+  lead: string;
+  text: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="key-facts">
+  <h2>Key facts</h2>
+  <ol>
+    {
+      items.map((item) => (
+        <li>
+          <p>
+            <strong>{item.lead}</strong> {item.text}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<style>
+  h2 {
+    margin-bottom: 1rem;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: fact;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem 2.5rem;
+    margin: 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-rule);
+    border-bottom: 1px solid var(--color-rule);
+    background: none;
+  }
+
+  li {
+    counter-increment: fact;
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0.5rem;
+  }
+
+  li::before {
+    content: counter(fact) ".";
+    color: var(--color-atlantic);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    ol {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

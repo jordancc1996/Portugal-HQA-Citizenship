@@ -1,0 +1,66 @@
+---
+import { serializeJsonLd } from "../lib/json-ld";
+
+interface Item {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+const site = Astro.site ?? new URL("https://portugalhqacitizenship.com");
+const pageUrl = new URL(Astro.url.pathname, site).href;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": new URL("#faq", pageUrl).href,
+  mainEntityOfPage: { "@id": new URL("#webpage", pageUrl).href },
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<div class="faq">
+  {
+    items.map((item) => (
+      <details>
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))
+  }
+</div>
+<script type="application/ld+json" set:html={serializeJsonLd(schema)} />
+
+<style>
+  details {
+    border-top: 1px solid var(--color-rule);
+  }
+
+  details:last-of-type {
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  summary {
+    cursor: pointer;
+    padding: 1rem 0;
+    font-family: var(--font-serif);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+</style>

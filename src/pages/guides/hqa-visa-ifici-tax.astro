@@ -1,0 +1,222 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import KeyFacts from "../../components/KeyFacts.astro";
+import Table from "../../components/Table.astro";
+import UnknownsBox from "../../components/UnknownsBox.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import FAQ from "../../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../../data/pages";
+import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/guides/hqa-visa-ifici-tax");
+
+const description =
+  "HQA visa IFICI tax for 2026: the 20% rate for 10 years, why the permit does not qualify you on its own, the eligible roles and the 15 January deadline.";
+
+const headline = "HQA Visa IFICI Tax: Who Actually Qualifies";
+const pageUrl = "https://portugalhqacitizenship.com/guides/hqa-visa-ifici-tax";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "Does the HQA visa give me IFICI?",
+    answer: "No, not on its own. You must work in an eligible role for an eligible employer and register on time.",
+  },
+  {
+    question: "What is the IFICI tax rate?",
+    answer: "20% on eligible Portuguese work income, for 10 consecutive years.",
+  },
+  {
+    question: "When do I register?",
+    answer: "By 15 January of the year after the year you become tax resident in Portugal.",
+  },
+  {
+    question: "Can Americans benefit from IFICI?",
+    answer: "Possibly, but US citizens still file US returns. How IFICI and US tax interact depends on your income. Get cross-border advice.",
+  },
+  {
+    question: "I was tax resident in Portugal 3 years ago. Can I apply?",
+    answer: "No. You must not have been tax resident in Portugal in any of the 5 years before.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA Visa IFICI Tax - Who Actually Qualifies"
+  metaTitle="HQA Visa IFICI Tax - Who Actually Qualifies | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/guides/hqa-visa-ifici-tax"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA visa IFICI tax benefits are often promised in marketing, but the permit does not give them to you. IFICI, sometimes called \"NHR 2.0\", taxes eligible Portuguese work income at 20% for 10 years and exempts most foreign income. You qualify only if your role and your employer fit one of the eligible categories, and you must register on time.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/guides/hqa-visa-ifici-tax"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+        { name: "HQA visa and IFICI tax", href: "/guides/hqa-visa-ifici-tax" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      HQA visa IFICI tax benefits are often promised in marketing, but the permit does not give them to you. IFICI, sometimes called "NHR 2.0", taxes eligible Portuguese work income at 20% for 10 years and exempts most foreign income. You qualify only if your role and your employer fit one of the eligible categories, and you must register on time.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not tax advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+<KeyFacts
+      items={[
+        {
+          lead: "20% for 10 years.",
+          text: "Eligible Portuguese employment and self-employment income is taxed at a flat 20%.",
+        },
+        {
+          lead: "Most foreign income exempt.",
+          text: "With some exceptions, such as income from listed tax havens.",
+        },
+        {
+          lead: "Not automatic.",
+          text: "The HQA permit is not a qualifying category by itself.",
+        },
+        {
+          lead: "Deadline: 15 January.",
+          text: "Register by 15 January of the year after you become tax resident.",
+        },
+      ]}
+    />
+    </div>
+<div class="measure">
+<p class="sources">Sources: Estatuto dos Benefícios Fiscais, article 58-A; Portaria 352/2024/1.</p>
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>Who can qualify</h2>
+      <p>You must not have been tax resident in Portugal in any of the previous 5 years, and you must never have benefited from NHR, Regressar or IFICI before. Your work must also fit one of the eligible categories, which include:</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Who certifies it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Work for a certified startup</td>
+              <td>Startup Portugal</td>
+            </tr>
+            <tr>
+              <td>Certified research and development staff</td>
+              <td>ANI, Portugal's innovation agency</td>
+            </tr>
+            <tr>
+              <td>Highly qualified roles in companies that meet investment or export conditions</td>
+              <td>Tax authority rules</td>
+            </tr>
+            <tr>
+              <td>Roles in companies recognised by AICEP or IAPMEI</td>
+              <td>AICEP or IAPMEI</td>
+            </tr>
+            <tr>
+              <td>Teaching and scientific research in higher education</td>
+              <td>Institution and tax authority rules</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+      <p>For the highly qualified professions category in Portaria 352/2024/1, the role generally requires a doctorate, or a degree plus at least 3 years of professional experience. Other categories have their own education rules.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>How this works with an HQA package</h2>
+      <p>An <a href="/portugal-hqa-visa-investment">HQA investment package</a> can put you in a position to qualify, for example through a role in a certified startup or certified research work. Whether it does depends on:</p>
+      <ul>
+        <li>whether the company holds the right certification</li>
+        <li>what your role is and how you are paid</li>
+        <li>whether you meet the education and experience rules</li>
+      </ul>
+      <p>Ask your provider in writing which IFICI category they expect you to use, and have a tax adviser confirm it before you move.</p>
+      <div class="unknowns">
+        <UnknownsBox level={3}>
+          <p>How many HQA package holders have actually obtained IFICI. We have found no public data.</p>
+        </UnknownsBox>
+      </div>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Old NHR is closed</h2>
+      <p>The old non-habitual resident regime (NHR) closed to new applicants from 1 January 2024. People already registered keep it for their remaining years. IFICI is narrower and tied to specific roles.</p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Tax questions to ask a provider"
+    paragraph="Our free HQA due diligence checklist includes the tax questions to ask before you pay."
+  >
+    <ChecklistForm idPrefix="ifici-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not tax advice. Tax rules change. Speak to a qualified tax adviser before you rely on IFICI.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

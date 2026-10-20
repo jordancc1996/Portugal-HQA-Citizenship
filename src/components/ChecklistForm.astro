@@ -1,0 +1,63 @@
+---
+import Button from "./Button.astro";
+import { siteConfig } from "../data/site";
+
+interface Props {
+  idPrefix?: string;
+}
+
+const { idPrefix = "checklist" } = Astro.props;
+const pagePath = Astro.url.pathname;
+const id = (name: string) => `${idPrefix}-${name}`;
+---
+
+<div class="form-block">
+  <form class="site-form" data-checklist-form data-page-path={pagePath} method="post" action={pagePath} novalidate>
+    <noscript>
+      <p>Please enable JavaScript to send this form.</p>
+    </noscript>
+    <p class="form-status" data-live role="alert" aria-live="assertive"></p>
+
+    <div>
+      <label for={id("name")}>Name</label>
+      <input id={id("name")} name="name" type="text" autocomplete="name" required aria-describedby={id("name-error")} />
+      <p id={id("name-error")} class="field-error" data-error-for="name" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("email")}>Email</label>
+      <input id={id("email")} name="email" type="email" autocomplete="email" required aria-describedby={id("email-error")} />
+      <p id={id("email-error")} class="field-error" data-error-for="email" hidden></p>
+    </div>
+
+    <div class="check">
+      <input id={id("privacy")} name="privacyConsent" type="checkbox" value="on" required aria-describedby={id("privacy-error")} />
+      <div>
+        <label class="check-text" for={id("privacy")}>
+          I have read the <a href="/privacy">Privacy Policy</a> and consent to {siteConfig.siteName} using my information to send the checklist.
+        </label>
+        <p id={id("privacy-error")} class="field-error" data-error-for="privacyConsent" hidden></p>
+      </div>
+    </div>
+
+    <div class="check">
+      <input id={id("marketing")} name="marketingConsent" type="checkbox" value="on" />
+      <label class="check-text" for={id("marketing")}>
+        Email me when the rules change. I can unsubscribe at any time.
+      </label>
+    </div>
+
+    <Button type="submit">Send me the checklist</Button>
+  </form>
+
+  <div class="form-success" data-success tabindex="-1" aria-live="polite" hidden>
+    <p>Thank you. The checklist is ready to download.</p>
+    <a href="/downloads/hqa-due-diligence-checklist-2026.pdf">Download the checklist</a>
+  </div>
+</div>
+
+<script>
+  import { bindChecklistForm } from "../scripts/checklist-form";
+
+  bindChecklistForm();
+</script>

@@ -1,0 +1,240 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Button from "../components/Button.astro";
+import PageIntro from "../components/PageIntro.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/hqa-visa-for-americans");
+
+const description =
+  "Portugal HQA visa for Americans in 2026: how US citizens apply, the 10-year citizenship path, the US tax rules that still apply abroad and what to ask first.";
+
+const headline = "Portugal HQA Visa for Americans: What US Investors Should Know";
+const pageUrl = "https://portugalhqacitizenship.com/hqa-visa-for-americans";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "Can Americans apply for the Portugal HQA visa?",
+    answer: "Yes. US citizens follow the same rules as other non-EU applicants.",
+  },
+  {
+    question: "How long until an American can get Portuguese citizenship?",
+    answer: "10 years of legal residence under the law in force since 19 May 2026.",
+  },
+  {
+    question: "Do I still pay US taxes if I live in Portugal?",
+    answer:
+      "You still file US returns. Whether you owe US tax depends on your income, exclusions, credits and the US–Portugal tax treaty.",
+  },
+  {
+    question: "Where do Americans apply for the visa?",
+    answer: "At the Portuguese consulate that covers your US state of residence.",
+  },
+  {
+    question: "Do I need an FBI background check?",
+    answer: "Yes. Portugal asks for criminal record certificates, and for Americans that usually means an FBI check, often apostilled.",
+  },
+];
+---
+
+<BaseLayout
+  title="Portugal HQA Visa for Americans - What US Investors Should Know"
+  metaTitle="Portugal HQA Visa for Americans - What US Investors Should Know | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/hqa-visa-for-americans"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "The Portugal HQA visa for Americans works the same way as for any other non-EU applicant, with one big difference: the United States taxes its citizens wherever they live. US citizens can apply for the highly qualified activity route, move to Portugal and, after 10 years of legal residence, apply for Portuguese citizenship. You will still file US tax returns every year.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/hqa-visa-for-americans"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "HQA visa for Americans", href: "/hqa-visa-for-americans" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      The Portugal HQA visa for Americans works the same way as for any other non-EU applicant, with one big difference: the United States taxes its citizens wherever they live. US citizens can apply for the highly qualified activity route, move to Portugal and, after 10 years of legal residence, apply for Portuguese citizenship. You will still file US tax returns every year.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or tax advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "Same Portuguese rules.",
+          text: "Americans follow the same visa, permit and residence rules as other non-EU nationals.",
+        },
+        {
+          lead: "10 years to citizenship.",
+          text: "The US is not an EU or CPLP country, so the 10-year rule applies.",
+        },
+        {
+          lead: "US tax does not stop.",
+          text: "US citizens must file US tax returns while living abroad.",
+        },
+        {
+          lead: "Dual citizenship is possible.",
+          text: "Both the US and Portugal allow it.",
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <section class="container section">
+    <div class="measure">
+      <p>The 10-year rule for US citizens is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
+    </div>
+  </section>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+      <h2>How Americans apply</h2>
+      <ol>
+        <li>Choose a provider and sign the package contract, with your own Portuguese lawyer reviewing it.</li>
+        <li>Get a Portuguese tax number (NIF) and open a Portuguese bank account, usually with your lawyer's help.</li>
+        <li>Gather your documents: passport, degree certificates, FBI background check, proof of funds and accommodation. US documents usually need an apostille.</li>
+        <li>Apply for the D3 visa through the Portuguese consulate that covers your US state.</li>
+        <li>Travel to Portugal and attend your AIMA appointment for the residence permit.</li>
+      </ol>
+      <p class="action-line"><Button href="/hqa-visa-requirements" variant="text">Requirements and documents</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>US tax while you live in Portugal</h2>
+      <p>These US rules continue after you move:</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>US rule</th>
+              <th>What it means for you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Annual tax return</td>
+              <td>You file a US return every year, wherever you live</td>
+            </tr>
+            <tr>
+              <td>Foreign earned income exclusion</td>
+              <td>You may exclude up to $132,900 of foreign earned income for 2026 if you qualify</td>
+            </tr>
+            <tr>
+              <td>FBAR</td>
+              <td>You report foreign bank accounts if their combined value goes over $10,000 at any time in the year</td>
+            </tr>
+            <tr>
+              <td>FATCA (Form 8938)</td>
+              <td>You report foreign financial assets above set thresholds</td>
+            </tr>
+            <tr>
+              <td>US–Portugal tax treaty</td>
+              <td>Helps avoid double taxation, but has limits for US citizens</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>Your Portuguese company, its shares and any research rights may also create US reporting duties. Get advice from a tax adviser who handles both US and Portuguese tax before you invest.</p>
+      <div class="unknowns">
+        <UnknownsBox level={3}>
+          <p>How Portugal's IFICI regime and the US foreign tax credit work together depends on your income type and amounts. There is no general answer. A cross-border tax adviser should model your case.</p>
+        </UnknownsBox>
+      </div>
+      <p class="action-line"><Button href="/guides/hqa-visa-ifici-tax" variant="text">HQA visa and IFICI tax</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Can I keep my US citizenship?</h2>
+      <p>Yes. The United States does not require you to give up your citizenship when you become Portuguese, and Portugal allows dual citizenship. You would hold both passports.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Living in Portugal from the US</h2>
+      <ul>
+        <li><strong>You must live there.</strong> The highly qualified activity permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified.</li>
+        <li><strong>Time zones.</strong> Lisbon is 5 hours ahead of New York and 8 hours ahead of San Francisco for most of the year.</li>
+        <li><strong>Health insurance.</strong> US health plans rarely cover you in Portugal. You need cover that is valid there.</li>
+      </ul>
+      <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Questions for US investors"
+    paragraph="Our free HQA due diligence checklist includes the questions to ask any provider before you pay."
+  >
+    <ChecklistForm idPrefix="americans-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal or tax advice. Speak to a Portuguese lawyer and a US–Portugal tax adviser before you commit money.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

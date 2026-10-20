@@ -1,0 +1,240 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import PageHero from "../components/PageHero.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import SourceNote from "../components/SourceNote.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import Table from "../components/Table.astro";
+import FAQ from "../components/FAQ.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import GuideList from "../components/GuideList.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Button from "../components/Button.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import ConsultationForm from "../components/ConsultationForm.astro";
+import { facts, lastVerified } from "../data/facts";
+import { formatVerifiedDate } from "../lib/format-date";
+import hero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const description = `This page shows the shared components for Portugal HQA Citizenship. Figures come from the fact file last verified on ${formatVerifiedDate(lastVerified)}.`;
+
+const keyFacts = [
+  { lead: "Legal minimum investment.", text: facts.legalMinimumInvestment.value },
+  { lead: "Reported package price.", text: facts.packagePriceReported.value },
+  { lead: "Permit validity.", text: facts.permitValidity.value },
+  { lead: "Citizenship.", text: facts.citizenshipYears.value },
+];
+
+const tableRows = [
+  facts.legalMinimumInvestment,
+  facts.packagePriceReported,
+  facts.permitValidity,
+  facts.citizenshipYears,
+];
+
+const tableLabels = [
+  "Legal minimum investment",
+  "Reported package price",
+  "Permit validity",
+  "Citizenship",
+];
+
+const faqItems = [
+  {
+    question:
+      "Does Portuguese law set a minimum investment for the highly qualified activity route?",
+    answer: facts.legalMinimumInvestment.value,
+  },
+  {
+    question: "How long is the residence permit valid?",
+    answer: facts.permitValidity.value,
+  },
+  {
+    question: "How many years of legal residence does the nationality law require?",
+    answer: facts.citizenshipYears.value,
+  },
+];
+
+const guides = [
+  {
+    href: "/guides/what-is-hqa-visa",
+    title: "What is the HQA visa?",
+    summary: "The legal basis in plain English.",
+    verified: lastVerified,
+  },
+  {
+    href: "/guides/hqa-visa-citizenship-10-year-rule",
+    title: "HQA visa citizenship under the 10-year rule",
+    summary: facts.citizenshipYears.value,
+    verified: lastVerified,
+  },
+  {
+    href: "/guides/hqa-visa-presence-requirements",
+    title: "HQA visa presence rules",
+    summary: facts.absenceLimit.value,
+    verified: lastVerified,
+  },
+  {
+    href: "/guides/hqa-visa-ifici-tax",
+    title: "HQA visa and IFICI tax",
+    summary: facts.ificiRate.value,
+    verified: lastVerified,
+  },
+];
+---
+
+<BaseLayout
+  title="Component Styleguide"
+  metaTitle="Component Styleguide | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/styleguide"
+  dateModified={lastVerified}
+  noindex={true}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: "Component Styleguide",
+      description,
+      url: "https://portugalhqacitizenship.com/styleguide",
+    },
+  ]}
+>
+  <PageIntro title="Component Styleguide" verified={lastVerified} path="/styleguide">
+    <p class="lead" slot="lead">{description}</p>
+  </PageIntro>
+
+  <div class="container facts">
+    <div class="wide">
+      <KeyFacts items={keyFacts} />
+    </div>
+  </div>
+
+  <section class="container section">
+    <div class="measure">
+      <h2>Layout</h2>
+      <p>This block uses the container and the measure column. The measure column is 720px wide and starts on the container's left edge.</p>
+    </div>
+  </section>
+
+  <section class="container section">
+        <div class="measure"><h2>Wide column</h2>
+      <p>Tables, the key facts grid and guide lists use the wide column. It is the full width of the container and starts on the same left edge.</p>
+    
+    </div>
+  </section>
+
+  <PageHero
+    title="Page Hero"
+    photo={hero}
+    photoAlt="Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline"
+    verified={lastVerified}
+    path="/styleguide"
+  >
+    <p class="lead" slot="lead">From 1024px the hero is two equal columns and the photo keeps a 4 / 5 frame.</p>
+    <Button slot="actions" href="#checklist">Get the due diligence checklist</Button>
+  </PageHero>
+
+    <div class="container section">
+<div class="measure">
+      <h2>Source note</h2>
+      <p>
+        {facts.nationalityLawInForce.value}
+        <SourceNote href={facts.nationalityLawInForce.source} label="Lei Orgânica 1/2026" />
+      </p>
+    </div>
+</div>
+
+    <div class="container section">
+<div class="measure">
+      <UnknownsBox>
+        <p>{facts.citizenshipClockStart.value}</p>
+        <SourceNote href={facts.citizenshipClockStart.source} label="Lei Orgânica 1/2026" />
+      </UnknownsBox>
+    </div>
+</div>
+
+    <div class="container section">
+<div class="measure">
+<h2>Recorded facts</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Record</th>
+              <th>Value</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              tableRows.map((row, index) => (
+                <tr>
+                  <td>{tableLabels[index]}</td>
+                  <td>{row.value}</td>
+                  <td>{row.status}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </Table>
+    </div>
+</div>
+
+    <div class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</div>
+
+  <div id="checklist">
+    <LeadMagnetBand
+      heading="Before you sign with any provider"
+      paragraph="Download our free HQA due diligence checklist. It lists the 15 questions to ask a provider, the contract terms to check and the red flags we see most often."
+    >
+      <ChecklistForm />
+    </LeadMagnetBand>
+  </div>
+
+  <div class="container section">
+<div class="measure">
+      <h2>Consultation form</h2>
+      <ConsultationForm />
+    </div>
+</div>
+
+    <div class="container section">
+<div class="measure">
+<h2>Guides</h2>
+      </div>
+<div class="wide">
+<GuideList guides={guides} />
+    </div>
+</div>
+
+    <div class="container section">
+<div class="measure">
+      <h2>Breadcrumbs</h2>
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Component styleguide", href: "/styleguide" },
+        ]}
+      />
+    </div>
+</div>
+
+    <div class="container section">
+<div class="measure">
+      <h2>Buttons</h2>
+      <div class="actions">
+        <Button href="#checklist">Get the due diligence checklist</Button>
+        <Button href="/portugal-hqa-visa-investment" variant="text">Read the investment guide</Button>
+      </div>
+</div>
+    </div>
+</BaseLayout>

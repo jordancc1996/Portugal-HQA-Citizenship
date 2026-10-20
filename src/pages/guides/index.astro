@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import GuideList from "../../components/GuideList.astro";
+import { getImage } from "astro:assets";
+import { pages, verifiedOn } from "../../data/pages";
+import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/guides");
+
+const description =
+  "HQA visa guides for investors in 2026: cost, requirements, family, tax, presence rules and the 10-year citizenship path, each verified and legally reviewed.";
+
+const headline = "HQA Visa Guides: Independent, Verified Answers";
+const lead =
+  "HQA visa guides on this site answer the questions investors ask most before they commit money to a Portuguese highly qualified activity package. Each guide shows the date we last checked it, links to the law where it matters, and says plainly what is still unclear.";
+const pageUrl = "https://portugalhqacitizenship.com/guides";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const pageFiles = import.meta.glob("/src/pages/**/*.astro");
+
+function pageExists(url: string) {
+  const relative = url.replace(/^\//, "");
+  return `/src/pages/${relative}.astro` in pageFiles || `/src/pages/${relative}/index.astro` in pageFiles;
+}
+
+function findPage(title: string) {
+  const key = title.trim().toLowerCase();
+  return pages.find((item) => item.title.trim().toLowerCase() === key);
+}
+
+const groups = [
+  {
+    heading: "Start here",
+    titles: [
+      "What is the HQA visa? The legal basis in plain English",
+      "Portugal HQA visa investment: what €175,000 actually buys",
+      "Is the HQA visa legit? A due diligence guide",
+    ],
+  },
+  {
+    heading: "Money and tax",
+    titles: [
+      "HQA visa cost: the full breakdown",
+      "HQA visa and IFICI tax: who actually qualifies",
+    ],
+  },
+  {
+    heading: "Eligibility and family",
+    titles: [
+      "HQA visa requirements and who qualifies",
+      "HQA visa family: spouse, children and parents",
+      "Portugal HQA visa for Americans",
+    ],
+  },
+  {
+    heading: "Living in Portugal",
+    titles: [
+      "HQA visa presence rules: how long you must stay",
+      "HQA visa permanent residency after 5 years",
+      "HQA visa citizenship under the 10-year rule",
+    ],
+  },
+  {
+    heading: "Comparisons",
+    titles: ["Portugal HQA vs Golden Visa", "HQA vs StartUP Visa and Tech Visa"],
+  },
+  {
+    heading: "Updates",
+    titles: ["HQA visa status and law changes"],
+  },
+].map((group) => ({
+  heading: group.heading,
+  guides: group.titles.flatMap((title) => {
+    const match = findPage(title);
+    if (!match || !pageExists(match.url)) return [];
+    return [{ href: match.url, title, verified: match.lastVerified }];
+  }),
+})).filter((group) => group.guides.length > 0);
+
+const listed = groups.flatMap((group) => group.guides);
+---
+
+<BaseLayout
+  title="HQA Visa Guides - Independent, Verified Answers"
+  metaTitle="HQA Visa Guides - Independent, Verified Answers | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/guides"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+    {
+      "@type": "CollectionPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+      dateModified: lastVerified,
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: listed.map((guide, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: guide.title,
+          url: new URL(guide.href, pageUrl).href,
+        })),
+      },
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/guides"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+      ]}
+  />
+  <p class="lead" slot="lead">{lead}</p>
+</PageIntro>
+
+  <div class="reading groups">
+    {
+      groups.map((group) => (
+        <section class="container section">
+<div class="measure">
+<h2>{group.heading}</h2>
+          </div>
+<div class="wide">
+<GuideList guides={group.guides} />
+        </div>
+</section>
+      ))
+    }
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+{
+  "name": "portugal-hqa-citizenship",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node --experimental-strip-types scripts/review-gate.ts && astro build && npm run test:facts && npm run check:headings",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "check:reviews": "node --experimental-strip-types scripts/check-reviews.ts",
+    "check:headings": "node --experimental-strip-types scripts/check-headings.ts",
+    "test:facts": "node --experimental-strip-types scripts/test-facts.ts"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/newsreader": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.11",
+    "node-html-parser": "^9.0.5",
+    "typescript": "^6.0.3"
+  }
+}

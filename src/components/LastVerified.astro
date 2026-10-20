@@ -1,0 +1,25 @@
+---
+import { reviews } from "../data/reviews";
+import { formatVerifiedDate } from "../lib/format-date";
+
+interface Props {
+  verified: string;
+  path: string;
+}
+
+const { verified, path } = Astro.props;
+const review = reviews[path];
+const reviewDate =
+  typeof review === "string" && review.trim() !== "" ? formatVerifiedDate(review) : null;
+---
+
+<p class="small verified">
+  Last verified: {formatVerifiedDate(verified)}{
+    reviewDate && (
+      <>
+        {" "}
+        · Legally reviewed by an independent Portuguese lawyer on {reviewDate}.
+      </>
+    )
+  }
+</p>

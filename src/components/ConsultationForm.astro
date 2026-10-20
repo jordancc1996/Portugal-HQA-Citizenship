@@ -1,0 +1,124 @@
+---
+import Button from "./Button.astro";
+import { siteConfig } from "../data/site";
+
+interface Props {
+  idPrefix?: string;
+}
+
+const { idPrefix = "consult" } = Astro.props;
+const pagePath = Astro.url.pathname;
+const id = (name: string) => `${idPrefix}-${name}`;
+
+const timeframes = ["Within 6 months", "6 to 12 months", "1 to 2 years", "Just researching"];
+---
+
+<div class="form-block">
+  <form class="site-form" data-consultation-form data-page-path={pagePath} method="post" action={pagePath} novalidate>
+    <noscript>
+      <p>Please enable JavaScript to send this form.</p>
+    </noscript>
+    <p class="form-status" data-live role="alert" aria-live="assertive"></p>
+
+    <div>
+      <label for={id("first-name")}>First name</label>
+      <input id={id("first-name")} name="firstName" type="text" autocomplete="given-name" required aria-describedby={id("first-name-error")} />
+      <p id={id("first-name-error")} class="field-error" data-error-for="firstName" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("last-name")}>Last name</label>
+      <input id={id("last-name")} name="lastName" type="text" autocomplete="family-name" required aria-describedby={id("last-name-error")} />
+      <p id={id("last-name-error")} class="field-error" data-error-for="lastName" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("email")}>Email</label>
+      <input id={id("email")} name="email" type="email" autocomplete="email" required aria-describedby={id("email-error")} />
+      <p id={id("email-error")} class="field-error" data-error-for="email" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("phone")}>Phone (optional)</label>
+      <input id={id("phone")} name="phone" type="tel" autocomplete="tel" aria-describedby={id("phone-error")} />
+      <p id={id("phone-error")} class="field-error" data-error-for="phone" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("linkedin")}>LinkedIn profile URL</label>
+      <input
+        id={id("linkedin")}
+        name="linkedinProfileUrl"
+        type="url"
+        inputmode="url"
+        spellcheck="false"
+        autocomplete="url"
+        placeholder="https://www.linkedin.com/in/username"
+        required
+        aria-describedby={id("linkedin-error")}
+      />
+      <p id={id("linkedin-error")} class="field-error" data-error-for="linkedinProfileUrl" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("country")}>Country of citizenship</label>
+      <input id={id("country")} name="countryOfCitizenship" type="text" autocomplete="country-name" required aria-describedby={id("country-error")} />
+      <p id={id("country-error")} class="field-error" data-error-for="countryOfCitizenship" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("timeframe")}>When do you plan to move?</label>
+      <select id={id("timeframe")} name="timeframe" required aria-describedby={id("timeframe-error")}>
+        <option value="">Select a timeframe</option>
+        {timeframes.map((option) => <option value={option}>{option}</option>)}
+      </select>
+      <p id={id("timeframe-error")} class="field-error" data-error-for="timeframe" hidden></p>
+    </div>
+
+    <div>
+      <label for={id("message")}>Message (optional)</label>
+      <textarea id={id("message")} name="message" rows="5" aria-describedby={`${id("message-note")} ${id("message-error")}`}></textarea>
+      <p id={id("message-note")} class="form-note">If you mention family members, only include information you are allowed to share.</p>
+      <p id={id("message-error")} class="field-error" data-error-for="message" hidden></p>
+    </div>
+
+    <div class="check">
+      <input id={id("privacy")} name="privacyConsent" type="checkbox" value="on" required aria-describedby={id("privacy-error")} />
+      <div>
+        <label class="check-text" for={id("privacy")}>
+          I have read the <a href="/privacy">Privacy Policy</a> and consent to {siteConfig.siteName} storing and using the information I provide to respond to my request.
+        </label>
+        <p id={id("privacy-error")} class="field-error" data-error-for="privacyConsent" hidden></p>
+      </div>
+    </div>
+
+    <div class="check">
+      <input id={id("sharing")} name="thirdPartySharingConsent" type="checkbox" value="on" required aria-describedby={id("sharing-error")} />
+      <div>
+        <label class="check-text" for={id("sharing")}>
+          I authorise {siteConfig.siteName} to share my request with independent advisors or providers where needed to make the introduction I asked for.
+        </label>
+        <p id={id("sharing-error")} class="field-error" data-error-for="thirdPartySharingConsent" hidden></p>
+      </div>
+    </div>
+
+    <div class="check">
+      <input id={id("marketing")} name="marketingConsent" type="checkbox" value="on" />
+      <label class="check-text" for={id("marketing")}>
+        Email me when the rules change. I can unsubscribe at any time.
+      </label>
+    </div>
+
+    <Button type="submit">Request a consultation</Button>
+  </form>
+
+  <div class="form-success" data-success tabindex="-1" aria-live="polite" hidden>
+    <p>Thank you. Your request was received.</p>
+  </div>
+</div>
+
+<script>
+  import { bindConsultationForm } from "../scripts/consultation-form";
+
+  bindConsultationForm();
+</script>

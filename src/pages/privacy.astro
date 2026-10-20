@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Table from "../components/Table.astro";
+import { getImage } from "astro:assets";
+import { siteConfig } from "../data/site";
+import { verifiedOn } from "../data/pages";
+import { isNoindex } from "../data/reviews";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const description =
+  "How Portugal HQA Citizenship collects, uses, shares and protects the personal data you send through our forms, and how to exercise your rights.";
+
+const headline = "Privacy Policy";
+const lead =
+  'This policy explains how Portugal HQA Citizenship ("we") collects and uses personal data sent through this website. Last updated: 20 October 2026.';
+const pageUrl = "https://portugalhqacitizenship.com/privacy";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const mailto = `mailto:${siteConfig.contactEmail}`;
+const lastVerified = verifiedOn("/privacy");
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  metaTitle="Privacy Policy | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/privacy"
+  dateModified={lastVerified}
+  noindex={isNoindex("/privacy")}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Privacy", href: "/privacy" },
+      ]}
+  />
+  <p class="lead" slot="lead">{lead}</p>
+</PageIntro>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure">
+      <h2>Who we are</h2>
+      <p>Portugal HQA Citizenship is an independent information website at portugalhqacitizenship.com. Contact: <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>What we collect</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Form</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Due diligence checklist</td>
+              <td>Name, email, your consent choices</td>
+            </tr>
+            <tr>
+              <td>Consultation request</td>
+              <td>First and last name, email, phone (optional), LinkedIn profile URL, country of citizenship, planned timing, message (optional), your consent choices</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>We do not ask for passport numbers, financial account details or documents.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Why we use it</h2>
+      <ul>
+        <li>To send you the checklist you asked for</li>
+        <li>To reply to your consultation request</li>
+        <li>To introduce you to advisors or providers, only if you tick the sharing box</li>
+        <li>To email you about rule changes, only if you tick the updates box</li>
+      </ul>
+      <p>We use your data on the basis of your consent. You can withdraw consent at any time.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Who we share it with</h2>
+      <ul>
+        <li><strong>Advisors or providers we introduce you to,</strong> only if you consent on the consultation form. They handle your data under their own privacy policies.</li>
+        <li><strong>Service providers who run our website and forms,</strong> such as our form processor (Formcarry) and our hosting provider (Vercel). They process data for us and do not use it for their own purposes.</li>
+      </ul>
+      <p>We do not sell your data. We are not paid for introductions.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>How long we keep it</h2>
+      <p>We keep your data only as long as needed for the purpose you gave it for, and delete it when you ask us to.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Your rights</h2>
+      <p>You can ask to access, correct or delete your data, to restrict or object to its use, or to receive a copy of it. You can withdraw consent at any time. Email <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
+      <p>You can also complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (CNPD).</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Cookies and analytics</h2>
+      <p>This site does not use advertising cookies. If we add analytics, we will update this policy and ask for your consent where required.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Changes</h2>
+      <p>We will post any changes to this policy on this page with a new date.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

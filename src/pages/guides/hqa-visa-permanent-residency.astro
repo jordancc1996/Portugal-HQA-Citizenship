@@ -1,0 +1,268 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Button from "../../components/Button.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import KeyFacts from "../../components/KeyFacts.astro";
+import Table from "../../components/Table.astro";
+import UnknownsBox from "../../components/UnknownsBox.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import FAQ from "../../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../../data/pages";
+import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/guides/hqa-visa-permanent-residency");
+
+const description =
+  "HQA visa permanent residency in Portugal after 5 years: the requirements, the basic Portuguese test, how it differs from citizenship and when to apply.";
+
+const headline = "HQA Visa Permanent Residency: What Changes After 5 Years";
+const pageUrl = "https://portugalhqacitizenship.com/guides/hqa-visa-permanent-residency";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "When can I get permanent residency on the HQA route?",
+    answer: "After at least 5 years with a temporary residence permit, if you meet the other requirements.",
+  },
+  {
+    question: "What level of Portuguese do I need?",
+    answer: "Basic knowledge, proved with a recognised certificate, such as a CAPLE test or an A2-level Portuguese course.",
+  },
+  {
+    question: "Does permanent residence give me a passport?",
+    answer: "No. A Portuguese passport comes with citizenship, which most people can apply for after 10 years of legal residence.",
+  },
+  {
+    question: "Do I still need my HQA company after I get permanent residence?",
+    answer: "Your permanent residence does not depend on the highly qualified activity. Your investment and company are a separate matter.",
+  },
+  {
+    question: "How long is the permanent residence card valid?",
+    answer: "No expiry date. The card is renewed every 5 years.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA Visa Permanent Residency - What Changes After 5 Years"
+  metaTitle="HQA Visa Permanent Residency - What Changes After 5 Years | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/guides/hqa-visa-permanent-residency"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA visa permanent residency becomes possible after 5 years of temporary residence in Portugal. A permanent residence permit means you stop renewing a temporary permit every few years. It does not give you a Portuguese passport, and it does not shorten the 10-year wait for citizenship.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/guides/hqa-visa-permanent-residency"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+        { name: "HQA visa permanent residency", href: "/guides/hqa-visa-permanent-residency" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      HQA visa permanent residency becomes possible after 5 years of temporary residence in Portugal. A permanent residence permit means you stop renewing a temporary permit every few years. It does not give you a Portuguese passport, and it does not shorten the 10-year wait for citizenship.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+<KeyFacts
+      items={[
+        {
+          lead: "After 5 years.",
+          text: "You need at least 5 years with a temporary residence permit.",
+        },
+        {
+          lead: "Basic Portuguese.",
+          text: "You must prove basic knowledge of the language.",
+        },
+        {
+          lead: "No expiry date.",
+          text: "The card is renewed every 5 years.",
+        },
+        {
+          lead: "Not citizenship.",
+          text: "Most people still need 10 years of legal residence for a passport.",
+        },
+      ]}
+    />
+    </div>
+<div class="measure">
+<p class="sources">Source: Lei 23/2007, articles 76 and 80.</p>
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>Requirements</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Requirement</th>
+              <th>What it means</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 years of temporary residence</td>
+              <td>Held a temporary residence permit for at least 5 years</td>
+            </tr>
+            <tr>
+              <td>Means of support</td>
+              <td>Stable income for you and your family, without welfare</td>
+            </tr>
+            <tr>
+              <td>Accommodation</td>
+              <td>Proof of where you live</td>
+            </tr>
+            <tr>
+              <td>Clean record</td>
+              <td>No prison sentence over 1 year in the previous 5 years</td>
+            </tr>
+            <tr>
+              <td>Tax and social security</td>
+              <td>Up to date with your obligations in Portugal</td>
+            </tr>
+            <tr>
+              <td>Basic Portuguese</td>
+              <td>A certificate such as a CAPLE test or an A2-level course</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Permanent residence or citizenship?</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Permanent residence</th>
+              <th>Citizenship</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">When</th>
+              <td>After 5 years</td>
+              <td>After 10 years (7 for EU and CPLP nationals)</td>
+            </tr>
+            <tr>
+              <th scope="row">What you get</th>
+              <td>No expiry date. The card is renewed every 5 years</td>
+              <td>A Portuguese passport and EU citizenship</td>
+            </tr>
+            <tr>
+              <th scope="row">Language</th>
+              <td>Basic Portuguese</td>
+              <td>Portuguese test or certificate</td>
+            </tr>
+            <tr>
+              <th scope="row">Renewals</th>
+              <td>Every 5 years</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th scope="row">Voting in national elections</th>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">Move freely in the EU</th>
+              <td>Limited</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p class="action-line"><Button href="/guides/hqa-visa-citizenship-10-year-rule" variant="text">Citizenship under the 10-year rule</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Why HQA holders may want permanent residence</h2>
+      <ul>
+        <li><strong>You no longer depend on the company.</strong> A temporary HQA permit depends on your highly qualified activity. Permanent residence does not.</li>
+        <li><strong>Fewer renewals.</strong> One card every 5 years.</li>
+        <li><strong>A bridge to citizenship.</strong> It keeps you legally resident while you build up to 10 years.</li>
+      </ul>
+      <div class="unknowns">
+        <UnknownsBox level={3}>
+          <p>Whether the new citizenship rules will change how years on a permanent residence card are counted. The law counts legal residence under any valid permit, and we expect permanent residence to count. We will confirm this when the government publishes its implementing rules.</p>
+        </UnknownsBox>
+      </div>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Plan your long-term path"
+    paragraph="Our free HQA due diligence checklist includes the long-term residence questions to ask a provider."
+  >
+    <ChecklistForm idPrefix="residency-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer before you apply.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

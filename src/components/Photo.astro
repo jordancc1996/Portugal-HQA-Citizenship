@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  class?: string;
+  sizes?: string;
+  maxWidth?: number;
+  priority?: boolean;
+  quality?: number;
+}
+
+const { src, alt, class: className, sizes, maxWidth = 960, priority = false, quality = 82 } = Astro.props;
+
+const w = Math.min(maxWidth, src.width);
+const h = Math.max(1, Math.round((src.height / src.width) * w));
+// A lower quality is for a heavy photo, so do not also emit larger copies.
+const cap = quality < 82 ? w : Math.min(1920, src.width);
+const widths = [...new Set([480, 640, 768, 960, 1280, 1600, 1920, w])]
+  .filter((width) => width > 0 && width <= cap)
+  .sort((a, b) => a - b);
+---
+
+<Image
+  src={src}
+  alt={alt}
+  width={w}
+  height={h}
+  widths={widths}
+  layout="constrained"
+  loading="eager"
+  quality={quality}
+  sizes={sizes}
+  class={className}
+  fetchpriority={priority ? "high" : "auto"}
+/>

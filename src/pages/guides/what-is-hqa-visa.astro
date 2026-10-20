@@ -1,0 +1,278 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Button from "../../components/Button.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import KeyFacts from "../../components/KeyFacts.astro";
+import Table from "../../components/Table.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import FAQ from "../../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../../data/pages";
+import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/guides/what-is-hqa-visa");
+
+const description =
+  "What is the HQA visa? A plain-English guide to Portugal's highly qualified activity visa: articles 61 and 90, the 4 ways to qualify and where €175,000 fits in.";
+
+const headline = "What Is the HQA Visa? The Legal Basis in Plain English";
+const pageUrl = "https://portugalhqacitizenship.com/guides/what-is-hqa-visa";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "Is the HQA visa an official program?",
+    answer:
+      'No. "HQA visa" is an informal label. The official tools are the D3 residence visa (article 61) and the residence permit for highly qualified activity (article 90) of Lei 23/2007.',
+  },
+  {
+    question: "Is the HQA visa the same as the D3 visa?",
+    answer:
+      'The D3 is the visa you get at the consulate. The article 90 residence permit is what lets you stay. People use "HQA visa" for both together.',
+  },
+  {
+    question: "Do I have to invest to get the HQA visa?",
+    answer:
+      "No. A job contract with a Portuguese employer for highly qualified work can lead to the same permit without any investment.",
+  },
+  {
+    question: "Who decides my application?",
+    answer:
+      "The Portuguese consulate decides the visa. AIMA, Portugal's immigration agency, decides the residence permit.",
+  },
+  {
+    question: 'Does "HQA®" mean a company owns the route?',
+    answer: 'No. Some companies use "HQA" in their branding. The legal route belongs to no company.',
+  },
+];
+---
+
+<BaseLayout
+  title="What Is the HQA Visa - The Legal Basis in Plain English"
+  metaTitle="What Is the HQA Visa - The Legal Basis in Plain English | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/guides/what-is-hqa-visa"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "What is the HQA visa? It is an informal name for Portugal's residence route for highly qualified activity, not the name of an official program. \"HQA\" stands for highly qualified activity. The route rests on two articles of Portugal's immigration law, Lei 23/2007, and there are several ways to qualify. Only one of them involves buying an investment package.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/guides/what-is-hqa-visa"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+        { name: "What is the HQA visa?", href: "/guides/what-is-hqa-visa" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      What is the HQA visa? It is an informal name for Portugal's residence route for highly qualified activity, not the name of an official program. "HQA" stands for highly qualified activity. The route rests on two articles of Portugal's immigration law, Lei 23/2007, and there are several ways to qualify. Only one of them involves buying an investment package.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "Two legal tools.",
+          text: "Article 61 covers the D3 residence visa. Article 90 covers the residence permit for highly qualified activity.",
+        },
+        {
+          lead: "No investment in the law.",
+          text: "Neither article mentions an investment amount.",
+        },
+        {
+          lead: "Several ways in.",
+          text: "A job contract, a research invitation, a certified company or a cultural activity can all qualify.",
+        },
+        {
+          lead: '"HQA" is a label.',
+          text: 'Some companies use it as a brand name. The government does not run an "HQA program".',
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>The two legal tools</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>D3 residence visa</th>
+              <th>Residence permit for highly qualified activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Law</th>
+              <td>Article 61, Lei 23/2007</td>
+              <td>Article 90, Lei 23/2007</td>
+            </tr>
+            <tr>
+              <th scope="row">Where you apply</th>
+              <td>Portuguese consulate in your country</td>
+              <td>AIMA, in Portugal</td>
+            </tr>
+            <tr>
+              <th scope="row">What it does</th>
+              <td>Lets you enter Portugal to start the activity</td>
+              <td>Lets you live in Portugal and renew</td>
+            </tr>
+            <tr>
+              <th scope="row">How long</th>
+              <td>Two entries and a stay of up to 4 months</td>
+              <td>2 years, then 3-year renewals</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>The four ways to qualify for the permit</h2>
+      <p>Under article 90, you need one of these:</p>
+      <ol>
+        <li><strong>A job contract.</strong> An employment or service contract for highly qualified work with a Portuguese employer.</li>
+        <li><strong>A research or teaching invitation.</strong> An invitation from a university, polytechnic or research institution.</li>
+        <li><strong>A certified company.</strong> A statement from a company certified for the Tech Visa by IAPMEI, the Portuguese agency for business and innovation.</li>
+        <li><strong>A cultural activity.</strong> An activity recognised as being of national cultural interest.</li>
+      </ol>
+      <p>The investment packages sold at about €175,000 are a way to create the second or third situation: they set up a research project or a company that can give you a qualifying role.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Related routes that are often confused with HQA</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>What it is</th>
+              <th>Legal basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tech Visa</td>
+              <td>Hiring by a company certified by IAPMEI</td>
+              <td>Article 90, Portaria 328/2018</td>
+            </tr>
+            <tr>
+              <td>StartUP Visa</td>
+              <td>A founder accepted into a certified incubator</td>
+              <td>Article 89</td>
+            </tr>
+            <tr>
+              <td>Golden Visa</td>
+              <td>Residence through a legal minimum investment</td>
+              <td>Article 90-A</td>
+            </tr>
+            <tr>
+              <td>D7 visa</td>
+              <td>Residence for people with regular passive income</td>
+              <td>A separate visa type</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The difference matters. Families of article 90 permit holders are exempt from the 2-year family reunification wait. Families of article 89 (StartUP Visa) holders are not.</p>
+      <p>The fuller comparison of <a href="/hqa-vs-startup-visa-tech-visa">HQA, the StartUP Visa and the Tech Visa</a> is separate from the Golden Visa comparison.</p>
+      <p class="action-line"><Button href="/hqa-visa-family" variant="text">Family rules for article 90</Button></p>
+      <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Where the €175,000 fits in</h2>
+      <p>Private providers sell packages that combine a company, an incubator place, a research project with a university and legal work. The package creates the activity. The visa and permit are still granted under articles 61 and 90.</p>
+      <p>That means two things:</p>
+      <ul>
+        <li><strong>The €175,000 is a price, not a legal threshold.</strong> Providers set it.</li>
+        <li><strong>The visa is not bought.</strong> It is granted because you carry out a highly qualified activity in Portugal, and it stays valid only while you keep doing so.</li>
+      </ul>
+      <p class="action-line"><Button href="/portugal-hqa-visa-investment" variant="text">What the €175,000 actually buys</Button></p>
+      <p class="action-line"><Button href="/hqa-visa-cost" variant="text">Full cost breakdown</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Is the HQA visa legitimate?</h2>
+      <p>The legal tools are real and have been in Portuguese law for years. The investment packages are private products. Some are well run, some are not. Judge each provider on its contract, its partners and its answers to hard questions.</p>
+      <p class="action-line"><Button href="/hqa-visa-due-diligence" variant="text">How to check a provider</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Questions to ask any provider"
+    paragraph="Our free HQA due diligence checklist lists 15 questions to ask before you pay."
+  >
+    <ChecklistForm idPrefix="what-is-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your own situation.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

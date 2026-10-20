@@ -1,0 +1,257 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Button from "../../components/Button.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import KeyFacts from "../../components/KeyFacts.astro";
+import Table from "../../components/Table.astro";
+import UnknownsBox from "../../components/UnknownsBox.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import FAQ from "../../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../../data/pages";
+import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/guides/hqa-visa-presence-requirements");
+
+const description =
+  "HQA visa minimum stay rules for 2026: the 6-month and 8-month absence limits, why the Golden Visa's 7 days do not apply, and what \"no minimum stay\" claims mean.";
+
+const headline = "HQA Visa Minimum Stay: How Long You Must Live in Portugal";
+const pageUrl = "https://portugalhqacitizenship.com/guides/hqa-visa-presence-requirements";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "What is the HQA visa minimum stay?",
+    answer:
+      "There is no fixed number of days. The rule works the other way: more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's validity can cost you the permit, unless the absence is justified.",
+  },
+  {
+    question: "Can I live in the US and keep an HQA permit?",
+    answer:
+      "Not if you spend most of the year in the US. The permit is for carrying out a highly qualified activity in Portugal.",
+  },
+  {
+    question: "Does business travel count as a justified absence?",
+    answer:
+      "It can, but the law does not make it automatic. Keep records of every trip and its purpose, and ask a Portuguese lawyer about your plans.",
+  },
+  {
+    question: "Does time abroad count toward citizenship?",
+    answer:
+      "Citizenship counts periods of legal residence, which means time with a valid permit. If you lose the permit through long absences, that time stops counting.",
+  },
+  {
+    question: "Do family members have the same presence rules?",
+    answer: "Family members hold their own residence permits, and the same general absence limits apply to them.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA Visa Minimum Stay - How Long You Must Live in Portugal"
+  metaTitle="HQA Visa Minimum Stay - How Long You Must Live in Portugal | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/guides/hqa-visa-presence-requirements"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA visa minimum stay rules come down to two absence limits: 6 months in a row or 8 months in total. The highly qualified activity permit is a permit to live and work in Portugal. A temporary permit can be cancelled if you spend more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. The Golden Visa's 7-day rule does not apply.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/guides/hqa-visa-presence-requirements"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+        { name: "HQA visa minimum stay", href: "/guides/hqa-visa-presence-requirements" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      HQA visa minimum stay rules come down to two absence limits: 6 months in a row or 8 months in total. The highly qualified activity permit is a permit to live and work in Portugal. A temporary permit can be cancelled if you spend more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. The Golden Visa's 7-day rule does not apply.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or tax advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "6 months in a row.",
+          text: "More than 6 consecutive months abroad can cost you the permit.",
+        },
+        {
+          lead: "8 months in total.",
+          text: "More than 8 non-consecutive months abroad during the permit's validity can also cost you the permit.",
+        },
+        {
+          lead: "Justified absences are an exception.",
+          text: "The law allows for absences with a valid reason, but the decision is case by case.",
+        },
+        {
+          lead: "7 days is a Golden Visa rule.",
+          text: "It does not apply to the highly qualified activity permit.",
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>The three things presence affects</h2>
+      <p>People often mix these up. They follow different rules.</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>What it means</th>
+              <th>What the rule is</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Keeping your permit</th>
+              <td>Not losing the permit while it is valid</td>
+              <td>No more than 6 consecutive or 8 non-consecutive months abroad, unless justified</td>
+            </tr>
+            <tr>
+              <th scope="row">Renewing your permit</th>
+              <td>Getting the next 3-year permit</td>
+              <td>You must still meet the conditions, including carrying out the activity in Portugal</td>
+            </tr>
+            <tr>
+              <th scope="row">Counting time for citizenship</th>
+              <td>Building up 10 years of legal residence</td>
+              <td>Time with a valid permit counts, within a 12-year window</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The 10-year rule, including the 12-year window, is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What "no minimum stay" claims mean</h2>
+      <p>Some providers say their package needs "no minimum stay" or only a few days a year. The usual argument is that time abroad for the business counts as a justified absence.</p>
+      <p>What we know:</p>
+      <ul>
+        <li>The law does allow justified absences.</li>
+        <li>It does not list business travel for an incubator project as an automatic justification.</li>
+        <li>Travel for the company, or for other work, does not cancel the permit if you can prove that activity.</li>
+        <li>A longer absence should be justified to AIMA before you leave, or afterwards in exceptional cases.</li>
+        <li>Your permit depends on carrying out a highly qualified activity in Portugal. A role that happens mostly abroad may not meet that condition at renewal.</li>
+      </ul>
+      <div class="unknowns">
+        <UnknownsBox level={3}>
+          <p>We have not found an official ruling or guidance confirming that HQA package holders can live mainly outside Portugal. If a provider makes this claim, ask for it in writing, with the legal basis, and have your own lawyer review it.</p>
+        </UnknownsBox>
+      </div>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Golden Visa and HQA compared</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>HQA permit</th>
+              <th>Golden Visa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Minimum time in Portugal</th>
+              <td>Live there; absence limits apply</td>
+              <td>7 days in year 1, then 14 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Suits someone who</th>
+              <td>Is moving to Portugal</td>
+              <td>Wants a backup residence</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Tax residence is a separate question</h2>
+      <p>Living in Portugal can make you a Portuguese tax resident. Portugal generally treats you as resident if you spend more than 183 days there in a 12-month period, or keep a home there you intend to use as your main residence. Tax residence can bring tax benefits, such as IFICI if you qualify, and also tax duties. Get tax advice before you move.</p>
+      <p class="action-line"><Button href="/guides/hqa-visa-ifici-tax" variant="text">HQA visa and IFICI tax</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Ask the right questions"
+    paragraph="Our free HQA due diligence checklist includes the presence questions to ask any provider."
+  >
+    <ChecklistForm idPrefix="presence-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal or tax advice. Speak to a qualified Portuguese lawyer and tax adviser before you plan your time in and out of Portugal.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,327 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import PageHero from "../components/PageHero.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import hero from "../assets/images/lisbon-praca-do-comercio-arch.webp";
+
+const lastVerified = verifiedOn("/portugal-hqa-vs-golden-visa");
+
+const description =
+  "Portugal HQA vs Golden Visa in 2026: about €175,000 against legal options of €250,000 to €500,000. Citizenship takes 10 years, or 7 for EU and CPLP nationals.";
+
+const heroAlt = "Rua Augusta Arch on Praça do Comércio in Lisbon";
+const headline = "Portugal HQA vs Golden Visa: Cost, Stay and Citizenship";
+const pageUrl = "https://portugalhqacitizenship.com/portugal-hqa-vs-golden-visa";
+
+const ogImage = await getImage({
+  src: hero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "Is the HQA visa cheaper than the Golden Visa?",
+    answer:
+      "The main amount is lower: about €175,000 for an HQA package against €500,000 for the Golden Visa fund route. Fees, risk and time in Portugal also differ.",
+  },
+  {
+    question: "Which is faster to citizenship?",
+    answer:
+      "Neither. Both need 10 years of legal residence for most applicants, or 7 for EU and CPLP nationals.",
+  },
+  {
+    question: "Can I keep living in the US with the HQA visa?",
+    answer:
+      "Not for most of the year. A temporary permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified.",
+  },
+  {
+    question: "Can I still buy property for a Golden Visa?",
+    answer: "No. Real estate routes closed to new applicants on 7 October 2023.",
+  },
+  {
+    question: "Can I switch from one route to the other later?",
+    answer:
+      "Possibly, but each route has its own conditions. Ask a Portuguese lawyer before you plan on it.",
+  },
+];
+---
+
+<BaseLayout
+  title="Portugal HQA vs Golden Visa - Cost, Stay and Citizenship"
+  metaTitle="Portugal HQA vs Golden Visa - Cost, Stay and Citizenship | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/portugal-hqa-vs-golden-visa"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={heroAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "Portugal HQA vs Golden Visa comes down to one trade-off: money against time in Portugal. An HQA investment package costs about €175,000, but you must not be away for more than 6 months in a row or 8 months in total during each permit. The Golden Visa fund route costs €500,000, but you only need to spend 7 days in Portugal in the first year and 14 days after that. Both routes now lead to citizenship after 10 years of legal residence for most applicants.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageHero
+    title={headline}
+    photo={hero}
+    photoAlt={heroAlt}
+    verified={lastVerified}
+    path="/portugal-hqa-vs-golden-visa"
+    maxWidth={960}
+    priority
+  >
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "HQA vs Golden Visa", href: "/portugal-hqa-vs-golden-visa" },
+      ]}
+    />
+    <p class="lead" slot="lead">
+      Portugal HQA vs Golden Visa comes down to one trade-off: money against time in Portugal. An HQA investment package costs about €175,000, but you must not be away for more than 6 months in a row or 8 months in total during each permit. The Golden Visa fund route costs €500,000, but you only need to spend 7 days in Portugal in the first year and 14 days after that. Both routes now lead to citizenship after 10 years of legal residence for most applicants.
+    </p>
+    <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
+  </PageHero>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "Different legal basis.",
+          text: "HQA uses articles 61 and 90 of Lei 23/2007. The Golden Visa uses article 90-A.",
+        },
+        {
+          lead: "Only the Golden Visa has a legal minimum.",
+          text: "€500,000 for the fund route. The HQA price is set by private providers.",
+        },
+        {
+          lead: "Very different stay rules.",
+          text: "The Golden Visa needs 7 days in year 1, then 14 days. An HQA permit can be cancelled after more than 6 consecutive months, or 8 months in total, abroad.",
+        },
+        {
+          lead: "Same citizenship wait.",
+          text: "10 years of legal residence, or 7 for EU and CPLP nationals.",
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <section class="container section">
+<div class="measure">
+<h2>Side by side</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <colgroup>
+            <col class="label-col" />
+            <col />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th></th>
+              <th>HQA investment package</th>
+              <th>Golden Visa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Legal basis</th>
+              <td>Articles 61 and 90, Lei 23/2007</td>
+              <td>Article 90-A, Lei 23/2007</td>
+            </tr>
+            <tr>
+              <th scope="row">Minimum set by law</th>
+              <td>None</td>
+              <td>€250,000 to €500,000, depending on the option</td>
+            </tr>
+            <tr>
+              <th scope="row">Typical cost</th>
+              <td>About €175,000 (private price)</td>
+              <td>€500,000 for the fund route</td>
+            </tr>
+            <tr>
+              <th scope="row">What the money buys</th>
+              <td>A company and a research project</td>
+              <td>Fund units, research funding, culture support or a business</td>
+            </tr>
+            <tr>
+              <th scope="row">Is the money at risk?</th>
+              <td>Yes, it funds a young business</td>
+              <td>Yes, fund values can fall</td>
+            </tr>
+            <tr>
+              <th scope="row">Time in Portugal</th>
+              <td>More than 6 consecutive months, or 8 months in total, abroad can cost the permit</td>
+              <td>7 days in year 1, then 14 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Family</th>
+              <td>Art. 90 families exempt from the 2-year wait</td>
+              <td>Exempt from the 2-year wait</td>
+            </tr>
+            <tr>
+              <th scope="row">First permit</th>
+              <td>2 years</td>
+              <td>2 years</td>
+            </tr>
+            <tr>
+              <th scope="row">Renewal</th>
+              <td>Renewed every 3 years</td>
+              <td>Renewed every 2 years</td>
+            </tr>
+            <tr>
+              <th scope="row">Permanent residence</th>
+              <td>After 5 years</td>
+              <td>After 5 years</td>
+            </tr>
+            <tr>
+              <th scope="row">Citizenship</th>
+              <td>10 years of legal residence (7 for EU and CPLP)</td>
+              <td>10 years of legal residence (7 for EU and CPLP)</td>
+            </tr>
+            <tr>
+              <th scope="row">Tax (IFICI)</th>
+              <td>Possible if your role qualifies</td>
+              <td>Not linked to the visa</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The package price is explained on the <a href="/hqa-visa-cost">cost page</a>. Absence limits are explained on the <a href="/guides/hqa-visa-presence-requirements">presence page</a>. The 2-year family rule is explained on the <a href="/hqa-visa-family">family page</a>. The 10-year citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>. IFICI is explained in the <a href="/guides/hqa-visa-ifici-tax">IFICI guide</a>.</p>
+    </div>
+</section>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>Golden Visa options in 2026</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Minimum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Qualifying investment funds</td>
+              <td>€500,000</td>
+            </tr>
+            <tr>
+              <td>Scientific research</td>
+              <td>€500,000</td>
+            </tr>
+            <tr>
+              <td>Arts and cultural heritage</td>
+              <td>€250,000</td>
+            </tr>
+            <tr>
+              <td>Company investment with 5 jobs</td>
+              <td>€500,000</td>
+            </tr>
+            <tr>
+              <td>Creating 10 jobs</td>
+              <td>No amount, 10 jobs</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>Real estate routes closed to new applicants on 7 October 2023.</p>
+<p>The job, research and culture amounts can be 20% lower in low-density areas. The fund and company routes are not reduced.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Which route fits you</h2>
+      <div class="fit-pair">
+        <div>
+          <p><strong>The HQA package can fit if you:</strong></p>
+          <ul>
+            <li>Want to live in Portugal and work on a real project</li>
+            <li>Prefer a lower upfront amount</li>
+            <li>Accept that the money funds a business that may fail</li>
+            <li>May qualify for IFICI tax treatment through your role</li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>The Golden Visa can fit if you:</strong></p>
+          <ul>
+            <li>Want to keep living mainly in another country</li>
+            <li>Can invest €500,000 or more</li>
+            <li>Want a route set out with a minimum in law</li>
+            <li>Want a residence permit as a backup plan, not a move</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What both routes have in common</h2>
+      <ul>
+        <li><strong>Neither guarantees citizenship.</strong> Both need 10 years of legal residence for most people, plus language and other requirements.</li>
+        <li><strong>Both carry investment risk.</strong> A young company can fail. Fund values can fall.</li>
+        <li><strong>Both depend on AIMA.</strong> AIMA's legal deadline to decide is 90 days, extendable by 30.</li>
+      </ul>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Compare providers properly"
+    paragraph="Our free HQA due diligence checklist lists the questions to ask any HQA provider before you compare it with a Golden Visa fund."
+  >
+    <ChecklistForm idPrefix="vs-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal, tax or investment advice. Speak to a qualified Portuguese lawyer before you commit money.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

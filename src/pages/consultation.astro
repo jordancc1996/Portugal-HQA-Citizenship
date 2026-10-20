@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ConsultationForm from "../components/ConsultationForm.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const description =
+  "HQA visa consultation for investors: tell us about your plans and, with your consent, we introduce you to advisors or providers. No fees paid to us, ever.";
+
+const headline = "HQA Visa Consultation: Request a Private Introduction";
+const lead =
+  "An HQA visa consultation here is a request for an introduction to an independent advisor or provider. Tell us about your plans, and with your consent we introduce you to advisors or providers who work on the highly qualified activity route. We take no referral fees or commissions, so we have no reason to push you toward any one of them.";
+const pageUrl = "https://portugalhqacitizenship.com/consultation";
+const lastVerified = verifiedOn("/consultation");
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+---
+
+<BaseLayout
+  title="HQA Visa Consultation - Request a Private Introduction"
+  metaTitle="HQA Visa Consultation - Request a Private Introduction | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/consultation"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Consultation", href: "/consultation" },
+      ]}
+  />
+  <p class="lead" slot="lead">{lead}</p>
+</PageIntro>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure">
+      <h2>How it works</h2>
+      <ol>
+        <li>You fill in the form below.</li>
+        <li>We read your request and reply by email.</li>
+        <li>If you agree, we introduce you to one or more advisors or providers who fit your situation.</li>
+        <li>You decide whether to work with them. Any agreement is between you and them.</li>
+      </ol>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What to know first</h2>
+      <ul>
+        <li>We are not a law firm and we do not give legal advice.</li>
+        <li>We are paid nothing for introductions.</li>
+        <li>We share your details only if you tick the sharing box, and only with the advisors or providers we introduce.</li>
+        <li>We recommend you also hire your own independent Portuguese lawyer before you sign anything.</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Request a consultation</h2>
+      <ConsultationForm idPrefix="consult" />
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Before you speak to anyone</h2>
+      <p>Read our <a href="/hqa-visa-due-diligence">due diligence guide</a> and download the free checklist, so you know which questions to ask.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

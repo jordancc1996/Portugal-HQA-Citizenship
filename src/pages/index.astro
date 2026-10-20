@@ -1,0 +1,345 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import Button from "../components/Button.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import GuideList from "../components/GuideList.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { pages, verifiedOn } from "../data/pages";
+import hero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/");
+
+const description =
+  "Portugal HQA visa facts for investors in 2026. No legal minimum investment, private packages near €175,000 and a 10-year path to Portuguese citizenship.";
+
+const heroAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: hero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const pageFiles = import.meta.glob(["./**/*.astro", "!./index.astro"]);
+
+function pageExists(url: string) {
+  const relative = url.replace(/^\//, "");
+  return `./${relative}.astro` in pageFiles || `./${relative}/index.astro` in pageFiles;
+}
+
+const guides = pages
+  .filter((page) => page.url !== "/" && page.listOnHome !== false && pageExists(page.url))
+  .map((page) => ({
+    href: page.url,
+    title: page.title,
+    verified: page.lastVerified,
+  }));
+
+const faqItems = [
+  {
+    question: "Is the HQA visa a real visa?",
+    answer:
+      'The underlying visa and permit are real and are set out in articles 61 and 90 of Lei 23/2007. "HQA visa" is an informal label, not an official program name.',
+  },
+  {
+    question: "Is €175,000 the official minimum?",
+    answer:
+      "No. Portuguese law sets no minimum investment for this route. €175,000 is the price private providers commonly charge for their packages.",
+  },
+  {
+    question: "How long until I can get Portuguese citizenship?",
+    answer:
+      "Under Lei Orgânica 1/2026, in force since 19 May 2026, most applicants need 10 years of legal residence. EU and CPLP nationals need 7.",
+  },
+  {
+    question: "Can I bring my family?",
+    answer:
+      "Yes. Family members of article 90 permit holders are exempt from the 2-year waiting period that applies to most other permits since October 2025.",
+  },
+  {
+    question: "Do I need to live in Portugal?",
+    answer:
+      "Yes. A temporary permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified.",
+  },
+];
+---
+
+<BaseLayout
+  title="Portugal HQA Visa - Independent Guide"
+  metaTitle="Portugal HQA Visa - Independent Guide | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={heroAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: "Portugal HQA Visa: An Independent, Verified Guide",
+      description,
+      url: "https://portugalhqacitizenship.com/",
+    },
+  ]}
+>
+  <PageHero
+    title="Portugal HQA Visa: An Independent, Verified Guide"
+    photo={hero}
+    photoAlt={heroAlt}
+    verified={lastVerified}
+    path="/"
+    maxWidth={960}
+    priority
+  >
+    <p class="lead" slot="lead">
+      The Portugal HQA visa is a residence route for highly qualified activity, and Portuguese law sets no minimum investment for it. Private providers sell packages priced near €175,000 as one way to use the route. This site explains what those packages are, what they are not, and how long the road to a Portuguese passport now takes.
+    </p>
+    <Button slot="actions" href="#checklist">Get the due diligence checklist</Button>
+    <Button slot="actions" href="/portugal-hqa-visa-investment" variant="text">Read the investment guide</Button>
+    <p class="small disclaimer" slot="disclaimer">
+      This site gives general information, not legal, tax or investment advice. Rules change. Speak to a qualified Portuguese lawyer before you commit money.
+    </p>
+  </PageHero>
+
+  <div class="container facts">
+        <div class="wide">
+<KeyFacts
+      items={[
+        {
+          lead: "No legal minimum investment.",
+          text: "The route rests on articles 61 and 90 of Portugal's immigration law (Lei 23/2007). No article sets an investment amount.",
+        },
+        {
+          lead: "€175,000 is a private price.",
+          text: "Incubator and university research packages are sold at about €170,000 to €200,000. The price is set by providers, not by law.",
+        },
+        {
+          lead: "Citizenship takes 10 years.",
+          text: "Since 19 May 2026, most applicants need 10 years of legal residence. EU and CPLP nationals need 7.",
+        },
+        {
+          lead: "You have to live in Portugal.",
+          text: "More than 6 consecutive months, or 8 months in total, abroad can cost you the permit. The Golden Visa's 7-day rule does not apply.",
+        },
+      ]}
+    />
+        </div>
+    <div class="measure">
+<p class="sources">
+      Sources: Lei 23/2007, Lei Orgânica 1/2026. Package prices are reported by providers. See <a href="/methodology">how we verify</a>.
+    </p>
+        </div>
+  </div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+      <h2>What the HQA visa actually is</h2>
+      <p>"HQA" stands for highly qualified activity. It is not the name of a law or a government program. It is a label for two legal tools:</p>
+      <ul>
+        <li><strong>The D3 residence visa</strong> (article 61), which lets you enter Portugal to carry out highly qualified work.</li>
+        <li><strong>The residence permit for highly qualified activity</strong> (article 90), which lets you stay and renew.</li>
+      </ul>
+      <p>These tools were built for skilled workers, researchers and founders. An investment package is one way to qualify, not the only one. A job contract with a Portuguese employer that meets the salary and qualification rules can lead to the same permit with no investment at all.</p>
+      <p class="action-line"><Button href="/guides/what-is-hqa-visa" variant="text">What is the HQA visa?</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What the €175,000 packages are</h2>
+      <p>Private providers combine several services into one price:</p>
+      <ul>
+        <li>Setting up a Portuguese company</li>
+        <li>A place in a certified incubator</li>
+        <li>A research and development project with a Portuguese university or research center</li>
+        <li>Legal and filing fees</li>
+      </ul>
+      <p>In the packages we researched, the money funds a company and a research project. It is risk capital, not a deposit. Refund terms differ from provider to provider, and some packages are fully non-refundable. Ask for the contract before you pay anything.</p>
+      <p class="action-line"><Button href="/hqa-visa-cost" variant="text">See the full cost breakdown</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>The honest timeline</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>When</th>
+              <th>What happens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Visa</td>
+              <td>Months 2 to 4 (provider estimate)</td>
+              <td>D3 visa at a Portuguese consulate</td>
+            </tr>
+            <tr>
+              <td>First permit</td>
+              <td>Year 0</td>
+              <td>AIMA issues a 2-year residence permit</td>
+            </tr>
+            <tr>
+              <td>Renewals</td>
+              <td>Years 2 and 5</td>
+              <td>Renewed for 3 years at a time</td>
+            </tr>
+            <tr>
+              <td>Permanent residence</td>
+              <td>Year 5</td>
+              <td>Possible with basic Portuguese and other conditions</td>
+            </tr>
+            <tr>
+              <td>Citizenship</td>
+              <td>Year 10</td>
+              <td>10 years of legal residence (7 for EU and CPLP nationals)</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<div class="unknowns">
+        <UnknownsBox>
+          <p>The new nationality law removed the old rule that counted time from your permit application. Several law firms say the clock now starts when your first residence card is issued. The law text does not say this directly. We will update this page when the government publishes its implementing rules.</p>
+        </UnknownsBox>
+      </div>
+      <p class="action-line"><Button href="/guides/hqa-visa-citizenship-10-year-rule" variant="text">Citizenship under the 10-year rule</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Who this route suits, and who it does not</h2>
+      <div class="suit">
+        <div>
+          <p><strong>It can suit you if:</strong></p>
+          <ul>
+            <li>You have a real business or research idea you want to build in Portugal</li>
+            <li>You plan to live in Portugal for most of the year</li>
+            <li>You can treat the investment as money at risk</li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>It is likely the wrong route if:</strong></p>
+          <ul>
+            <li>You want a residence permit with minimal time in Portugal</li>
+            <li>You need to be certain of getting your capital back</li>
+            <li>You want a passport in less than 10 years (7 for EU and CPLP nationals)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>HQA packages and the Golden Visa</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>HQA investment package</th>
+              <th>Golden Visa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Minimum set by law</th>
+              <td>None</td>
+              <td>€250,000 to €500,000, depending on the option</td>
+            </tr>
+            <tr>
+              <th scope="row">Typical cost</th>
+              <td>About €175,000 (private price)</td>
+              <td>€500,000 for the fund route</td>
+            </tr>
+            <tr>
+              <th scope="row">Time in Portugal</th>
+              <td>Live there; long absences can cost the permit</td>
+              <td>7 days in year 1, then 14 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Family waiting period</th>
+              <td>None for art. 90 holders</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th scope="row">Citizenship</th>
+              <td>10 years of legal residence</td>
+              <td>10 years of legal residence</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Full comparison</Button></p>
+    </div>
+</section>
+  </div>
+
+  <div id="checklist">
+    <LeadMagnetBand
+      heading="Before you sign with any provider"
+      paragraph="Download our free HQA due diligence checklist. It lists the 15 questions to ask a provider, the contract terms to check and the red flags we see most often."
+    >
+      <ChecklistForm />
+    </LeadMagnetBand>
+  </div>
+
+  <div class="reading end">
+    {
+      guides.length > 0 && (
+        <section class="container section">
+<div class="measure">
+<h2>Guides</h2>
+          </div>
+<div class="wide">
+<GuideList guides={guides} />
+        </div>
+</section>
+      )
+    }
+
+    <section class="container section">
+<div class="measure">
+      <h2>How we work</h2>
+      <ul>
+        <li><strong>Independent.</strong> We take no referral fees or commissions from any provider, incubator, university or law firm.</li>
+        <li><strong>Sourced.</strong> Every legal claim names its source, and we link the official text where one exists.</li>
+        <li><strong>Legally reviewed.</strong> An independent Portuguese lawyer reviews every page. Each page shows its review date.</li>
+        <li><strong>Dated.</strong> Every page shows when we last checked it. We log changes on our <a href="/hqa-visa-status">status page</a>.</li>
+      </ul>
+      <p class="action-line"><Button href="/methodology" variant="text">Our methodology</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+  </div>
+</BaseLayout>

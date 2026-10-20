@@ -1,0 +1,40 @@
+---
+interface Props {
+  heading: string;
+  paragraph: string;
+}
+
+const { heading, paragraph } = Astro.props;
+---
+
+<section class="band">
+  <div class="container">
+    <div class="measure">
+      <h2>{heading}</h2>
+      <p>{paragraph}</p>
+      <div class="slot">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .band {
+    background: var(--color-cream);
+    margin-top: var(--space-section);
+    padding-block: var(--space-section);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .slot {
+    margin-top: 1.5rem;
+  }
+</style>

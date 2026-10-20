@@ -1,0 +1,36 @@
+<div class="table-wrap">
+  <p class="small table-hint">Scroll sideways to see the full table.</p>
+  <div class="table-scroller" tabindex="0">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .table-hint {
+    margin: 0 0 0.5rem;
+  }
+
+  .table-scroller {
+    overflow-x: auto;
+  }
+
+  .table-scroller :global(table) {
+    width: 100%;
+  }
+
+  @media (max-width: 47.99rem) {
+    .table-scroller :global(table) {
+      min-width: 40rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .table-hint {
+      display: none;
+    }
+
+    .table-scroller {
+      overflow-x: visible;
+    }
+  }
+</style>

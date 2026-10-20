@@ -1,0 +1,14 @@
+---
+description: Core rules for portugalhqacitizenship.com
+alwaysApply: true
+---
+
+Before any task, read AGENTS.md in the repo root and follow it exactly.
+
+Most important:
+- Honesty overrides SEO. Never invent facts, fees, dates, reviews or testimonials.
+- Program facts only from src/data/facts.ts. Approved copy in docs/content/ is used word for word.
+- Never write HQA® or HQA™. No company name anywhere.
+- No em dashes. No lazy loading. One H1 in Title Case, H2 to H6 in sentence case.
+- Run the 5-location keyword check on every page.
+- Run `npm run build` after changes. Never commit, push or deploy unless asked.

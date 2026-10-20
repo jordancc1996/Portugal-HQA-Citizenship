@@ -1,0 +1,389 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Button from "../components/Button.astro";
+import PageIntro from "../components/PageIntro.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const lastVerified = verifiedOn("/hqa-visa-cost");
+
+const description =
+  "HQA visa Portugal cost in 2026: a €175,000 package is only the start. See every other cost, who sets each one, what is refundable and what we could not verify.";
+
+const headline = "HQA Visa Portugal Cost: The Full Breakdown";
+const pageUrl = "https://portugalhqacitizenship.com/hqa-visa-cost";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "How much does the HQA visa cost in total?",
+    answer:
+      "For one person, expect about €175,000 for the package plus legal, government and document costs. A family adds €2,500 to €5,000 per person in provider fees, plus their own government fees.",
+  },
+  {
+    question: "Is €175,000 a government fee?",
+    answer:
+      "No. It is a private price for a package of services. Portuguese law sets no investment amount for this route.",
+  },
+  {
+    question: "Can I pay in installments?",
+    answer:
+      "Some providers offer staged payments. This is a contract term, not a legal rule. Get the schedule and the refund terms in writing.",
+  },
+  {
+    question: "Do I pay the €175,000 again at renewal?",
+    answer:
+      "The packages we researched are sold as a one-time price that covers about 3 years of incubation. Ask what happens after that period and what your renewal requires. You pay government fees and, usually, legal fees at each renewal.",
+  },
+  {
+    question: "Why don't you list exact government fees?",
+    answer:
+      "AIMA changed its fees on 1 March 2026. We only publish numbers we can confirm from an official source.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA Visa Portugal Cost - The Full 2026 Breakdown"
+  metaTitle="HQA Visa Portugal Cost - The Full 2026 Breakdown | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/hqa-visa-cost"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA visa Portugal cost starts with a private package of about €175,000, but it does not end there. You will also pay for family members, legal work, government fees, documents and renewals. This page lists every cost we know of, who sets it, and how sure we are of the number. Where we could not confirm a figure, we say so.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+  verified={lastVerified}
+  path="/hqa-visa-cost"
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "HQA visa cost", href: "/hqa-visa-cost" },
+      ]}
+  />
+  <p class="lead" slot="lead">
+      HQA visa Portugal cost starts with a private package of about €175,000, but it does not end there. You will also pay for family members, legal work, government fees, documents and renewals. This page lists every cost we know of, who sets it, and how sure we are of the number. Where we could not confirm a figure, we say so.
+    </p>
+  <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
+</PageIntro>
+
+  <div class="container facts">
+<div class="wide">
+    <KeyFacts
+      items={[
+        {
+          lead: "No price is set by law.",
+          text: "Portuguese law sets no minimum investment for the highly qualified activity route.",
+        },
+        {
+          lead: "Packages cost about €170,000 to €200,000.",
+          text: "€175,000 is the most common quote.",
+        },
+        {
+          lead: "Family members cost extra.",
+          text: "Providers quote about €2,500 to €5,000 per dependent.",
+        },
+        {
+          lead: "Government fees changed on 1 March 2026.",
+          text: "We have not yet confirmed the new amounts.",
+        },
+      ]}
+    />
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>Cost table</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Cost</th>
+              <th>Typical amount</th>
+              <th>Who sets it</th>
+              <th>How sure we are</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Investment package</td>
+              <td>€170,000 to €200,000</td>
+              <td>Provider</td>
+              <td>Reported by providers</td>
+            </tr>
+            <tr>
+              <td>Each family member</td>
+              <td>€2,500 to €5,000</td>
+              <td>Provider</td>
+              <td>Reported by providers</td>
+            </tr>
+            <tr>
+              <td>Your own Portuguese lawyer</td>
+              <td>€5,000 to €10,000</td>
+              <td>Lawyer</td>
+              <td>Reported, varies widely</td>
+            </tr>
+            <tr>
+              <td>D3 visa fee at the consulate</td>
+              <td>About €90 to €110 per person</td>
+              <td>Portuguese state</td>
+              <td>Not confirmed</td>
+            </tr>
+            <tr>
+              <td>AIMA residence permit fees</td>
+              <td>Several hundred euros per person</td>
+              <td>Portuguese state</td>
+              <td>Not confirmed (new table since March 2026)</td>
+            </tr>
+            <tr>
+              <td>Translations and apostilles</td>
+              <td>Depends on your documents</td>
+              <td>Translators, your home country</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Criminal record certificates</td>
+              <td>Depends on your country</td>
+              <td>Your home country</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Health insurance</td>
+              <td>Depends on age and cover</td>
+              <td>Insurer</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Permit renewals (years 2 and 5)</td>
+              <td>AIMA fees again, plus legal help</td>
+              <td>Portuguese state, lawyer</td>
+              <td>Not confirmed</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>Package prices and per-dependent fees come from provider websites. No government body publishes or checks them.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What the package price usually includes</h2>
+      <ul>
+        <li>Setting up a Portuguese company</li>
+        <li>A place in a certified incubator, often for about 3 years in the packages we researched</li>
+        <li>A research and development project with a Portuguese university or research center</li>
+        <li>Legal and filing work for the visa and first permit</li>
+      </ul>
+      <p>One provider's published breakdown splits a €175,000 package into about €150,000 for incubation and research and €25,000 for legal and setup costs. Ask your provider for a line-by-line split in writing.</p>
+      <p class="action-line"><Button href="/portugal-hqa-visa-investment" variant="text">What the €175,000 actually buys</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>What is not usually included</h2>
+      <ul>
+        <li>Your own independent lawyer</li>
+        <li>Fees for each family member</li>
+        <li>Government fees at the consulate and at AIMA</li>
+        <li>Translations, apostilles and certificates</li>
+        <li>Travel to Portugal for appointments</li>
+        <li>Housing in Portugal</li>
+        <li>Renewal costs after the first permit</li>
+        <li>Tax advice, including advice on IFICI</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Is the money refundable?</h2>
+      <p>It depends entirely on your contract. We have seen three approaches in provider terms:</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Approach</th>
+              <th>What it means</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fully non-refundable</td>
+              <td>You do not get money back, even if the visa is refused</td>
+            </tr>
+            <tr>
+              <td>Refund on refusal</td>
+              <td>Part of the money is returned if the visa is refused</td>
+            </tr>
+            <tr>
+              <td>Refund minus amounts paid out</td>
+              <td>You get back what has not yet been paid to universities or incubators</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>In the packages we researched, the money funds a company and a research project. Once it is spent, it is gone, whatever happens to your application.</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>What a family of four might pay</h2>
+      <p>This is an illustration, not a quote. It uses the reported ranges and leaves out costs we could not confirm.</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Investment package (main applicant)</td>
+              <td>€175,000</td>
+            </tr>
+            <tr>
+              <td>Three family members at €2,500 to €5,000 each</td>
+              <td>€7,500 to €15,000</td>
+            </tr>
+            <tr>
+              <td>Independent Portuguese lawyer</td>
+              <td>€5,000 to €10,000</td>
+            </tr>
+            <tr class="subtotal">
+              <td>Subtotal before government fees and documents</td>
+              <td>€187,500 to €200,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>Government fees, translations, insurance, travel and housing come on top.</p>
+      <div class="unknowns">
+        <UnknownsBox>
+          <p>AIMA introduced a new fee table on 1 March 2026. We have not been able to confirm the new amounts from an official source. We will update this page when we do.</p>
+        </UnknownsBox>
+      </div>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>How this compares to the Golden Visa</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>HQA investment package</th>
+              <th>Golden Visa fund route</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Main amount</th>
+              <td>About €175,000</td>
+              <td>€500,000</td>
+            </tr>
+            <tr>
+              <th scope="row">Set by</th>
+              <td>Provider</td>
+              <td>Law</td>
+            </tr>
+            <tr>
+              <th scope="row">What it buys</th>
+              <td>A company and a research project</td>
+              <td>Fund units you may sell later</td>
+            </tr>
+            <tr>
+              <th scope="row">Government fees</th>
+              <td>Standard residence permit fees</td>
+              <td>Much higher Golden Visa fees</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Check the contract before you pay"
+    paragraph="Our free HQA due diligence checklist lists the cost and refund questions to ask any provider."
+  >
+    <ChecklistForm idPrefix="cost-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal, tax or investment advice. Prices change and differ by provider. Speak to a qualified Portuguese lawyer before you commit money.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

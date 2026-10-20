@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portugalhqacitizenship.com/sitemap-index.xml

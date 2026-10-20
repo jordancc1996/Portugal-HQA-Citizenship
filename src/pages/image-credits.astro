@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { getImage } from "astro:assets";
+import { imageCredits } from "../data/image-credits";
+import { pages, verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const description =
+  "Photographers whose Unsplash photos appear on Portugal HQA Citizenship, with links to each original photo. All photos are used under the Unsplash License.";
+
+const headline = "Image Credits";
+const lead =
+  "All photos on this site come from Unsplash and are used under the Unsplash License. Thank you to these photographers.";
+const pageUrl = "https://portugalhqacitizenship.com/image-credits";
+const lastVerified = verifiedOn("/image-credits");
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const credits = imageCredits.map((credit) => {
+  const match = pages.find((item) => item.url === credit.page);
+  const label = credit.page === "/" ? "Home" : (match?.title ?? credit.page);
+  return { ...credit, label };
+});
+---
+
+<BaseLayout
+  title="Image Credits"
+  metaTitle="Image Credits | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/image-credits"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Image credits", href: "/image-credits" },
+      ]}
+  />
+  <p class="lead" slot="lead">{lead}</p>
+</PageIntro>
+
+  <section class="container section">
+    <div class="measure">
+    <ul class="credits">
+      {
+        credits.map((credit) => (
+          <li>
+            <p>{credit.description}</p>
+            <p>{credit.photographer}</p>
+            <p>
+              <a href={credit.unsplashUrl} rel="noopener" target="_blank">Unsplash</a>
+            </p>
+            <p>
+              Used on <a href={credit.page}>{credit.label}</a>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+    </div>
+  </section>
+</BaseLayout>

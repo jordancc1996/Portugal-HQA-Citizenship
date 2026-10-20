@@ -1,0 +1,290 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageHero from "../../components/PageHero.astro";
+import Button from "../../components/Button.astro";
+import KeyFacts from "../../components/KeyFacts.astro";
+import Table from "../../components/Table.astro";
+import UnknownsBox from "../../components/UnknownsBox.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import FAQ from "../../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../../data/pages";
+import hero from "../../assets/images/assembleia-da-republica-lisbon.webp";
+
+const lastVerified = verifiedOn("/guides/hqa-visa-citizenship-10-year-rule");
+
+const description =
+  "HQA visa citizenship now takes 10 years of legal residence under Portugal's law in force since 19 May 2026. See the timeline, the tests and what is unclear.";
+
+const heroAlt = "São Bento Palace, home of Portugal's parliament, in Lisbon";
+const headline = "HQA Visa Citizenship: The 10-Year Rule Explained";
+const pageUrl = "https://portugalhqacitizenship.com/guides/hqa-visa-citizenship-10-year-rule";
+
+const ogImage = await getImage({
+  src: hero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "How long does HQA visa citizenship take now?",
+    answer: "Most applicants need 10 years of legal residence. EU and CPLP nationals need 7 years.",
+  },
+  {
+    question: "I already applied for citizenship before 19 May 2026. Does the new rule apply to me?",
+    answer: "No. Applications already pending on 19 May 2026 are decided under the previous rules.",
+  },
+  {
+    question: "I had 5 years of residence on 19 May 2026 but had not applied. Am I protected?",
+    answer:
+      "No. The transition rule covers pending applications only. If you had not applied by that date, the new rules apply to you.",
+  },
+  {
+    question: "Can I keep my current citizenship?",
+    answer:
+      "Portugal allows dual citizenship. Whether you can keep your current citizenship depends on the law of your own country.",
+  },
+  {
+    question: "Is permanent residence the same as citizenship?",
+    answer:
+      "No. Permanent residence is possible after 5 years and lets you stop renewing a temporary permit. Citizenship needs 10 years for most people and gives you a Portuguese passport.",
+  },
+];
+---
+
+<BaseLayout
+  title="HQA Visa Citizenship - The 10-Year Rule Explained"
+  metaTitle="HQA Visa Citizenship - The 10-Year Rule Explained | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/guides/hqa-visa-citizenship-10-year-rule"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={heroAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU and CPLP nationals need 7 years. Many websites still promise a passport after 5 years. That is no longer true for new applications.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageHero
+    title={headline}
+    photo={hero}
+    photoAlt={heroAlt}
+    verified={lastVerified}
+    path="/guides/hqa-visa-citizenship-10-year-rule"
+    maxWidth={960}
+    priority
+  >
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "Guides", href: "/guides" },
+        { name: "HQA visa citizenship", href: "/guides/hqa-visa-citizenship-10-year-rule" },
+      ]}
+    />
+    <p class="lead" slot="lead">
+      HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU and CPLP nationals need 7 years. Many websites still promise a passport after 5 years. That is no longer true for new applications.
+    </p>
+    <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
+  </PageHero>
+
+  <div class="container facts">
+<div class="wide">
+<KeyFacts
+      items={[
+        {
+          lead: "10 years for most people.",
+          text: "Applicants from outside the EU and the CPLP need 10 years of legal residence.",
+        },
+        {
+          lead: "7 years for EU and CPLP nationals.",
+          text: "CPLP is the community of Portuguese-speaking countries, including Brazil.",
+        },
+        {
+          lead: "In force since 19 May 2026.",
+          text: "The law was published on 18 May 2026.",
+        },
+        {
+          lead: "Pending applications keep the old rules.",
+          text: "Applications already pending on 19 May 2026 are decided under the previous law.",
+        },
+      ]}
+    />
+    </div>
+<div class="measure">
+<p class="sources">Source: Lei Orgânica n.º 1/2026, Diário da República n.º 95/2026.</p>
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>What changed</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Before 19 May 2026</th>
+              <th>From 19 May 2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Legal residence needed (most nationals)</th>
+              <td>5 years</td>
+              <td>10 years</td>
+            </tr>
+            <tr>
+              <th scope="row">Legal residence needed (EU and CPLP nationals)</th>
+              <td>5 years</td>
+              <td>7 years</td>
+            </tr>
+            <tr>
+              <th scope="row">When the clock started</th>
+              <td>Counted from the permit application, under a 2024 rule</td>
+              <td>That 2024 rule was revoked</td>
+            </tr>
+            <tr>
+              <th scope="row">Applications already filed</th>
+              <td>Old rules</td>
+              <td>Old rules still apply if pending on 19 May 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The law also allows breaks. All periods of legal residence are added together, as long as they fall within a window of 12 years (9 years for EU and CPLP nationals).</p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Your timeline on the HQA route</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Milestone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>First residence permit, valid 2 years</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Renewal for 3 years</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Renewal for 3 years, or permanent residence if you qualify</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Renewal (if you did not take permanent residence)</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Earliest citizenship application for most nationals</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p><a href="/guides/hqa-visa-permanent-residency">Permanent residence</a> after 5 years lets you stop renewing a temporary permit. It does not shorten the 10-year wait for citizenship.</p>
+    </div>
+</section>
+
+    <div class="container section">
+<div class="measure">
+      <UnknownsBox level={2}>
+        <p><strong>When the clock starts.</strong> The old rule that counted time from your permit application was revoked. Several law firms say the clock now starts when your first residence card is issued. The law text does not say this directly. It defines legal residence as living in Portugal with your situation regularised under any visa or permit. Whether time on your D3 visa, or time spent waiting for AIMA, counts is not settled.</p>
+        <p><strong>The implementing rules.</strong> The government must update the nationality regulation to apply the new law. Until it does, details such as the language level and test format are not final.</p>
+        <p>We will update this page when these points are settled.</p>
+      </UnknownsBox>
+    </div>
+</div>
+
+    <section class="container section">
+<div class="measure">
+      <h2>The other requirements for citizenship</h2>
+      <ul>
+        <li><strong>Language.</strong> You must show knowledge of Portuguese through a test or certificate. The required level is set by regulation, not by the law itself.</li>
+        <li><strong>Knowledge of rights and duties.</strong> A test of civic knowledge is part of the new law.</li>
+        <li><strong>Means of support.</strong> You must show you can support yourself.</li>
+        <li><strong>Criminal record.</strong> A final conviction with an effective prison sentence of more than 3 years for certain serious crimes can block an application.</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>How the law got here</h2>
+      <ul>
+        <li><strong>December 2025.</strong> Portugal's Constitutional Court struck down 4 rules in an earlier version of the law (Acórdão 1133/2025 of 15 December 2025). One of them would have applied the new rules to applications already pending.</li>
+        <li><strong>18 May 2026.</strong> Parliament's revised law was published as Lei Orgânica n.º 1/2026.</li>
+        <li><strong>19 May 2026.</strong> The law came into force.</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Does the Golden Visa get you citizenship faster?</h2>
+      <p>No. Golden Visa holders follow the same 10-year rule (7 years for EU and CPLP nationals). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.</p>
+      <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Plan with the real timeline"
+    paragraph="Our free HQA due diligence checklist includes the questions to ask any provider about the citizenship path."
+  >
+    <ChecklistForm idPrefix="citizenship-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your own timeline.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

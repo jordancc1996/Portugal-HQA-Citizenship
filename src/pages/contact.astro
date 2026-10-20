@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { getImage } from "astro:assets";
+import { siteConfig } from "../data/site";
+import { verifiedOn } from "../data/pages";
+import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+
+const description =
+  "Contact Portugal HQA Citizenship by email for corrections, questions about our guides or privacy requests. For introductions, use the consultation page.";
+
+const headline = "Contact Portugal HQA Citizenship";
+const pageUrl = "https://portugalhqacitizenship.com/contact";
+const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const mailto = `mailto:${siteConfig.contactEmail}`;
+const lastVerified = verifiedOn("/contact");
+
+const ogImage = await getImage({
+  src: defaultHero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+---
+
+<BaseLayout
+  title="Contact Portugal HQA Citizenship"
+  metaTitle="Contact | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/contact"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={ogAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: `Contact Portugal HQA Citizenship by email at ${siteConfig.contactEmail}.`,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro
+  title={headline}
+>
+  <Breadcrumbs slot="crumbs"
+    items={[
+        { name: "Home", href: "/" },
+        { name: "Contact", href: "/contact" },
+      ]}
+  />
+  <p class="lead" slot="lead">Contact Portugal HQA Citizenship by email at <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
+</PageIntro>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure">
+      <h2>What to email us about</h2>
+      <ul>
+        <li><strong>Corrections.</strong> Tell us the page and the source. We check every report.</li>
+        <li><strong>Questions about our guides.</strong> We answer general questions, but we cannot give legal advice.</li>
+        <li><strong>Privacy requests.</strong> To see, correct or delete your data, or to withdraw consent.</li>
+      </ul>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Looking for advice on your situation?</h2>
+      <p>Use our <a href="/consultation">consultation page</a>. With your consent, we can introduce you to advisors or providers. We take no fees for introductions.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

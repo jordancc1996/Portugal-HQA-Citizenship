@@ -1,0 +1,380 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import PageHero from "../components/PageHero.astro";
+import Button from "../components/Button.astro";
+import KeyFacts from "../components/KeyFacts.astro";
+import Table from "../components/Table.astro";
+import UnknownsBox from "../components/UnknownsBox.astro";
+import LeadMagnetBand from "../components/LeadMagnetBand.astro";
+import ChecklistForm from "../components/ChecklistForm.astro";
+import FAQ from "../components/FAQ.astro";
+import { getImage } from "astro:assets";
+import { verifiedOn } from "../data/pages";
+import hero from "../assets/images/university-of-coimbra-paco-das-escolas.webp";
+
+const lastVerified = verifiedOn("/portugal-hqa-visa-investment");
+
+const description =
+  "Portugal HQA visa investment explained for 2026: what a €175,000 package pays for, why no legal minimum exists, the risks, and the 10-year citizenship path.";
+
+const heroAlt = "Paço das Escolas courtyard at the University of Coimbra";
+const pageUrl = "https://portugalhqacitizenship.com/portugal-hqa-visa-investment";
+const headline = "Portugal HQA Visa Investment: What €175,000 Actually Buys";
+
+const ogImage = await getImage({
+  src: hero,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "jpg",
+  quality: 82,
+  layout: "none",
+});
+
+const faqItems = [
+  {
+    question: "How much is the Portugal HQA visa investment?",
+    answer:
+      "Portuguese law sets no amount. Private packages cost about €170,000 to €200,000, most often €175,000, plus fees for each family member.",
+  },
+  {
+    question: "Do I get my €175,000 back?",
+    answer:
+      "Not necessarily. The money funds a company and research. Refund terms depend on your contract, and some packages are fully non-refundable.",
+  },
+  {
+    question: "Is the HQA visa investment a government program?",
+    answer:
+      "No. The residence visa and permit are set in Portuguese law, but the investment packages are private products sold by providers.",
+  },
+  {
+    question: "Does the HQA investment lead to citizenship?",
+    answer:
+      "It can, over time. Most applicants need 10 years of legal residence, plus Portuguese language and other requirements. EU and CPLP nationals need 7 years.",
+  },
+  {
+    question: "Can my family come with me?",
+    answer:
+      "Yes. Family members of article 90 permit holders are exempt from the 2-year waiting period that applies to most permits since October 2025. Confirm which article your file uses.",
+  },
+  {
+    question: "Is it cheaper than the Golden Visa?",
+    answer:
+      "The upfront amount is lower: about €175,000 against €500,000 for the fund route. But you must live in Portugal, and the money is at risk in a business.",
+  },
+];
+---
+
+<BaseLayout
+  title="Portugal HQA Visa Investment - What €175,000 Buys"
+  metaTitle="Portugal HQA Visa Investment - What €175,000 Buys | Portugal HQA Citizenship"
+  description={description}
+  canonicalPath="/portugal-hqa-visa-investment"
+  dateModified={lastVerified}
+  ogImage={ogImage.src}
+  ogImageAlt={heroAlt}
+  ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
+  ogImageHeight={Number(ogImage.attributes.height ?? 630)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description:
+        "A Portugal HQA visa investment is money you pay into a private package that sets up a Portuguese company and a research project. Portuguese law does not require that payment. The law sets no minimum investment for the highly qualified activity route. Providers charge about €170,000 to €200,000 for packages that combine a company, an incubator place, university research work and legal fees. This page explains what that money pays for, how it connects to your residence permit, what can go wrong, and what to ask before you sign.",
+      url: pageUrl,
+    },
+    {
+      "@type": "Article",
+      headline,
+      dateModified: lastVerified,
+    },
+  ]}
+>
+  <PageHero
+    title={headline}
+    photo={hero}
+    photoAlt={heroAlt}
+    verified={lastVerified}
+    path="/portugal-hqa-visa-investment"
+    maxWidth={960}
+    priority
+  >
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "HQA visa investment", href: "/portugal-hqa-visa-investment" },
+      ]}
+    />
+    <p class="lead" slot="lead">
+      A Portugal HQA visa investment is money you pay into a private package that sets up a Portuguese company and a research project. Portuguese law does not require that payment. The law sets no minimum investment for the highly qualified activity route. Providers charge about €170,000 to €200,000 for packages that combine a company, an incubator place, university research work and legal fees. This page explains what that money pays for, how it connects to your residence permit, what can go wrong, and what to ask before you sign.
+    </p>
+    <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
+  </PageHero>
+
+  <div class="container facts">
+<div class="wide">
+<KeyFacts
+      items={[
+        {
+          lead: "No legal minimum.",
+          text: "Articles 61 and 90 of Lei 23/2007 set no investment amount for highly qualified activity.",
+        },
+        {
+          lead: "The price is private.",
+          text: "Packages are sold at about €170,000 to €200,000, most often quoted at €175,000.",
+        },
+        {
+          lead: "The money is at risk.",
+          text: "In the packages we researched, the money funds a company and a research project. It is not a deposit, and returns are not promised.",
+        },
+        {
+          lead: "Citizenship takes 10 years.",
+          text: "Most applicants need 10 years of legal residence under Lei Orgânica 1/2026. EU and CPLP nationals need 7.",
+        },
+      ]}
+    />
+    </div>
+<div class="measure">
+<p class="sources">Sources: Lei 23/2007, Lei Orgânica 1/2026, provider price lists.</p>
+</div>
+</div>
+
+  <div class="reading">
+    <section class="container section">
+<div class="measure">
+<h2>What the €175,000 pays for</h2>
+      <p>Providers bundle several services into one price. The exact split differs, but most packages include:</p>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Part of the package</th>
+              <th>What it is</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Portuguese company</td>
+              <td>A new company (usually a limited company, "Lda") set up in your name</td>
+            </tr>
+            <tr>
+              <td>Incubator place</td>
+              <td>A place in a certified Portuguese incubator, often for about 3 years</td>
+            </tr>
+            <tr>
+              <td>Research project</td>
+              <td>Research and development work with a Portuguese university or research center, often including paid local researchers</td>
+            </tr>
+            <tr>
+              <td>Legal and filing work</td>
+              <td>Company setup, visa file, residence permit file</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>One provider's published breakdown splits a €175,000 package into about €150,000 for incubation and research and €25,000 for legal and setup costs. Treat any split as the provider's own figure. No government body publishes or checks these prices.</p>
+      <p>Family members usually cost extra. Providers quote about €2,500 to €5,000 for each dependent.</p>
+      <p class="action-line"><Button href="/hqa-visa-cost" variant="text">See the full cost breakdown</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>How the package connects to your residence permit</h2>
+      <p>The investment does not buy a visa. It creates the conditions for one.</p>
+      <ol>
+        <li>The package sets up a company with a research or innovation project.</li>
+        <li>You take a highly qualified role in that company or project.</li>
+        <li>You apply for a D3 residence visa at a Portuguese consulate (article 61 of Lei 23/2007).</li>
+        <li>In Portugal, AIMA, the immigration agency, issues a residence permit for highly qualified activity (article 90).</li>
+        <li>You renew the permit while you keep meeting the conditions.</li>
+      </ol>
+      <div class="unknowns">
+        <UnknownsBox>
+          <p>Providers do not always say which legal article your file uses. This matters. Families of article 90 permit holders are exempt from the 2-year family reunification wait introduced in October 2025. Holders under article 89, the StartUP Visa route, are not exempt. Ask your provider in writing which article your application uses, and have your own lawyer confirm it.</p>
+        </UnknownsBox>
+      </div>
+      <p class="action-line"><Button href="/hqa-visa-family" variant="text">Family rules for article 90</Button></p>
+      <p class="action-line"><Button href="/hqa-visa-requirements" variant="text">Requirements and who qualifies</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>The risks, stated plainly</h2>
+      <p><strong>Your money funds a business.</strong> If the company or the research fails, you can lose some or all of the investment. Nothing in Portuguese law guarantees a return.</p>
+      <p><strong>Refund terms vary.</strong> Some packages are fully non-refundable. Others refund part of the money if the visa is refused, minus amounts already paid to universities or incubators. Read the refund clause before you pay anything.</p>
+      <p><strong>Renewal depends on the conditions still being met.</strong> If the company stops operating, or loses a certification it needs, your next renewal may be at risk. The law does not spell out what happens in each case. Ask a Portuguese lawyer before you sign.</p>
+      <p><strong>You must live in Portugal.</strong> A temporary permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. Some marketing says this route needs "no minimum stay". We have not found a legal basis that makes that true for everyone.</p>
+      <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules explained</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>Timeline from investment to citizenship</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Typical timing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Package contract and company setup</td>
+              <td>Months 0 to 2</td>
+            </tr>
+            <tr>
+              <td>D3 visa at a Portuguese consulate</td>
+              <td>Months 2 to 4</td>
+            </tr>
+            <tr>
+              <td>First residence permit (2 years)</td>
+              <td>Year 0</td>
+            </tr>
+            <tr>
+              <td>Renewal (3 years)</td>
+              <td>Year 2</td>
+            </tr>
+            <tr>
+              <td>Renewal and permanent residence option</td>
+              <td>Year 5</td>
+            </tr>
+            <tr>
+              <td>Citizenship application</td>
+              <td>Year 10 (7 for EU and CPLP nationals)</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>Months 0 to 4 are typical provider estimates, not legal deadlines. AIMA's legal deadline to decide a residence application is 90 days, extendable by 30.</p>
+      <p class="action-line"><Button href="/guides/hqa-visa-citizenship-10-year-rule" variant="text">Citizenship under the 10-year rule</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Tax: IFICI is possible, not automatic</h2>
+      <p>Portugal's IFICI regime taxes eligible Portuguese work income at 20% for 10 years and exempts most foreign income. A highly qualified activity permit does not give you IFICI on its own. You qualify only if your role and your employer fit one of the eligible categories, such as a certified startup or certified research and development work. You must register by 15 January of the year after you become tax resident.</p>
+      <p class="action-line"><Button href="/guides/hqa-visa-ifici-tax" variant="text">HQA visa and IFICI tax</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+<h2>HQA package or Golden Visa fund?</h2>
+      </div>
+<div class="wide">
+<Table>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>HQA investment package</th>
+              <th>Golden Visa fund route</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Minimum set by law</th>
+              <td>None</td>
+              <td>€500,000</td>
+            </tr>
+            <tr>
+              <th scope="row">Typical cost</th>
+              <td>About €175,000</td>
+              <td>€500,000 plus fees</td>
+            </tr>
+            <tr>
+              <th scope="row">What the money buys</th>
+              <td>A company and a research project</td>
+              <td>Units in a qualifying investment fund</td>
+            </tr>
+            <tr>
+              <th scope="row">Time in Portugal</th>
+              <td>Live there; long absences can cost the permit</td>
+              <td>7 days in year 1, then 14 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Citizenship</th>
+              <td>10 years of legal residence</td>
+              <td>10 years of legal residence</td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+      </div>
+<div class="measure">
+<p>The HQA package costs less but asks more of you: you need to live in Portugal and build something real. The Golden Visa fund costs more but asks for very little time in the country.</p>
+      <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Full comparison</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Red flags in HQA marketing</h2>
+      <ul>
+        <li>Claims to act "under the authority" of the Portuguese government</li>
+        <li>Promises of approval or of a fixed return</li>
+        <li>"Citizenship in 5 years" (out of date since 19 May 2026)</li>
+        <li>"No minimum stay" with no legal explanation</li>
+        <li>References to SEF, the immigration service replaced by AIMA in October 2023</li>
+        <li>A trademark symbol on "HQA", as if one company owned the route</li>
+      </ul>
+      <p>None of these proves a provider is dishonest. Each one is a reason to ask harder questions.</p>
+      <p class="action-line"><Button href="/hqa-visa-due-diligence" variant="text">Due diligence guide</Button></p>
+    </div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Questions to ask before you sign</h2>
+      <ol>
+        <li>Which legal article will my residence application use?</li>
+        <li>What exactly does the €175,000 pay for, line by line?</li>
+        <li>Who owns the company, its equity and any research results?</li>
+        <li>What is refunded if the visa is refused, and when?</li>
+        <li>What happens to my permit if the company or research fails?</li>
+        <li>How many months a year must I spend in Portugal?</li>
+        <li>Which university or research center is involved, and can I see their agreement?</li>
+        <li>What will family members cost, and which article will their permits use?</li>
+      </ol>
+    </div>
+</section>
+  </div>
+
+  <LeadMagnetBand
+    heading="Get the full checklist"
+    paragraph="Our free HQA due diligence checklist has 15 questions, the contract terms to check and the red flags we see most often."
+  >
+    <ChecklistForm idPrefix="pillar-checklist" />
+  </LeadMagnetBand>
+
+  <div class="reading end">
+    <section class="container section">
+<div class="measure"><h2>Frequently asked questions</h2>
+      <FAQ items={faqItems} />
+    
+</div>
+</section>
+
+    <section class="container section">
+<div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal, tax or investment advice. Rules change. Speak to a qualified Portuguese lawyer before you commit money.</p>
+    </div>
+</section>
+  </div>
+</BaseLayout>

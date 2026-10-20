@@ -1,0 +1,183 @@
+---
+import type { ImageMetadata } from "astro";
+import Photo from "./Photo.astro";
+import LastVerified from "./LastVerified.astro";
+
+interface Props {
+  title: string;
+  photo: ImageMetadata;
+  photoAlt: string;
+  verified: string;
+  path: string;
+  maxWidth?: number;
+  quality?: number;
+  priority?: boolean;
+  smallAspect?: "3/2" | "4/5";
+}
+
+const {
+  title,
+  photo,
+  photoAlt,
+  verified,
+  path,
+  maxWidth = 960,
+  quality = 82,
+  priority = true,
+  smallAspect = "3/2",
+} = Astro.props;
+---
+
+<section class:list={["page-hero", smallAspect === "4/5" && "ratio-portrait"]}>
+  <div class="container">
+    {
+      Astro.slots.has("crumbs") && (
+        <div class="crumbs-wrap">
+          <slot name="crumbs" />
+        </div>
+      )
+    }
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>{title}</h1>
+        <slot name="lead" />
+        {
+          Astro.slots.has("actions") && (
+            <div class="actions">
+              <slot name="actions" />
+            </div>
+          )
+        }
+        <div class="hero-note">
+          <LastVerified verified={verified} path={path} />
+          <slot name="disclaimer" />
+        </div>
+      </div>
+      <div class="hero-media">
+        <Photo
+          src={photo}
+          alt={photoAlt}
+          priority={priority}
+          maxWidth={maxWidth}
+          quality={quality}
+          sizes="(min-width: 1024px) 560px, 100vw"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    padding-top: var(--space-block);
+  }
+
+  .crumbs-wrap {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .page-hero h1,
+  .page-hero :global(.lead) {
+    margin: 0;
+  }
+
+  .page-hero h1 {
+    order: 1;
+  }
+
+  .page-hero :global(.lead) {
+    order: 3;
+  }
+
+  .actions {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .hero-note {
+    order: 5;
+    margin-top: 24px;
+  }
+
+  .hero-media {
+    order: 2;
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background: var(--color-cream);
+  }
+
+  .page-hero.ratio-portrait .hero-media {
+    aspect-ratio: 4 / 5;
+  }
+
+  .hero-media :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  @media (max-width: 767px) {
+    .actions :global(.solid) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: 64px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .page-hero h1,
+    .page-hero :global(.lead),
+    .actions,
+    .hero-note,
+    .hero-media {
+      order: 0;
+    }
+
+    .page-hero :global(.lead),
+    .actions {
+      margin-top: 1.25rem;
+    }
+
+    .actions {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 1.5rem;
+    }
+
+    .hero-note {
+      margin-top: 24px;
+    }
+
+    .hero-media {
+      aspect-ratio: 4 / 5;
+    }
+  }
+</style>

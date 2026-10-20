@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Button from "../components/Button.astro";
+import { lastVerified } from "../data/facts";
+
+const sentence = "This page does not exist or has moved.";
+---
+
+<BaseLayout
+  title="Page Not Found"
+  metaTitle="Page Not Found | Portugal HQA Citizenship"
+  description={sentence}
+  canonicalPath="/404"
+  dateModified={lastVerified}
+  noindex={true}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: "Page Not Found",
+      description: sentence,
+      url: "https://portugalhqacitizenship.com/404",
+    },
+  ]}
+>
+  <PageIntro title="Page Not Found">
+    <p class="lead" slot="lead">{sentence}</p>
+    <div slot="actions">
+      <Button href="/" variant="text">Home</Button>
+      <Button href="/guides" variant="text">Guides</Button>
+    </div>
+  </PageIntro>
+</BaseLayout>
