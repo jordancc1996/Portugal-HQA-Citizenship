@@ -74,7 +74,8 @@ Show a ✓/✗ table for these five checks and fix every ✗ before writing the 
 - No gradients, shadows, rounded cards, emoji or icon clutter. Hairline rules instead of boxes. Max 4px radius on buttons and inputs.
 - Reading column max 720px. Generous vertical space.
 - Every block sits in .container. Text, headings and lists use .measure (720px, left-aligned). Only tables, the key facts grid and guide lists use .wide (full container width). One left edge on every page.
-- Header: wordmark in Inter 700, one menu button at all sizes, full-screen menu.
+- Header: logo on the left, one menu button at all sizes, full-screen menu.
+- Logo: Logo.astro (PH mark plus PORTUGAL / HQA CITIZENSHIP) in Atlantic, white on dark bands. Favicons from logo-mark.svg.
 - Pages are built from full-width Section bands: paper, cream, at most one atlantic (the checklist), Ink footer. Never two equal tones in a row.
 - No white boxes inside cream bands. Tables are row style everywhere. Only form inputs stay white.
 - New pages use PageHero or PageIntro. No page-level layout CSS.

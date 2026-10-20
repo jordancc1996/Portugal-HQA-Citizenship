@@ -1,4 +1,5 @@
 ---
+import Logo from "./Logo.astro";
 import { siteConfig } from "../data/site";
 
 const links = [
@@ -18,7 +19,9 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 <header class="site-header">
   <div class="container bar">
-    <a class="wordmark" href="/">{siteConfig.siteName}</a>
+    <a class="wordmark" href="/" aria-label="Portugal HQA Citizenship, home">
+      <Logo />
+    </a>
     <details class="menu">
       <summary>
         <span class="icon" aria-hidden="true">
@@ -141,18 +144,17 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
   }
 
   .wordmark {
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    line-height: 1.2;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
     min-width: 0;
+    color: var(--color-atlantic);
+    font-size: 21px;
+    line-height: 1;
+    text-decoration: none;
   }
 
   .wordmark:hover {
-    color: var(--color-ink);
+    color: var(--color-atlantic);
     text-decoration: none;
   }
 
@@ -358,7 +360,7 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
     }
 
     .wordmark {
-      font-size: 22px;
+      font-size: 26px;
     }
 
     .panel {

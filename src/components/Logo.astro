@@ -1,0 +1,74 @@
+---
+interface Props {
+  tone?: "atlantic" | "white";
+}
+
+const { tone = "atlantic" } = Astro.props;
+---
+
+<span class:list={["logo", tone === "white" ? "is-white" : "is-atlantic"]}>
+  <svg class="mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+    <rect x="2.61" y="0" width="4.75" height="48" />
+    <rect x="2.61" y="0" width="21.86" height="4.75" />
+    <rect x="19.72" y="0" width="4.75" height="48" />
+    <rect x="2.61" y="23.29" width="42.77" height="5.7" />
+    <rect x="40.63" y="0" width="4.75" height="48" />
+  </svg>
+  <span class="lines">
+    <span class="country">Portugal</span>
+    <span class="sub">HQA Citizenship</span>
+  </span>
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    max-width: 100%;
+    color: var(--color-atlantic);
+    line-height: 1;
+  }
+
+  .is-white {
+    color: #ffffff;
+  }
+
+  .mark {
+    display: block;
+    width: 1.38em;
+    height: 1.38em;
+    flex: none;
+    fill: currentColor;
+  }
+
+  .lines {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    gap: 0.32em;
+  }
+
+  .country,
+  .sub {
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .country {
+    font-family: var(--font-serif);
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 0.72;
+  }
+
+  .sub {
+    font-family: var(--font-sans);
+    font-size: 0.34em;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    line-height: 1;
+  }
+</style>

@@ -17,6 +17,7 @@ import { facts, lastVerified } from "../data/facts";
 import { formatVerifiedDate } from "../lib/format-date";
 import hero from "../assets/images/lisbon-alfama-rooftops.webp";
 import Section from "../components/Section.astro";
+import Logo from "../components/Logo.astro";
 
 const description = `This page shows the shared components for Portugal HQA Citizenship. Figures come from the fact file last verified on ${formatVerifiedDate(lastVerified)}.`;
 
@@ -114,7 +115,16 @@ const guides = [
   <Section tone="paper">
     <div class="measure">
       <h2>Header</h2>
-      <p>The wordmark is Inter 700. One Menu button sits on the right at every screen size and opens a full-screen menu. The same seven links stay in the page HTML.</p>
+      <p>The logo is the PH mark with PORTUGAL and HQA CITIZENSHIP. One Menu button sits on the right at every screen size and opens a full-screen menu. The same seven links stay in the page HTML.</p>
+      <p><Logo /></p>
+      <div class="logo-dark">
+        <Logo tone="white" />
+      </div>
+      <p>Favicon sizes, from the same mark.</p>
+      <p class="favicon-row">
+        <img src="/favicon.svg" alt="Favicon" width="32" height="32" />
+        <img src="/apple-touch-icon.png" alt="Apple touch icon" width="180" height="180" />
+      </p>
     </div>
   </Section>
 
@@ -273,3 +283,25 @@ const guides = [
 </div>
     </Section>
 </BaseLayout>
+
+<style>
+  .logo-dark {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #141414;
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  .favicon-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .favicon-row img {
+    display: block;
+  }
+</style>

@@ -245,5 +245,10 @@ Why: The forms need a real endpoint before a submission test. The values stay in
 Change: Remove paper fills from tables and the unknowns box inside cream bands, and use the same row rules on every table.
 Why: White header cells and a white unknowns box broke the cream band into patches.
 
+## 2026-10-20
+
+Change: Replace the text wordmark with the PH monogram, PORTUGAL, and HQA CITIZENSHIP, and add favicons from that mark. The favicon strokes are thicker than the site mark so the mark stays readable at 16px.
+Why: The header and footer now use the chosen lockup, in Atlantic on light bands and white on the dark footer.
+
 
 
