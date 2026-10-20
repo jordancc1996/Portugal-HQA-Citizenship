@@ -105,3 +105,4 @@ Show a ✓/✗ table for these five checks and fix every ✗ before writing the 
 - Local builds and Vercel preview builds skip that check and log one line: "Skipped check:reviews because VERCEL_ENV is not production."
 - Do not invent a review date to make production pass. Store a real date in `src/data/reviews.ts` only after the lawyer review.
 - Do not deploy unless asked.
+- Vercel needs PUBLIC_FORMCARRY_CHECKLIST_URL (checklist form) and PUBLIC_FORMCARRY_CONSULT_URL (consultation form) set for Production and Preview.

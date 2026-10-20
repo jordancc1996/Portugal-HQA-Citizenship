@@ -235,5 +235,10 @@ Why: A single white column did not show where one section ended and the next beg
 Change: Add nine Lisbon photographs, switch eight text pages to a photo hero, and add one photo break on the home page and one on the citizenship guide.
 Why: Those pages were text only. The new photos are Unsplash License images taken in Portugal, and each page still has at most one photo break.
 
+## 2026-10-20
+
+Change: Set the local Formcarry URLs for the checklist form and the consultation form.
+Why: The forms need a real endpoint before a submission test. The values stay in .env, which is not committed.
+
 
 
