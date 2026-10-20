@@ -1,19 +1,8 @@
 ---
 import Logo from "./Logo.astro";
+import { menuLinks, reportsReady } from "../data/menu";
 import { siteConfig } from "../data/site";
 
-const links = [
-  { href: "/portugal-hqa-visa-investment", label: "Investment" },
-  { href: "/hqa-visa-cost", label: "Costs" },
-  { href: "/hqa-visa-requirements", label: "Requirements" },
-  { href: "/guides/hqa-visa-citizenship-10-year-rule", label: "Citizenship" },
-  { href: "/guides", label: "Guides" },
-  { href: "/about", label: "About" },
-  { href: "/consultation", label: "Request a consultation", consult: true },
-];
-
-const pageLinks = links.filter((link) => !link.consult);
-const consult = links.find((link) => link.consult);
 const current = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 
@@ -39,7 +28,7 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
           <nav aria-label="Primary">
             <ul class="links">
               {
-                pageLinks.map((link) => (
+                menuLinks.map((link) => (
                   <li>
                     <a href={link.href} aria-current={current === link.href ? "page" : undefined}>
                       {link.label}
@@ -48,19 +37,25 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
                 ))
               }
             </ul>
-            {
-              consult && (
-                <p class="consult-wrap">
-                  <a
-                    class="consult"
-                    href={consult.href}
-                    aria-current={current === consult.href ? "page" : undefined}
-                  >
-                    {consult.label}
+            <div class="actions">
+              <a
+                class="consult"
+                href="/consultation"
+                aria-current={current === "/consultation" ? "page" : undefined}
+              >
+                Request a consultation
+              </a>
+              {
+                reportsReady && (
+                  <a class="reports-link" href="/reports">
+                    Read our reports
+                    <svg class="arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false">
+                      <path d="M3 13 L13 3 M13 3 H6.5 M13 3 V9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
                   </a>
-                </p>
-              )
-            }
+                )
+              }
+            </div>
           </nav>
           <p class="menu-mail">
             <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
@@ -257,7 +252,7 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
     left: 0;
     z-index: 1;
     overflow: auto;
-    background: var(--color-paper);
+    background: var(--color-cream);
     animation: menu-in 150ms ease-out;
   }
 
@@ -277,74 +272,102 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 4px;
   }
 
   .links a {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 48px;
     color: var(--color-ink);
     font-family: var(--font-serif);
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.1;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   .links a:hover,
-  .links a:focus-visible {
-    text-decoration-line: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
-
+  .links a:focus,
   .links a[aria-current="page"] {
+    color: var(--color-atlantic);
     text-decoration-line: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-decoration-color: var(--color-atlantic);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
   }
 
-  .consult-wrap {
-    margin: 32px 0 0;
-    padding-top: 32px;
-    border-top: 1px solid var(--color-rule);
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 40px;
   }
 
-  .consult {
+  .consult,
+  .reports-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     box-sizing: border-box;
-    height: 48px;
-    padding: 0 1.25rem;
+    height: 60px;
+    padding: 0 32px;
     border: 1px solid var(--color-atlantic);
     border-radius: 4px;
-    background: var(--color-atlantic);
-    box-shadow: none;
-    color: #ffffff;
     font-family: var(--font-sans);
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
-    letter-spacing: 0.02em;
     line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .consult {
+    background: var(--color-atlantic);
+    color: #ffffff;
+  }
+
+  .consult:hover,
+  .consult:focus {
+    background: var(--color-atlantic);
+    color: #ffffff;
     text-decoration: none;
   }
 
-  .consult:hover {
-    background: #ffffff;
+  .reports-link {
+    background: transparent;
+    color: var(--color-atlantic);
+  }
+
+  .reports-link:hover,
+  .reports-link:focus {
     color: var(--color-atlantic);
     text-decoration: none;
   }
 
+  .arrow {
+    display: block;
+    flex: none;
+  }
+
   .menu-mail {
-    margin: auto 0 0;
-    padding-top: 32px;
+    margin: 24px 0 0;
     color: var(--color-graphite);
     font-family: var(--font-sans);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
   }
 
   .menu-mail a {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 48px;
     color: var(--color-graphite);
     font-family: inherit;
     font-size: inherit;
@@ -372,7 +395,18 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
     }
 
     .links a {
-      font-size: 36px;
+      font-size: 44px;
+    }
+
+    .actions {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .links a {
+      font-size: 56px;
     }
   }
 
@@ -395,5 +429,10 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
   :global(html.menu-open),
   :global(html.menu-open body) {
     overflow: hidden;
+  }
+
+  :global(html.menu-open) .site-header {
+    background: var(--color-cream);
+    border-bottom-color: var(--color-cream);
   }
 </style>

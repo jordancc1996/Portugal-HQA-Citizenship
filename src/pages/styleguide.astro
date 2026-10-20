@@ -18,6 +18,8 @@ import { formatVerifiedDate } from "../lib/format-date";
 import hero from "../assets/images/lisbon-alfama-rooftops.webp";
 import Section from "../components/Section.astro";
 import Logo from "../components/Logo.astro";
+import { menuLinks, reportsReady } from "../data/menu";
+import { siteConfig } from "../data/site";
 
 const description = `This page shows the shared components for Portugal HQA Citizenship. Figures come from the fact file last verified on ${formatVerifiedDate(lastVerified)}.`;
 
@@ -115,7 +117,7 @@ const guides = [
   <Section tone="paper">
     <div class="measure">
       <h2>Header</h2>
-      <p>The logo is the PH mark with PORTUGAL and HQA CITIZENSHIP. One Menu button sits on the right at every screen size and opens a full-screen menu. The same seven links stay in the page HTML.</p>
+      <p>The logo is the PH mark with PORTUGAL and HQA CITIZENSHIP. One Menu button sits on the right at every screen size and opens a full-screen cream menu. Reports and Press join the list when those pages exist.</p>
       <p><Logo /></p>
       <div class="logo-dark">
         <Logo tone="white" />
@@ -126,6 +128,45 @@ const guides = [
         <img src="/apple-touch-icon.png" alt="Apple touch icon" width="180" height="180" />
       </p>
     </div>
+    <div class="menu-sample">
+      <div class="sample-bar">
+        <span class="sample-logo"><Logo /></span>
+        <span class="sample-close">
+          <svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">
+            <path d="M1 1 L27 19 M27 1 L1 19" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          Close
+        </span>
+      </div>
+      <ul class="sample-links">
+        {
+          menuLinks.map((link) => (
+            <li>
+              <a href={link.href} class:list={[{ "is-current": link.href === "/portugal-hqa-visa-investment" }]}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="sample-actions">
+        <a class="sample-consult" href="/consultation">Request a consultation</a>
+        {
+          reportsReady && (
+            <a class="sample-reports" href="/reports">
+              Read our reports
+              <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M3 13 L13 3 M13 3 H6.5 M13 3 V9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+              </svg>
+            </a>
+          )
+        }
+      </div>
+      <p class="sample-mail">
+        <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
+      </p>
+    </div>
+    <p class="measure sample-note">Investment shows the current-page underline. Reports, Press and the reports button appear when those pages exist.</p>
   </Section>
 
   <Section tone="cream">
@@ -303,5 +344,162 @@ const guides = [
 
   .favicon-row img {
     display: block;
+  }
+
+  .menu-sample {
+    box-sizing: border-box;
+    margin-top: 48px;
+    padding-block: 0 32px;
+    background: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  .sample-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    margin-bottom: 32px;
+  }
+
+  .sample-logo {
+    display: flex;
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  .sample-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .sample-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .sample-links a {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 48px;
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .sample-links a.is-current {
+    color: var(--color-atlantic);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+
+  .sample-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .sample-consult,
+  .sample-reports {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 0 32px;
+    border: 1px solid var(--color-atlantic);
+    border-radius: 4px;
+    background: var(--color-atlantic);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .sample-consult {
+    background: var(--color-atlantic);
+    color: #ffffff;
+  }
+
+  .sample-reports {
+    background: transparent;
+    color: var(--color-atlantic);
+    gap: 10px;
+  }
+
+  .sample-mail {
+    margin: 24px 0 0;
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .sample-mail a {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 48px;
+    color: var(--color-graphite);
+    font-size: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .sample-note {
+    margin: 8px 0 0;
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .sample-bar {
+      height: 80px;
+    }
+
+    .sample-logo {
+      font-size: 26px;
+    }
+
+    .sample-links a {
+      font-size: 44px;
+    }
+
+    .sample-actions {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sample-links a {
+      font-size: 56px;
+    }
   }
 </style>

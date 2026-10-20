@@ -250,5 +250,10 @@ Why: White header cells and a white unknowns box broke the cream band into patch
 Change: Replace the text wordmark with the PH monogram, PORTUGAL, and HQA CITIZENSHIP, and add favicons from that mark. The favicon strokes are thicker than the site mark so the mark stays readable at 16px.
 Why: The header and footer now use the chosen lockup, in Atlantic on light bands and white on the dark footer.
 
+## 2026-10-20
+
+Change: Restyle the open menu as a cream full-screen panel, with larger links, Home and Contact, and the consultation button under the list.
+Why: The menu should read as a quiet panel. Reports and Press stay hidden until those pages exist.
+
 
 
