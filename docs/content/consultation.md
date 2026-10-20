@@ -4,7 +4,7 @@ url: /consultation
 primaryKeyword: hqa visa consultation
 title: HQA Visa Consultation - Request a Private Introduction
 metaTitle: HQA Visa Consultation - Request a Private Introduction | Portugal HQA Citizenship
-metaDescription: HQA visa consultation for investors: tell us about your plans and, with your consent, we introduce you to advisors or providers. No fees paid to us, ever.
+metaDescription: HQA visa consultation for investors: tell us about your plans and, with your consent, we introduce you to advisors or providers who fit your situation.
 lastVerified: 2026-10-20
 heroImage: none
 breadcrumb: Home > Consultation
@@ -12,7 +12,7 @@ breadcrumb: Home > Consultation
 
 # HQA Visa Consultation: Request a Private Introduction
 
-An HQA visa consultation here is a request for an introduction to an independent advisor or provider. Tell us about your plans, and with your consent we introduce you to advisors or providers who work on the highly qualified activity route. We take no referral fees or commissions, so we have no reason to push you toward any one of them.
+An HQA visa consultation here is a request for an introduction to an independent advisor or provider. Tell us about your plans, and with your consent we introduce you to advisors or providers who work on the highly qualified activity route.
 
 ---
 
@@ -28,7 +28,6 @@ An HQA visa consultation here is a request for an introduction to an independent
 ## What to know first
 
 - We are not a law firm and we do not give legal advice.
-- We are paid nothing for introductions.
 - We share your details only if you tick the sharing box, and only with the advisors or providers we introduce.
 - We recommend you also hire your own independent Portuguese lawyer before you sign anything.
 

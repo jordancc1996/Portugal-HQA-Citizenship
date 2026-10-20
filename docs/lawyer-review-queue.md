@@ -92,3 +92,26 @@ Do not add this to the citizenship page until you answer.
 
 Article 6(10) of Lei Orgânica 1/2026 presumes that CPLP nationals meet the Portuguese language part of article 6(1)(c), unless the lack is obvious. Culture, history and national symbols sit outside that presumption. The citizenship page still says the applicant must show knowledge of Portuguese through a test or certificate. Should that page state the presumption, and should it say the presumption covers language only?
 
+## Fee claims removed, 20 October 2026
+
+The owner may sell leads in future. Do not add a new claim that the site is paid or that it sells leads. The policy and the consent wording must be reviewed before that starts.
+
+| Page | Before | After | Reason | Fact key |
+|---|---|---|---|---|
+| Footer | Portugal HQA Citizenship is an independent information site. We take no referral fees or commissions from any provider, incubator, university or law firm. | Portugal HQA Citizenship is an independent information site. | Remove the no-fee claim. | none |
+| `/` | Independent. We take no referral fees or commissions from any provider, incubator, university or law firm. | Independent. We are not a provider and do not sell investment packages. | Remove the no-fee claim. The package sentence was already on the about page. | none |
+| `/about` | Meta description ended "and no provider fees." | Meta description ends "and dated updates." | Remove the no-fee claim. | none |
+| `/about` | We take no referral fees or commissions from any provider, incubator, university, law firm or advisor. | Sentence deleted. | Remove the no-fee claim. | none |
+| `/about` | We do this only with your consent, and we are not paid for the introduction. | We do this only with your consent. | Delete the unpaid part only. | none |
+| `/methodology` | Meta description ended "and no fees from any provider." | Meta description ends "and dated updates on the status page." | Remove the no-fee claim. 158 characters. | none |
+| `/methodology` | We take no referral fees or commissions from any provider, incubator, university, law firm or advisor. If you ask us for a consultation, we may introduce you to advisors or providers, but only with your consent, and we are not paid for the introduction. | If you ask us for a consultation, we may introduce you to advisors or providers, but only with your consent. | Delete the no-fee sentence and the unpaid clause. | none |
+| `/contact` | We take no fees for introductions. | Sentence deleted. The introduction sentence stays. | Remove the no-fee claim. | none |
+| `/consultation` | Meta description ended "No fees paid to us, ever." | Meta description ends "who fit your situation." | Remove the no-fee claim. | none |
+| `/consultation` | We take no referral fees or commissions, so we have no reason to push you toward any one of them. | Clause deleted. The introduction sentences stay. | Remove the no-fee claim. Same string is in the page JSON-LD. | none |
+| `/consultation` | We are paid nothing for introductions. | Bullet deleted. | Remove the unpaid claim. Consent wording was not changed. | none |
+| `/hqa-visa-due-diligence` | We take no fees from any provider. | Sentence deleted. The advice sentence stays. | Remove the no-fee claim. | none |
+| `/terms` | We are not paid for introductions and we are not responsible for their services. | We are not responsible for their services. | Delete the unpaid part only. | none |
+| `/privacy` | We do not sell your data. We are not paid for introductions. | Sentence deleted. Nothing added in its place. | The owner may sell leads in future. The policy and consent wording must be reviewed before that starts. | none |
+| `llms.txt` | This site is independent, takes no referral fees, and program facts are checked against Portuguese law with the date shown on each page. | This site is independent, and program facts are checked against Portuguese law with the date shown on each page. | Remove the no-fee claim from the generator. | none |
+
+

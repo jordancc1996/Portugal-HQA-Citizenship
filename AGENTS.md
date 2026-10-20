@@ -7,7 +7,7 @@ Read this file before every task. These rules apply to every page, component and
 - An independent micro site about the Portuguese HQA (highly qualified activity) residence route, mainly the private investment packages (often about €175,000) sold as a Golden Visa alternative.
 - Audience: high-net-worth investors, founders and families. Many are American.
 - Goal: rank for "portugal hqa visa investment" and related long-tail searches, and collect email leads with Formcarry.
-- Position: honest, upfront, fact-checked. We take no referral fees or commissions. We are not a law firm, not a provider and not a government body.
+- Position: honest, upfront, fact-checked. We are not a law firm, not a provider and not a government body.
 - Site name in titles: "Portugal HQA Citizenship". No company name appears anywhere on the site.
 
 Reference docs (read when relevant):

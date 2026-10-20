@@ -50,8 +50,6 @@ We use your data on the basis of your consent. You can withdraw consent at any t
 - **Advisors or providers we introduce you to,** only if you consent on the consultation form. They handle your data under their own privacy policies.
 - **Service providers who run our website and forms,** such as our form processor (Formcarry) and our hosting provider (Vercel). They process data for us and do not use it for their own purposes.
 
-We do not sell your data. We are not paid for introductions.
-
 ---
 
 ## How long we keep it

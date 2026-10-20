@@ -27,7 +27,7 @@ Rules change, and we cannot promise that every page is complete or current. We d
 
 ## Introductions
 
-If you ask us to, we may introduce you to advisors or providers. We are not paid for introductions and we are not responsible for their services. Any agreement is between you and them. Check every advisor or provider yourself before you sign or pay.
+If you ask us to, we may introduce you to advisors or providers. We are not responsible for their services. Any agreement is between you and them. Check every advisor or provider yourself before you sign or pay.
 
 ## Not affiliated
 

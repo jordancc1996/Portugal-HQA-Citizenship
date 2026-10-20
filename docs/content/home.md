@@ -129,7 +129,7 @@ Download our free HQA due diligence checklist. It lists the 15 questions to ask 
 
 ## How we work
 
-- **Independent.** We take no referral fees or commissions from any provider, incubator, university or law firm.
+- **Independent.** We are not a provider and do not sell investment packages.
 - **Sourced.** Every legal claim names its source, and we link the official text where one exists.
 - **Legally reviewed.** An independent Portuguese lawyer reviews every page. Each page shows its review date.
 - **Dated.** Every page shows when we last checked it. We log changes on our [status page](/hqa-visa-status).

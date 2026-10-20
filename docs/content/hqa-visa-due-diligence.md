@@ -121,4 +121,4 @@ Not that we have found. Portugal does not publish ratings of private providers.
 
 ## Disclaimer
 
-This page gives general information, not legal or investment advice. We take no fees from any provider. Speak to an independent Portuguese lawyer before you commit money.
+This page gives general information, not legal or investment advice. Speak to an independent Portuguese lawyer before you commit money.

@@ -26,4 +26,4 @@ Contact Portugal HQA Citizenship by email at hello@portugalhqacitizenship.com.
 
 ## Looking for advice on your situation?
 
-Use our [consultation page](/consultation). With your consent, we can introduce you to advisors or providers. We take no fees for introductions.
+Use our [consultation page](/consultation). With your consent, we can introduce you to advisors or providers.

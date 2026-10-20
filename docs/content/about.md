@@ -4,7 +4,7 @@ url: /about
 primaryKeyword: about portugal hqa citizenship
 title: About Portugal HQA Citizenship - Independent Information
 metaTitle: About Portugal HQA Citizenship - Independent Information | Portugal HQA Citizenship
-metaDescription: About Portugal HQA Citizenship: an independent site explaining Portugal's HQA visa route in plain English, with legally reviewed pages and no provider fees.
+metaDescription: About Portugal HQA Citizenship: an independent site explaining Portugal's HQA visa route in plain English, with legally reviewed pages and dated updates.
 lastVerified: 2026-10-20
 heroImage: none
 breadcrumb: Home > About
@@ -37,9 +37,7 @@ Last verified: 20 October 2026 · Legally reviewed by an independent Portuguese 
 
 ## How we are independent
 
-We take no referral fees or commissions from any provider, incubator, university, law firm or advisor.
-
-If you request a consultation, we may introduce you to advisors or providers who can help with your situation. We do this only with your consent, and we are not paid for the introduction.
+If you request a consultation, we may introduce you to advisors or providers who can help with your situation. We do this only with your consent.
 
 ---
 

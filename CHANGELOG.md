@@ -215,4 +215,10 @@ Why: Unknown URLs had no site page, and a production deploy should not go out be
 Change: State that the permanent residence permit has no expiry and that the D3 visa allows a stay of up to 4 months, and add a cover note for the lawyer.
 Why: The permanent-residence page said the permit was valid for 5 years, and the D3 visa was described as 120 days. Articles 76 and 58(2) say otherwise.
 
+## 2026-10-20
+
+Change: Remove every claim that the site takes no fees, is not paid for introductions, or does not sell data.
+Why: The owner may sell leads later. Those sentences would be false if that starts, and no new claim about payment was added.
+
+
 

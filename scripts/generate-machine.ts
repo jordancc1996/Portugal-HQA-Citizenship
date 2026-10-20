@@ -338,7 +338,7 @@ function llmsText(records: Map<string, PageRecord>): string {
     "",
     "Portugal HQA Citizenship explains the Portuguese residence route for highly qualified activity, and the private packages sold around it.",
     "",
-    "This site is independent, takes no referral fees, and program facts are checked against Portuguese law with the date shown on each page.",
+    "This site is independent, and program facts are checked against Portuguese law with the date shown on each page.",
     "",
   ];
   for (const section of sections) {

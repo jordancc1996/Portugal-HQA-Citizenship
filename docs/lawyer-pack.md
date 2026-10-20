@@ -4,7 +4,7 @@ Date: 20 October 2026. This note is for the owner to send with the site. It does
 
 ## What the site is
 
-Portugal HQA Citizenship is an independent information site about the Portuguese highly qualified activity residence route. It takes no referral fees or commissions. It is not a law firm, not a provider and not a government body. No company name appears on the site.
+Portugal HQA Citizenship is an independent information site about the Portuguese highly qualified activity residence route. It is not a law firm, not a provider and not a government body. No company name appears on the site.
 
 Please review all 21 indexable pages, the privacy policy and the terms. The review line on the site stays hidden until a real date is stored. Do not send a name, a photo or a registration number for that line.
 
@@ -52,6 +52,7 @@ For each page, reply "approved" and give a date, or list the changes needed. Use
 6. How does AIMA apply the article 105 extension in practice? The statute says AIMA must decide a family reunification request within 9 months, and that it can extend once by the same period in exceptional cases and must tell the applicant, except for the ordinary 2-year and 15-month cases.
 7. Is the IFICI education wording right for each category? The page limits "doctorate, or a degree plus at least 3 years of experience" to the highly qualified professions category in Portaria 352/2024/1, and says other categories have their own education rules.
 8. Is the residence-card wording right? The permanent-residence page now says the permit has no expiry date and the card is renewed every 5 years (article 76).
+9. The owner may sell consultation leads to advisors or providers in future. What disclosure, consent wording and privacy-policy changes are needed before the first lead is sold?
 
 ## What happens after
 
