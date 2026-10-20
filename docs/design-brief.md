@@ -28,7 +28,7 @@ We take the **structure, restraint and editorial pattern** from Julia Bell. We d
 ## 2. Layout
 
 Desktop (1440px):
-- **Header:** small wordmark top-left ("Portugal HQA Citizenship" set in the serif), a short text menu on the right: Investment, Costs, Requirements, Citizenship, Guides, About. One quiet text link "Request a consultation". White background, thin bottom rule. No dropdown mega-menus.
+- **Header:** wordmark top-left ("Portugal HQA Citizenship" in Inter 700), one Menu button on the right at every screen size. The button opens a full-screen white menu with the same links. White background, thin bottom rule. No dropdown mega-menus.
 - **Hero:** split layout. Left half: H1 with the keyword, a two-sentence honest summary, one primary button. Right half: one sharp, full-height photograph of Portugal. No video, no slider, no overlay text on the photo.
 - **Key facts strip** directly under the hero: 4 short facts with sources (for example: "No legal minimum investment", "Citizenship after 10 years of legal residence", "Permit valid 2 years, then 3-year renewals", "Last verified: [date]").
 - **Content sections:** one idea per screen. Generous white space (96 to 160px between sections). Text column max 680px for reading.

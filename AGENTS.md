@@ -74,6 +74,7 @@ Show a ✓/✗ table for these five checks and fix every ✗ before writing the 
 - No gradients, shadows, rounded cards, emoji or icon clutter. Hairline rules instead of boxes. Max 4px radius on buttons and inputs.
 - Reading column max 720px. Generous vertical space.
 - Every block sits in .container. Text, headings and lists use .measure (720px, left-aligned). Only tables, the key facts grid and guide lists use .wide (full container width). One left edge on every page.
+- Header: wordmark in Inter 700, one menu button at all sizes, full-screen menu.
 - New pages use PageHero or PageIntro. No page-level layout CSS.
 
 ## Forms

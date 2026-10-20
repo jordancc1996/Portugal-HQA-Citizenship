@@ -220,5 +220,10 @@ Why: The permanent-residence page said the permit was valid for 5 years, and the
 Change: Remove every claim that the site takes no fees, is not paid for introductions, or does not sell data.
 Why: The owner may sell leads later. Those sentences would be false if that starts, and no new claim about payment was added.
 
+## 2026-10-20
+
+Change: Replace the desktop link row with one menu button, and set the wordmark in Inter 700.
+Why: The header uses the same menu at every screen size, with the wordmark on the left.
+
 
 
