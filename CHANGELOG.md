@@ -240,5 +240,10 @@ Why: Those pages were text only. The new photos are Unsplash License images take
 Change: Set the local Formcarry URLs for the checklist form and the consultation form.
 Why: The forms need a real endpoint before a submission test. The values stay in .env, which is not committed.
 
+## 2026-10-20
+
+Change: Remove paper fills from tables and the unknowns box inside cream bands, and use the same row rules on every table.
+Why: White header cells and a white unknowns box broke the cream band into patches.
+
 
 

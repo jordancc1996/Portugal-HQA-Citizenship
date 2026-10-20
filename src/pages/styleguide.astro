@@ -157,6 +157,30 @@ const guides = [
         <SourceNote href={facts.citizenshipClockStart.source} label="Lei Orgânica 1/2026" />
       </UnknownsBox>
     </div>
+    <div class="wide">
+      <Table>
+        <table>
+          <thead>
+            <tr>
+              <th>Record</th>
+              <th>Value</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              tableRows.map((row, index) => (
+                <tr>
+                  <td>{tableLabels[index]}</td>
+                  <td>{row.value}</td>
+                  <td>{row.status}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </Table>
+    </div>
 </Section>
 
     <Section tone="cream">
@@ -186,6 +210,12 @@ const guides = [
           </tbody>
         </table>
       </Table>
+    </div>
+    <div class="measure">
+      <UnknownsBox>
+        <p>{facts.citizenshipClockStart.value}</p>
+        <SourceNote href={facts.citizenshipClockStart.source} label="Lei Orgânica 1/2026" />
+      </UnknownsBox>
     </div>
 </Section>
 

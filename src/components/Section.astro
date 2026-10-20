@@ -29,8 +29,31 @@ const prose = as === "section" && !className;
   .tone-cream {
     background: var(--color-cream);
     color: var(--color-ink);
-    --table-head: var(--color-paper);
-    --unknowns-bg: var(--color-paper);
+    --unknowns-bg: transparent;
+  }
+
+  .tone-cream :global(th),
+  .tone-cream :global(td),
+  .tone-cream :global(.unknowns),
+  .tone-cream :global(.key-facts),
+  .tone-cream :global(.key-facts ol),
+  .tone-cream :global(.faq),
+  .tone-cream :global(.faq details),
+  .tone-cream :global(.guides),
+  .tone-cream :global(.guides li),
+  .tone-cream :global(.source),
+  .tone-cream :global(.form-block),
+  .tone-cream :global(.site-form),
+  .tone-cream :global(.site-form > div),
+  .tone-cream :global(.table-wrap),
+  .tone-cream :global(.table-scroller) {
+    background-color: transparent;
+  }
+
+  .tone-cream :global(.site-form input:not([type="checkbox"])),
+  .tone-cream :global(.site-form select),
+  .tone-cream :global(.site-form textarea) {
+    background: #ffffff;
   }
 
   .tone-atlantic {
@@ -65,6 +88,17 @@ const prose = as === "section" && !className;
   .tone-atlantic :global(.form-success p),
   .tone-atlantic :global(.form-success a) {
     color: #ffffff;
+  }
+
+  .tone-atlantic :global(.unknowns),
+  .tone-atlantic :global(th),
+  .tone-atlantic :global(td),
+  .tone-atlantic :global(.form-block),
+  .tone-atlantic :global(.site-form),
+  .tone-atlantic :global(.site-form > div),
+  .tone-atlantic :global(.table-wrap),
+  .tone-atlantic :global(.table-scroller) {
+    background-color: transparent;
   }
 
   .tone-atlantic :global(.site-form input:not([type="checkbox"])),
