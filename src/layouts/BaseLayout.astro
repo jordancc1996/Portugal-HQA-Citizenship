@@ -64,7 +64,7 @@ const graph = {
     ...schema.map((entry) => {
       const type = entry["@type"];
       const dated =
-        type === "WebPage" || type === "Article" || type === "CollectionPage"
+        type === "WebPage" || type === "Article" || type === "NewsArticle" || type === "CollectionPage"
           ? { ...entry, dateModified }
           : entry;
       const pageUrl = nodeUrl(dated);
@@ -77,10 +77,10 @@ const graph = {
           inLanguage: "en",
         };
       }
-      if (type === "Article") {
+      if (type === "Article" || type === "NewsArticle") {
         return {
           ...dated,
-          "@id": new URL("#article", pageUrl).href,
+          "@id": new URL(type === "NewsArticle" ? "#newsarticle" : "#article", pageUrl).href,
           url: pageUrl,
           mainEntityOfPage: { "@id": webpageId },
           isPartOf: { "@id": websiteId },

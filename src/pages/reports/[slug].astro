@@ -1,0 +1,142 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Button from "../../components/Button.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import FAQ from "../../components/FAQ.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Section from "../../components/Section.astro";
+import SourceNote from "../../components/SourceNote.astro";
+import { formatVerifiedDate } from "../../lib/format-date";
+
+export async function getStaticPaths() {
+  const reports = await getCollection("reports");
+  return reports.map((report) => {
+    if (report.id !== report.data.slug) {
+      throw new Error(`Report file ${report.id} does not match slug ${report.data.slug}`);
+    }
+    return { params: { slug: report.data.slug }, props: { report } };
+  });
+}
+
+interface Props {
+  report: CollectionEntry<"reports">;
+}
+
+const { report } = Astro.props;
+const { Content } = await render(report);
+const data = report.data;
+const path = `/reports/${data.slug}`;
+const pageUrl = `https://portugalhqacitizenship.com${path}`;
+const sources = data.sources ?? [];
+const related = data.related ?? [];
+const faq = data.faq ?? [];
+const updated = data.dateModified !== data.datePublished;
+---
+
+<BaseLayout
+  title={data.title}
+  metaTitle={data.metaTitle}
+  description={data.description}
+  canonicalPath={path}
+  dateModified={data.dateModified}
+  schema={[
+    {
+      "@type": "Article",
+      headline: data.title,
+      description: data.description,
+      datePublished: data.datePublished,
+      dateModified: data.dateModified,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro title={data.title} verified={data.lastVerified} path={path}>
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "Reports", href: "/reports" },
+        { name: data.title, href: path },
+      ]}
+    />
+    <p class="lead" slot="lead">{data.summary}</p>
+    <p class="small" slot="lead">
+      Published: {formatVerifiedDate(data.datePublished)}
+      {updated ? `. Updated: ${formatVerifiedDate(data.dateModified)}` : ""}
+    </p>
+  </PageIntro>
+
+  <Section tone="cream">
+    <div class="measure">
+      <h2>Key findings</h2>
+      <ul>
+        {data.keyFindings.map((finding) => <li>{finding}</li>)}
+      </ul>
+    </div>
+  </Section>
+
+  <Section tone="paper">
+    <div class="measure">
+      <Content />
+      {
+        data.pdf && (
+          <p class="action-line">
+            <Button href={data.pdf}>Download the PDF</Button>
+          </p>
+        )
+      }
+      {
+        sources.length > 0 && (
+          <>
+            <h2>Sources</h2>
+            <p class="sources">
+              {sources.map((source) => <SourceNote href={source.href} label={source.label} />)}
+            </p>
+          </>
+        )
+      }
+      {
+        related.length > 0 && (
+          <>
+            <h2>Related pages</h2>
+            <ul>
+              {related.map((link) => (
+                <li>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+    </div>
+  </Section>
+
+  {
+    faq.length > 0 && (
+      <Section tone="cream">
+        <div class="measure">
+          <h2>Frequently asked questions</h2>
+          <FAQ items={faq} />
+        </div>
+      </Section>
+    )
+  }
+
+  <LeadMagnetBand
+    heading="Questions to ask any provider"
+    paragraph="Our free HQA due diligence checklist lists 15 questions to ask before you pay."
+  >
+    <ChecklistForm idPrefix={`report-${data.slug}`} />
+  </LeadMagnetBand>
+
+  <Section tone="paper">
+    <div class="measure">
+      <h2>Disclaimer</h2>
+      <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your own situation.</p>
+    </div>
+  </Section>
+</BaseLayout>

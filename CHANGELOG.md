@@ -255,5 +255,10 @@ Why: The header and footer now use the chosen lockup, in Atlantic on light bands
 Change: Restyle the open menu as a cream full-screen panel, with larger links, Home and Contact, and the consultation button under the list.
 Why: The menu should read as a quiet panel. Reports and Press stay hidden until those pages exist.
 
+## 2026-10-20
+
+Change: Add the reports and press routes, content collections and schema. Empty hubs stay noindex until an item is published.
+Why: Reports and releases can be added later without a second structural pass, and an empty hub does not enter the index.
+
 
 

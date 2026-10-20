@@ -1,0 +1,98 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Section from "../../components/Section.astro";
+import { formatVerifiedDate } from "../../lib/format-date";
+import { siteConfig } from "../../data/site";
+
+export async function getStaticPaths() {
+  const releases = await getCollection("press");
+  return releases.map((release) => {
+    if (release.id !== release.data.slug) {
+      throw new Error(`Press file ${release.id} does not match slug ${release.data.slug}`);
+    }
+    return { params: { slug: release.data.slug }, props: { release } };
+  });
+}
+
+interface Props {
+  release: CollectionEntry<"press">;
+}
+
+const { release } = Astro.props;
+const { Content } = await render(release);
+const data = release.data;
+const path = `/press/${data.slug}`;
+const pageUrl = `https://portugalhqacitizenship.com${path}`;
+const syndicated = data.syndicatedTo ?? [];
+const mailto = `mailto:${siteConfig.contactEmail}`;
+const updated = data.dateModified !== data.datePublished;
+---
+
+<BaseLayout
+  title={data.headline}
+  metaTitle={data.metaTitle}
+  description={data.description}
+  canonicalPath={path}
+  dateModified={data.dateModified}
+  schema={[
+    {
+      "@type": "NewsArticle",
+      headline: data.headline,
+      description: data.description,
+      datePublished: data.datePublished,
+      dateModified: data.dateModified,
+      dateline: data.dateline,
+      url: pageUrl,
+    },
+  ]}
+>
+  <PageIntro title={data.headline}>
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "Press", href: "/press" },
+        { name: data.headline, href: path },
+      ]}
+    />
+    <p class="small" slot="lead">
+      {data.dateline}, {formatVerifiedDate(data.datePublished)}
+      {updated ? `. Updated: ${formatVerifiedDate(data.dateModified)}` : ""}
+    </p>
+    <p class="lead" slot="lead">{data.summary}</p>
+  </PageIntro>
+
+  <Section tone="cream">
+    <div class="measure">
+      <Content />
+    </div>
+  </Section>
+
+  <Section tone="paper">
+    <div class="measure">
+      <h2>About this site</h2>
+      <p>{siteConfig.about}</p>
+      <h2>Media contact</h2>
+      <p>
+        Email <a href={mailto}>{siteConfig.contactEmail}</a>.
+      </p>
+      {
+        syndicated.length > 0 && (
+          <>
+            <h2>Also published on</h2>
+            <ul>
+              {syndicated.map((item) => (
+                <li>
+                  <a href={item.url}>{item.outlet}</a>, {formatVerifiedDate(item.date)}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+    </div>
+  </Section>
+</BaseLayout>

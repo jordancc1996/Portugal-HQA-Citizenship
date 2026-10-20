@@ -29,7 +29,7 @@ Reference docs (read when relevant):
 
 ## URL rules
 
-- Shallow structure. Core pages at the root (/portugal-hqa-visa-investment). Guides one level deep (/guides/[slug]).
+- Shallow structure. Core pages at the root (/portugal-hqa-visa-investment). Guides, reports and press are one level deep (/guides/[slug], /reports/[slug], /press/[slug]).
 - Slugs: lowercase, hyphenated, descriptive, no dates. Use the slugs in docs/research-brief.md section 6.
 - Never change a published URL without explicit approval.
 - Every page: one self-referencing canonical, included in the sitemap, indexable unless it is a utility page.
@@ -90,8 +90,13 @@ Show a ✓/✗ table for these five checks and fix every ✗ before writing the 
 ## Technical SEO
 
 - Static HTML output (Astro). Every page has a unique title, meta description, canonical, Open Graph and Twitter tags.
-- Schema: Organization is not used (no company). Use WebSite, WebPage, Article (for guides), BreadcrumbList and FAQPage. Schema must match visible content.
+- Schema: Organization is not used (no company). Use WebSite, WebPage, Article (for guides and reports), NewsArticle (for press releases), BreadcrumbList, FAQPage and CollectionPage. Schema must match visible content. Report and release dates come from front matter only. No author names.
 - robots.txt points to the sitemap. Sitemap lists canonical indexable URLs only.
+
+## Internal links
+
+- Each report links to the topic pages it draws on.
+- A topic page may link to a report only where the report adds data.
 
 ## Workflow
 

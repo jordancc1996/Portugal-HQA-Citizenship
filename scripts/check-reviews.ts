@@ -1,8 +1,10 @@
 import { pages } from "../src/data/pages.ts";
-import { hasReviewDate, isNoindex, reviews } from "../src/data/reviews.ts";
+import { hasReviewDate, isNoindex, publicationPaths, reviews } from "../src/data/reviews.ts";
 
-const missingFromRegistry = pages.filter((page) => !(page.url in reviews)).map((page) => page.url);
-const missingDates = pages.map((page) => page.url).filter((url) => !isNoindex(url) && !hasReviewDate(url));
+const itemRoutes = publicationPaths();
+const routes = [...pages.map((page) => page.url), ...itemRoutes];
+const missingFromRegistry = routes.filter((url) => !(url in reviews));
+const missingDates = routes.filter((url) => !isNoindex(url) && !hasReviewDate(url));
 const withheld = pages.map((page) => page.url).filter((url) => isNoindex(url));
 
 if (missingFromRegistry.length > 0 || missingDates.length > 0) {

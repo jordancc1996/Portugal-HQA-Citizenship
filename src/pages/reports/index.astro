@@ -1,0 +1,99 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import ChecklistForm from "../../components/ChecklistForm.astro";
+import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import PublicationList from "../../components/PublicationList.astro";
+import Section from "../../components/Section.astro";
+import { verifiedOn } from "../../data/pages";
+import { isNoindex } from "../../data/reviews";
+import { formatVerifiedDate } from "../../lib/format-date";
+
+const path = "/reports";
+const lastVerified = verifiedOn(path);
+const headline = "HQA Visa Reports";
+const title = "HQA visa reports - dated research on the residence route";
+const reports = (await getCollection("reports")).sort((left, right) =>
+  right.data.datePublished.localeCompare(left.data.datePublished),
+);
+const description =
+  reports.length === 0
+    ? `HQA visa reports on this site are dated research on the Portuguese highly qualified activity residence route. None are published yet, as of ${formatVerifiedDate(lastVerified)}.`
+    : `HQA visa reports on this site are dated research on the Portuguese highly qualified activity residence route. The newest was published on ${formatVerifiedDate(reports[0].data.datePublished)}.`;
+const lead =
+  "HQA visa reports on this site are dated research on the Portuguese highly qualified activity residence route. Each report shows when it was published and when it was last checked.";
+const pageUrl = "https://portugalhqacitizenship.com/reports";
+
+const listed = reports.map((report) => ({
+  href: `/reports/${report.data.slug}`,
+  title: report.data.title,
+  summary: report.data.summary,
+  published: report.data.datePublished,
+  verified: report.data.lastVerified,
+}));
+---
+
+<BaseLayout
+  title={title}
+  metaTitle={`${title} | Portugal HQA Citizenship`}
+  description={description}
+  canonicalPath={path}
+  dateModified={lastVerified}
+  noindex={isNoindex(path)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+    {
+      "@type": "CollectionPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: listed.map((report, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: report.title,
+          url: new URL(report.href, pageUrl).href,
+          description: report.summary,
+        })),
+      },
+    },
+  ]}
+>
+  <PageIntro title={headline} verified={lastVerified} path={path}>
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "Reports", href: path },
+      ]}
+    />
+    <p class="lead" slot="lead">{lead}</p>
+  </PageIntro>
+
+  <Section tone="cream">
+    <div class="measure">
+      <h2>Published reports</h2>
+      {listed.length === 0 && <p>No reports are published yet.</p>}
+    </div>
+    {listed.length > 0 && (
+      <div class="wide">
+        <PublicationList items={listed} />
+      </div>
+    )}
+  </Section>
+
+  <LeadMagnetBand
+    heading="Questions to ask any provider"
+    paragraph="Our free HQA due diligence checklist lists 15 questions to ask before you pay."
+  >
+    <ChecklistForm idPrefix="reports-checklist" />
+  </LeadMagnetBand>
+</BaseLayout>

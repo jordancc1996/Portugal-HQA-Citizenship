@@ -70,7 +70,7 @@ function sameSet(left: string[], right: string[], label: string) {
 sameSet(sitemapRoutes, indexRoutes, "Sitemap URLs and content index");
 sameSet(sitemapRoutes, llmsRoutes, "Sitemap URLs and llms.txt");
 
-for (const route of ["/privacy", "/terms", "/styleguide", "/404"]) {
+for (const route of ["/privacy", "/terms", "/styleguide", "/404", "/reports", "/press"]) {
   if (!isNoindex(route)) continue;
   if (sitemapRoutes.includes(route) || indexRoutes.includes(route) || llmsRoutes.includes(route)) {
     fail(`${route} is noindex but appears in the machine layer or sitemap`);
@@ -89,7 +89,11 @@ for (const route of sitemapRoutes) {
   }
   const record = index.pages.find((page) => page.canonical_url === new URL(route, SITE).href);
   const expected = pages.find((page) => page.url === route)?.lastVerified;
-  if (!record || record.dateModified !== expected) fail(`dateModified for ${route} does not match pages.ts`);
+  if (!record || !/^\d{4}-\d{2}-\d{2}$/.test(record.dateModified)) fail(`dateModified for ${route} is missing`);
+  if (expected && record.dateModified !== expected) fail(`dateModified for ${route} does not match pages.ts`);
+  if (!expected && !route.startsWith("/reports/") && !route.startsWith("/press/")) {
+    fail(`dateModified for ${route} does not match pages.ts`);
+  }
   if ("datePublished" in record) fail(`content index invented datePublished for ${route}`);
 }
 

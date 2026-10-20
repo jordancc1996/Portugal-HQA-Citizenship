@@ -106,6 +106,18 @@ export const pages: SitePage[] = [
     listOnHome: false,
   },
   {
+    url: "/reports",
+    title: "HQA visa reports - dated research on the residence route",
+    lastVerified: "2026-10-20",
+    listOnHome: false,
+  },
+  {
+    url: "/press",
+    title: "HQA visa press releases - statements for journalists",
+    lastVerified: "2026-10-20",
+    listOnHome: false,
+  },
+  {
     url: "/consultation",
     title: "HQA Visa Consultation: Request a Private Introduction",
     lastVerified: "2026-10-20",

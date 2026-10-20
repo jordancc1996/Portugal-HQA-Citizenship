@@ -52,6 +52,10 @@ const sections: { heading: string; paths: string[] }[] = [
       "/terms",
     ],
   },
+  {
+    heading: "Reports and press",
+    paths: ["/reports", "/press"],
+  },
 ];
 
 interface PageRecord {
@@ -278,6 +282,30 @@ function stripChrome(main: HTMLElement): void {
   }
 }
 
+function schemaDateModified(root: HTMLElement): string | undefined {
+  for (const script of root.querySelectorAll('script[type="application/ld+json"]')) {
+    try {
+      const data = JSON.parse(script.text) as {
+        "@type"?: string;
+        dateModified?: string;
+        "@graph"?: { "@type"?: string; dateModified?: string }[];
+      };
+      const nodes = data["@graph"] ?? [data];
+      for (const node of nodes) {
+        if (
+          (node["@type"] === "Article" || node["@type"] === "NewsArticle" || node["@type"] === "CollectionPage") &&
+          node.dateModified
+        ) {
+          return node.dateModified;
+        }
+      }
+    } catch {
+      continue;
+    }
+  }
+  return undefined;
+}
+
 function contentTypeFrom(root: HTMLElement): string {
   const types = new Set<string>();
   for (const script of root.querySelectorAll('script[type="application/ld+json"]')) {
@@ -294,6 +322,7 @@ function contentTypeFrom(root: HTMLElement): string {
       continue;
     }
   }
+  if (types.has("NewsArticle")) return "NewsArticle";
   if (types.has("Article")) return "Article";
   if (types.has("CollectionPage")) return "CollectionPage";
   return "WebPage";
@@ -318,7 +347,8 @@ function readPage(dist: string, route: string): PageRecord {
     throw new Error(`Missing title, description, or canonical in ${file}`);
   }
   const page = pages.find((item) => item.url === route);
-  if (!page) throw new Error(`No pages.ts date for ${route}`);
+  const dateModified = page?.lastVerified ?? schemaDateModified(root);
+  if (!dateModified) throw new Error(`No date for ${route}`);
   const markdownPath = markdownPublicPath(route);
   return {
     route,
@@ -327,7 +357,7 @@ function readPage(dist: string, route: string): PageRecord {
     canonicalUrl,
     markdownUrl: new URL(markdownPath, SITE).href,
     contentType: contentTypeFrom(root),
-    dateModified: page.lastVerified,
+    dateModified,
     markdown: pageMarkdown(main, canonicalUrl),
   };
 }
@@ -375,6 +405,13 @@ export async function generateMachineLayer(dir: URL): Promise<void> {
   walk(dist);
 
   const indexable = builtRoutes.filter((route) => !isNoindex(route)).sort();
+  const publicationSection = sections.find((section) => section.heading === "Reports and press");
+  if (publicationSection) {
+    for (const route of indexable) {
+      if (!route.startsWith("/reports/") && !route.startsWith("/press/")) continue;
+      if (!publicationSection.paths.includes(route)) publicationSection.paths.push(route);
+    }
+  }
   const classified = new Set(sections.flatMap((section) => section.paths));
   const missing = indexable.filter((route) => !classified.has(route));
   if (missing.length) {

@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import PublicationList from "../../components/PublicationList.astro";
+import Section from "../../components/Section.astro";
+import { verifiedOn } from "../../data/pages";
+import { isNoindex } from "../../data/reviews";
+import { siteConfig } from "../../data/site";
+import { formatVerifiedDate } from "../../lib/format-date";
+
+const path = "/press";
+const lastVerified = verifiedOn(path);
+const headline = "HQA Visa Press Releases";
+const title = "HQA visa press releases - statements for journalists";
+const releases = (await getCollection("press")).sort((left, right) =>
+  right.data.datePublished.localeCompare(left.data.datePublished),
+);
+const description =
+  releases.length === 0
+    ? `HQA visa press releases on this site are listed newest first for journalists. None are published yet. The media email is on this page, as of ${formatVerifiedDate(lastVerified)}.`
+    : `HQA visa press releases on this site are listed newest first for journalists. The newest was published on ${formatVerifiedDate(releases[0].data.datePublished)}.`;
+const lead =
+  "HQA visa press releases on this site are listed newest first for journalists. Each release is published here before it is sent anywhere else.";
+const pageUrl = "https://portugalhqacitizenship.com/press";
+const mailto = `mailto:${siteConfig.contactEmail}`;
+
+const listed = releases.map((release) => ({
+  href: `/press/${release.data.slug}`,
+  title: release.data.headline,
+  summary: release.data.summary,
+  published: release.data.datePublished,
+}));
+---
+
+<BaseLayout
+  title={title}
+  metaTitle={`${title} | Portugal HQA Citizenship`}
+  description={description}
+  canonicalPath={path}
+  dateModified={lastVerified}
+  noindex={isNoindex(path)}
+  schema={[
+    {
+      "@type": "WebPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+    },
+    {
+      "@type": "CollectionPage",
+      name: headline,
+      description: lead,
+      url: pageUrl,
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: listed.map((release, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: release.title,
+          url: new URL(release.href, pageUrl).href,
+          description: release.summary,
+        })),
+      },
+    },
+  ]}
+>
+  <PageIntro title={headline} verified={lastVerified} path={path}>
+    <Breadcrumbs
+      slot="crumbs"
+      items={[
+        { name: "Home", href: "/" },
+        { name: "Press", href: path },
+      ]}
+    />
+    <p class="lead" slot="lead">{lead}</p>
+  </PageIntro>
+
+  <Section tone="cream">
+    <div class="measure">
+      <h2>Releases</h2>
+      {listed.length === 0 && <p>No press releases are published yet.</p>}
+    </div>
+    {listed.length > 0 && (
+      <div class="wide">
+        <PublicationList items={listed} dateFirst />
+      </div>
+    )}
+  </Section>
+
+  <Section tone="paper">
+    <div class="measure">
+      <h2>For journalists</h2>
+      <p>
+        For questions about a release, email <a href={mailto}>{siteConfig.contactEmail}</a>. Releases
+        may be republished with a link to the original on this site.
+      </p>
+    </div>
+  </Section>
+</BaseLayout>
