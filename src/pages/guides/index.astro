@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import PageIntro from "../../components/PageIntro.astro";
 import GuideList from "../../components/GuideList.astro";
+import Section from "../../components/Section.astro";
 import { getImage } from "astro:assets";
 import { pages, verifiedOn } from "../../data/pages";
 import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
@@ -143,15 +144,15 @@ const listed = groups.flatMap((group) => group.guides);
 
   <div class="reading groups">
     {
-      groups.map((group) => (
-        <section class="container section">
+      groups.map((group, index) => (
+        <Section tone={index % 2 === 0 ? "cream" : "paper"}>
 <div class="measure">
 <h2>{group.heading}</h2>
           </div>
 <div class="wide">
 <GuideList guides={group.guides} />
         </div>
-</section>
+</Section>
       ))
     }
   </div>

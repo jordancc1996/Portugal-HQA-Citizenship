@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-visa-cost");
 
@@ -103,7 +104,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -126,10 +127,10 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>Cost table</h2>
       </div>
@@ -206,9 +207,9 @@ const faqItems = [
 <div class="measure">
 <p>Package prices and per-dependent fees come from provider websites. No government body publishes or checks them.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>What the package price usually includes</h2>
       <ul>
@@ -220,9 +221,9 @@ const faqItems = [
       <p>One provider's published breakdown splits a €175,000 package into about €150,000 for incubation and research and €25,000 for legal and setup costs. Ask your provider for a line-by-line split in writing.</p>
       <p class="action-line"><Button href="/portugal-hqa-visa-investment" variant="text">What the €175,000 actually buys</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>What is not usually included</h2>
       <ul>
@@ -236,9 +237,9 @@ const faqItems = [
         <li>Tax advice, including advice on IFICI</li>
       </ul>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Is the money refundable?</h2>
       <p>It depends entirely on your contract. We have seen three approaches in provider terms:</p>
@@ -272,9 +273,9 @@ const faqItems = [
 <div class="measure">
 <p>In the packages we researched, the money funds a company and a research project. Once it is spent, it is gone, whatever happens to your application.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>What a family of four might pay</h2>
       <p>This is an illustration, not a quote. It uses the reported ranges and leaves out costs we could not confirm.</p>
@@ -317,9 +318,9 @@ const faqItems = [
         </UnknownsBox>
       </div>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>How this compares to the Golden Visa</h2>
       </div>
@@ -361,7 +362,7 @@ const faqItems = [
 <div class="measure">
 <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -372,18 +373,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal, tax or investment advice. Prices change and differ by provider. Speak to a qualified Portuguese lawyer before you commit money.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

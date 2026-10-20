@@ -12,6 +12,7 @@ import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
 import hero from "../../assets/images/assembleia-da-republica-lisbon.webp";
+import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/hqa-visa-citizenship-10-year-rule");
 
@@ -107,7 +108,7 @@ const faqItems = [
     <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
   </PageHero>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
 <KeyFacts
       items={[
@@ -133,10 +134,10 @@ const faqItems = [
 <div class="measure">
 <p class="sources">Source: Lei Orgânica n.º 1/2026, Diário da República n.º 95/2026.</p>
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>What changed</h2>
       </div>
@@ -178,9 +179,9 @@ const faqItems = [
 <div class="measure">
 <p>The law also allows breaks. All periods of legal residence are added together, as long as they fall within a window of 12 years (9 years for EU and CPLP nationals).</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Your timeline on the HQA route</h2>
       </div>
@@ -221,9 +222,9 @@ const faqItems = [
 <div class="measure">
 <p><a href="/guides/hqa-visa-permanent-residency">Permanent residence</a> after 5 years lets you stop renewing a temporary permit. It does not shorten the 10-year wait for citizenship.</p>
     </div>
-</section>
+</Section>
 
-    <div class="container section">
+    <Section tone="paper">
 <div class="measure">
       <UnknownsBox level={2}>
         <p><strong>When the clock starts.</strong> The old rule that counted time from your permit application was revoked. Several law firms say the clock now starts when your first residence card is issued. The law text does not say this directly. It defines legal residence as living in Portugal with your situation regularised under any visa or permit. Whether time on your D3 visa, or time spent waiting for AIMA, counts is not settled.</p>
@@ -231,9 +232,9 @@ const faqItems = [
         <p>We will update this page when these points are settled.</p>
       </UnknownsBox>
     </div>
-</div>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>The other requirements for citizenship</h2>
       <ul>
@@ -243,9 +244,9 @@ const faqItems = [
         <li><strong>Criminal record.</strong> A final conviction with an effective prison sentence of more than 3 years for certain serious crimes can block an application.</li>
       </ul>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>How the law got here</h2>
       <ul>
@@ -254,15 +255,15 @@ const faqItems = [
         <li><strong>19 May 2026.</strong> The law came into force.</li>
       </ul>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Does the Golden Visa get you citizenship faster?</h2>
       <p>No. Golden Visa holders follow the same 10-year rule (7 years for EU and CPLP nationals). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.</p>
       <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -273,18 +274,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your own timeline.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

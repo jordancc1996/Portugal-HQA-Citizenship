@@ -6,6 +6,7 @@ import { getImage } from "astro:assets";
 import { imageCredits } from "../data/image-credits";
 import { pages, verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const description =
   "Photographers whose Unsplash photos appear on Portugal HQA Citizenship, with links to each original photo. All photos are used under the Unsplash License.";
@@ -65,7 +66,7 @@ const credits = imageCredits.map((credit) => {
   <p class="lead" slot="lead">{lead}</p>
 </PageIntro>
 
-  <section class="container section">
+  <Section tone="cream">
     <div class="measure">
     <ul class="credits">
       {
@@ -84,5 +85,5 @@ const credits = imageCredits.map((credit) => {
       }
     </ul>
     </div>
-  </section>
+  </Section>
 </BaseLayout>

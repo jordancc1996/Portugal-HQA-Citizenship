@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-visa-for-americans");
 
@@ -99,7 +100,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or tax advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -122,16 +123,16 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
-  <section class="container section">
+  <Section tone="paper">
     <div class="measure">
       <p>The 10-year rule for US citizens is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
     </div>
-  </section>
+  </Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>How Americans apply</h2>
       <ol>
@@ -143,9 +144,9 @@ const faqItems = [
       </ol>
       <p class="action-line"><Button href="/hqa-visa-requirements" variant="text">Requirements and documents</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>US tax while you live in Portugal</h2>
       <p>These US rules continue after you move:</p>
@@ -193,16 +194,16 @@ const faqItems = [
       </div>
       <p class="action-line"><Button href="/guides/hqa-visa-ifici-tax" variant="text">HQA visa and IFICI tax</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Can I keep my US citizenship?</h2>
       <p>Yes. The United States does not require you to give up your citizenship when you become Portuguese, and Portugal allows dual citizenship. You would hold both passports.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Living in Portugal from the US</h2>
       <ul>
@@ -212,7 +213,7 @@ const faqItems = [
       </ul>
       <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -223,18 +224,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal or tax advice. Speak to a Portuguese lawyer and a US–Portugal tax adviser before you commit money.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

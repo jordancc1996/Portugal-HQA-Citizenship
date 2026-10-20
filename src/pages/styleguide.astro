@@ -16,6 +16,7 @@ import ConsultationForm from "../components/ConsultationForm.astro";
 import { facts, lastVerified } from "../data/facts";
 import { formatVerifiedDate } from "../lib/format-date";
 import hero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const description = `This page shows the shared components for Portugal HQA Citizenship. Figures come from the fact file last verified on ${formatVerifiedDate(lastVerified)}.`;
 
@@ -104,32 +105,29 @@ const guides = [
     <p class="lead" slot="lead">{description}</p>
   </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
     <div class="wide">
       <KeyFacts items={keyFacts} />
     </div>
-  </div>
+  </Section>
 
-  <section class="container section">
+  <Section tone="paper">
     <div class="measure">
       <h2>Header</h2>
       <p>The wordmark is Inter 700. One Menu button sits on the right at every screen size and opens a full-screen menu. The same seven links stay in the page HTML.</p>
     </div>
-  </section>
+  </Section>
 
-  <section class="container section">
+  <Section tone="cream">
     <div class="measure">
       <h2>Layout</h2>
       <p>This block uses the container and the measure column. The measure column is 720px wide and starts on the container's left edge.</p>
     </div>
-  </section>
-
-  <section class="container section">
-        <div class="measure"><h2>Wide column</h2>
+    <div class="measure">
+      <h2>Wide column</h2>
       <p>Tables, the key facts grid and guide lists use the wide column. It is the full width of the container and starts on the same left edge.</p>
-    
     </div>
-  </section>
+  </Section>
 
   <PageHero
     title="Page Hero"
@@ -142,7 +140,7 @@ const guides = [
     <Button slot="actions" href="#checklist">Get the due diligence checklist</Button>
   </PageHero>
 
-    <div class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Source note</h2>
       <p>
@@ -150,18 +148,18 @@ const guides = [
         <SourceNote href={facts.nationalityLawInForce.source} label="Lei Orgânica 1/2026" />
       </p>
     </div>
-</div>
+</Section>
 
-    <div class="container section">
+    <Section tone="paper">
 <div class="measure">
       <UnknownsBox>
         <p>{facts.citizenshipClockStart.value}</p>
         <SourceNote href={facts.citizenshipClockStart.source} label="Lei Orgânica 1/2026" />
       </UnknownsBox>
     </div>
-</div>
+</Section>
 
-    <div class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Recorded facts</h2>
       </div>
@@ -189,14 +187,14 @@ const guides = [
         </table>
       </Table>
     </div>
-</div>
+</Section>
 
-    <div class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</div>
+</Section>
 
   <div id="checklist">
     <LeadMagnetBand
@@ -207,23 +205,23 @@ const guides = [
     </LeadMagnetBand>
   </div>
 
-  <div class="container section">
+  <Section tone="paper">
 <div class="measure">
       <h2>Consultation form</h2>
       <ConsultationForm />
     </div>
-</div>
+</Section>
 
-    <div class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Guides</h2>
       </div>
 <div class="wide">
 <GuideList guides={guides} />
     </div>
-</div>
+</Section>
 
-    <div class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Breadcrumbs</h2>
       <Breadcrumbs
@@ -233,9 +231,9 @@ const guides = [
         ]}
       />
     </div>
-</div>
+</Section>
 
-    <div class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Buttons</h2>
       <div class="actions">
@@ -243,5 +241,5 @@ const guides = [
         <Button href="/portugal-hqa-visa-investment" variant="text">Read the investment guide</Button>
       </div>
 </div>
-    </div>
+    </Section>
 </BaseLayout>

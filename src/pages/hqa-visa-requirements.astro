@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import hero from "../assets/images/blue-white-tile-pattern.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-visa-requirements");
 
@@ -108,7 +109,7 @@ const faqItems = [
     <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
   </PageHero>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -131,10 +132,10 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>What the law requires</h2>
       <p>To get a residence permit for highly qualified activity under article 90, you need one of these:</p>
@@ -154,17 +155,17 @@ const faqItems = [
       </ul>
       <p class="action-line"><Button href="/portugal-hqa-visa-investment" variant="text">How the investment package fits this legal structure</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Qualifications</h2>
       <p>Portuguese law describes highly qualified activity as work that needs specialised technical skills or a matching qualification. Under Portaria 328/2018, the Tech Visa asks for a degree at level 6 (a bachelor's degree or equivalent), or a level 5 higher technical course plus at least 5 years of specialized experience.</p>
       <p>Investment packages usually expect a university degree and experience that fits the research project. Check the provider's exact criteria before you pay.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>What providers add on top</h2>
       <p>These are package rules, not legal rules. They differ by provider.</p>
@@ -177,9 +178,9 @@ const faqItems = [
       </ul>
       <p>Ask the provider to put every eligibility rule in writing, and to say which ones come from the law and which come from them.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Documents you will usually need</h2>
       </div>
@@ -232,9 +233,9 @@ const faqItems = [
 <div class="measure">
 <p>Consulates publish their own checklists, and they differ by country. Use the checklist for the consulate where you will apply.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Who this route suits</h2>
       <ul>
@@ -246,9 +247,9 @@ const faqItems = [
       <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
       <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules</Button></p>
     </div>
-</section>
+</Section>
 
-    <div class="container section">
+    <Section tone="cream">
 <div class="measure">
       <UnknownsBox level={2}>
         <p><strong>Salary thresholds.</strong> Portuguese law sets salary floors for some highly qualified routes, linked to the national average salary or to the social support index (IAS, €537.13 a month in 2026). We have not confirmed which threshold, if any, applies when you hold a role in a company funded by your own package.</p>
@@ -256,7 +257,7 @@ const faqItems = [
         <p><strong>A founder employing themselves.</strong> Whether a founder can meet the highly qualified activity conditions through a contract with a company they control is a question for a Portuguese lawyer.</p>
       </UnknownsBox>
     </div>
-</div>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -267,18 +268,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal, tax or investment advice. Requirements change and differ by consulate. Speak to a qualified Portuguese lawyer before you apply.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

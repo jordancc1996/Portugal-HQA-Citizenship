@@ -11,6 +11,7 @@ import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
 import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/hqa-visa-ifici-tax");
 
@@ -98,7 +99,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not tax advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
 <KeyFacts
       items={[
@@ -124,10 +125,10 @@ const faqItems = [
 <div class="measure">
 <p class="sources">Sources: Estatuto dos Benefícios Fiscais, article 58-A; Portaria 352/2024/1.</p>
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>Who can qualify</h2>
       <p>You must not have been tax resident in Portugal in any of the previous 5 years, and you must never have benefited from NHR, Regressar or IFICI before. Your work must also fit one of the eligible categories, which include:</p>
@@ -169,9 +170,9 @@ const faqItems = [
 <div class="measure">
       <p>For the highly qualified professions category in Portaria 352/2024/1, the role generally requires a doctorate, or a degree plus at least 3 years of professional experience. Other categories have their own education rules.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>How this works with an HQA package</h2>
       <p>An <a href="/portugal-hqa-visa-investment">HQA investment package</a> can put you in a position to qualify, for example through a role in a certified startup or certified research work. Whether it does depends on:</p>
@@ -187,14 +188,14 @@ const faqItems = [
         </UnknownsBox>
       </div>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Old NHR is closed</h2>
       <p>The old non-habitual resident regime (NHR) closed to new applicants from 1 January 2024. People already registered keep it for their remaining years. IFICI is narrower and tied to specific roles.</p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -205,18 +206,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not tax advice. Tax rules change. Speak to a qualified tax adviser before you rely on IFICI.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

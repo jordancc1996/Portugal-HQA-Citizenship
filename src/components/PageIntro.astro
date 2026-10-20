@@ -1,5 +1,6 @@
 ---
 import LastVerified from "./LastVerified.astro";
+import Section from "./Section.astro";
 
 interface Props {
   title: string;
@@ -10,8 +11,7 @@ interface Props {
 const { title, verified, path } = Astro.props;
 ---
 
-<section class="page-intro">
-  <div class="container">
+<Section tone="paper" class="page-intro">
     <div class="measure">
       {
         Astro.slots.has("crumbs") && (
@@ -38,12 +38,10 @@ const { title, verified, path } = Astro.props;
         ) : null
       }
     </div>
-  </div>
-</section>
+</Section>
 
 <style>
   .page-intro {
-    padding-top: var(--space-block);
     text-align: left;
   }
 

@@ -2,6 +2,7 @@
 import type { ImageMetadata } from "astro";
 import Photo from "./Photo.astro";
 import LastVerified from "./LastVerified.astro";
+import Section from "./Section.astro";
 
 interface Props {
   title: string;
@@ -28,8 +29,7 @@ const {
 } = Astro.props;
 ---
 
-<section class:list={["page-hero", smallAspect === "4/5" && "ratio-portrait"]}>
-  <div class="container">
+<Section tone="paper" class={smallAspect === "4/5" ? "page-hero ratio-portrait" : "page-hero"}>
     {
       Astro.slots.has("crumbs") && (
         <div class="crumbs-wrap">
@@ -64,14 +64,9 @@ const {
         />
       </div>
     </div>
-  </div>
-</section>
+</Section>
 
 <style>
-  .page-hero {
-    padding-top: var(--space-block);
-  }
-
   .crumbs-wrap {
     margin-bottom: 1.25rem;
   }

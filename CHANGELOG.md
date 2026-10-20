@@ -225,5 +225,10 @@ Why: The owner may sell leads later. Those sentences would be false if that star
 Change: Replace the desktop link row with one menu button, and set the wordmark in Inter 700.
 Why: The header uses the same menu at every screen size, with the wordmark on the left.
 
+## 2026-10-20
+
+Change: Build pages from full-width paper, cream and Atlantic bands, and set the footer on Ink.
+Why: A single white column did not show where one section ended and the next began.
+
 
 

@@ -12,6 +12,7 @@ import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
 import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/hqa-visa-permanent-residency");
 
@@ -99,7 +100,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
 <KeyFacts
       items={[
@@ -125,10 +126,10 @@ const faqItems = [
 <div class="measure">
 <p class="sources">Source: Lei 23/2007, articles 76 and 80.</p>
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>Requirements</h2>
       </div>
@@ -170,9 +171,9 @@ const faqItems = [
         </table>
       </Table>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Permanent residence or citizenship?</h2>
       </div>
@@ -224,9 +225,9 @@ const faqItems = [
 <div class="measure">
 <p class="action-line"><Button href="/guides/hqa-visa-citizenship-10-year-rule" variant="text">Citizenship under the 10-year rule</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Why HQA holders may want permanent residence</h2>
       <ul>
@@ -240,7 +241,7 @@ const faqItems = [
         </UnknownsBox>
       </div>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -251,18 +252,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer before you apply.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import hero from "../assets/images/cascais-town-square.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-visa-family");
 
@@ -104,7 +105,7 @@ const faqItems = [
     <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
   </PageHero>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
 <KeyFacts
       items={[
@@ -130,10 +131,10 @@ const faqItems = [
 <div class="measure">
 <p class="sources">Source: Lei 61/2025, Diário da República n.º 204/2025. Provider fees are reported by providers, not set by that law.</p>
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>The 2-year rule and who is exempt</h2>
       <p>In October 2025, Portugal changed its family reunification rules. Most permit holders must now hold their permit for 2 years before applying for family members. A spouse or partner who lived with the holder for at least 18 months before entering Portugal can apply after 15 months.</p>
@@ -173,9 +174,9 @@ const faqItems = [
         </table>
       </Table>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Who counts as family</h2>
       <p>Providers usually list:</p>
@@ -187,9 +188,9 @@ const faqItems = [
       </ul>
       <p>Portuguese law sets the exact definitions, and they can depend on your situation. Confirm each family member with your lawyer before you apply.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>What family members cost</h2>
       </div>
@@ -226,9 +227,9 @@ const faqItems = [
 <div class="measure">
 <p class="action-line"><Button href="/hqa-visa-cost" variant="text">Full cost breakdown</Button></p>
     </div>
-</section>
+</Section>
 
-    <div class="container section">
+    <Section tone="cream">
 <div class="measure">
       <p>After the family permit is granted, family members must take Portuguese language training and training on constitutional values, and children must attend compulsory school. Renewal depends on that training, with a humanitarian exception. The article 90 exemption from the waiting period is not repeated in this rule.</p>
       <p>AIMA must decide a family reunification request within 9 months. For article 90 families, AIMA can extend that once by the same period in exceptional cases and must tell the applicant.</p>
@@ -239,15 +240,15 @@ const faqItems = [
         </ul>
       </UnknownsBox>
     </div>
-</div>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Living in Portugal as a family</h2>
       <p>Family members hold their own residence permits and can live, study and, in most cases, work in Portugal. The same absence limits apply to them. Children can attend Portuguese public schools or the many international schools around Lisbon, Cascais, Porto and the Algarve.</p>
       <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -258,19 +259,19 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
       <p>The 10-year rule for each family member is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your family's situation.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

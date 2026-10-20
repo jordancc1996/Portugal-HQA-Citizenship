@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-vs-startup-visa-tech-visa");
 
@@ -100,7 +101,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -123,15 +124,15 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
-  <section class="container section">
+  <Section tone="paper">
     <div class="measure">
       <p>Article 90 families and the 2-year wait are explained on the <a href="/hqa-visa-family">family page</a>. The package price is explained on the <a href="/hqa-visa-cost">cost page</a>. The shared citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
     </div>
-  </section>
+  </Section>
 
-  <section class="container section">
+  <Section tone="cream">
 <div class="measure">
 <h2>The three routes side by side</h2>
       </div>
@@ -193,10 +194,10 @@ const faqItems = [
         </table>
       </Table>
     </div>
-</section>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Which one fits you</h2>
       <h3>HQA investment package</h3>
@@ -223,7 +224,7 @@ const faqItems = [
       </div>
       <p class="action-line"><Button href="/guides/what-is-hqa-visa" variant="text">What is the HQA visa?</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -234,18 +235,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer before you choose a route.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

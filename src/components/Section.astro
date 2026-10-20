@@ -1,0 +1,100 @@
+---
+interface Props {
+  tone?: "paper" | "cream" | "atlantic";
+  id?: string;
+  as?: "section" | "div";
+  class?: string;
+}
+
+const { tone = "paper", id, as = "section", class: className } = Astro.props;
+const Tag = as;
+const prose = as === "section" && !className;
+---
+
+<Tag id={id} class:list={["band-section", prose && "section", `tone-${tone}`, className]}>
+  <div class="container">
+    <slot />
+  </div>
+</Tag>
+
+<style>
+  .band-section {
+    box-sizing: border-box;
+    width: 100%;
+    padding-block: 64px;
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .tone-cream {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    --table-head: var(--color-paper);
+    --unknowns-bg: var(--color-paper);
+  }
+
+  .tone-atlantic {
+    background: var(--color-atlantic);
+    color: #ffffff;
+  }
+
+  .tone-atlantic :global(h1),
+  .tone-atlantic :global(h2),
+  .tone-atlantic :global(h3),
+  .tone-atlantic :global(p),
+  .tone-atlantic :global(li),
+  .tone-atlantic :global(label),
+  .tone-atlantic :global(summary) {
+    color: #ffffff;
+  }
+
+  .tone-atlantic :global(a) {
+    color: #ffffff;
+  }
+
+  .tone-atlantic :global(small),
+  .tone-atlantic :global(.small) {
+    color: #e5dfd6;
+  }
+
+  .tone-atlantic :global(.site-form label),
+  .tone-atlantic :global(.site-form .check-text),
+  .tone-atlantic :global(.site-form .form-note),
+  .tone-atlantic :global(.site-form .field-error),
+  .tone-atlantic :global(.site-form .form-status),
+  .tone-atlantic :global(.form-success p),
+  .tone-atlantic :global(.form-success a) {
+    color: #ffffff;
+  }
+
+  .tone-atlantic :global(.site-form input:not([type="checkbox"])),
+  .tone-atlantic :global(.site-form select),
+  .tone-atlantic :global(.site-form textarea) {
+    background: #ffffff;
+    color: var(--color-ink);
+  }
+
+  .tone-atlantic :global(a.solid),
+  .tone-atlantic :global(button.solid) {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--color-atlantic);
+  }
+
+  .tone-atlantic :global(a.solid:hover),
+  .tone-atlantic :global(button.solid:hover) {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  .tone-atlantic :global(:focus-visible) {
+    outline-color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    .band-section {
+      padding-block: 112px;
+    }
+  }
+</style>

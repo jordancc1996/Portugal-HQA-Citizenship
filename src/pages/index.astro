@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { pages, verifiedOn } from "../data/pages";
 import hero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/");
 
@@ -112,7 +113,7 @@ const faqItems = [
     </p>
   </PageHero>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
         <div class="wide">
 <KeyFacts
       items={[
@@ -140,10 +141,10 @@ const faqItems = [
       Sources: Lei 23/2007, Lei Orgânica 1/2026. Package prices are reported by providers. See <a href="/methodology">how we verify</a>.
     </p>
         </div>
-  </div>
+  </Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>What the HQA visa actually is</h2>
       <p>"HQA" stands for highly qualified activity. It is not the name of a law or a government program. It is a label for two legal tools:</p>
@@ -154,9 +155,9 @@ const faqItems = [
       <p>These tools were built for skilled workers, researchers and founders. An investment package is one way to qualify, not the only one. A job contract with a Portuguese employer that meets the salary and qualification rules can lead to the same permit with no investment at all.</p>
       <p class="action-line"><Button href="/guides/what-is-hqa-visa" variant="text">What is the HQA visa?</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>What the €175,000 packages are</h2>
       <p>Private providers combine several services into one price:</p>
@@ -169,9 +170,9 @@ const faqItems = [
       <p>In the packages we researched, the money funds a company and a research project. It is risk capital, not a deposit. Refund terms differ from provider to provider, and some packages are fully non-refundable. Ask for the contract before you pay anything.</p>
       <p class="action-line"><Button href="/hqa-visa-cost" variant="text">See the full cost breakdown</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>The honest timeline</h2>
       </div>
@@ -223,9 +224,9 @@ const faqItems = [
       </div>
       <p class="action-line"><Button href="/guides/hqa-visa-citizenship-10-year-rule" variant="text">Citizenship under the 10-year rule</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Who this route suits, and who it does not</h2>
       <div class="suit">
@@ -247,9 +248,9 @@ const faqItems = [
         </div>
       </div>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>HQA packages and the Golden Visa</h2>
       </div>
@@ -296,7 +297,7 @@ const faqItems = [
 <div class="measure">
 <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Full comparison</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <div id="checklist">
@@ -311,18 +312,18 @@ const faqItems = [
   <div class="reading end">
     {
       guides.length > 0 && (
-        <section class="container section">
+        <Section tone="paper">
 <div class="measure">
 <h2>Guides</h2>
           </div>
 <div class="wide">
 <GuideList guides={guides} />
         </div>
-</section>
+</Section>
       )
     }
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>How we work</h2>
       <ul>
@@ -333,13 +334,13 @@ const faqItems = [
       </ul>
       <p class="action-line"><Button href="/methodology" variant="text">Our methodology</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

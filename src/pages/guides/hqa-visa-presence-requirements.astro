@@ -12,6 +12,7 @@ import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
 import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/hqa-visa-presence-requirements");
 
@@ -103,7 +104,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or tax advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -126,10 +127,10 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>The three things presence affects</h2>
       <p>People often mix these up. They follow different rules.</p>
@@ -167,9 +168,9 @@ const faqItems = [
 <div class="measure">
 <p>The 10-year rule, including the 12-year window, is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>What "no minimum stay" claims mean</h2>
       <p>Some providers say their package needs "no minimum stay" or only a few days a year. The usual argument is that time abroad for the business counts as a justified absence.</p>
@@ -187,9 +188,9 @@ const faqItems = [
         </UnknownsBox>
       </div>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>Golden Visa and HQA compared</h2>
       </div>
@@ -221,15 +222,15 @@ const faqItems = [
 <div class="measure">
 <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Tax residence is a separate question</h2>
       <p>Living in Portugal can make you a Portuguese tax resident. Portugal generally treats you as resident if you spend more than 183 days there in a 12-month period, or keep a home there you intend to use as your main residence. Tax residence can bring tax benefits, such as IFICI if you qualify, and also tax duties. Get tax advice before you move.</p>
       <p class="action-line"><Button href="/guides/hqa-visa-ifici-tax" variant="text">HQA visa and IFICI tax</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -240,18 +241,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal or tax advice. Speak to a qualified Portuguese lawyer and tax adviser before you plan your time in and out of Portugal.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

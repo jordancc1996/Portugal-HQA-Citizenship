@@ -11,6 +11,7 @@ import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
 import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/what-is-hqa-visa");
 
@@ -102,7 +103,7 @@ const faqItems = [
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
 </PageIntro>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -125,10 +126,10 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>The two legal tools</h2>
       </div>
@@ -167,9 +168,9 @@ const faqItems = [
         </table>
       </Table>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>The four ways to qualify for the permit</h2>
       <p>Under article 90, you need one of these:</p>
@@ -181,9 +182,9 @@ const faqItems = [
       </ol>
       <p>The investment packages sold at about €175,000 are a way to create the second or third situation: they set up a research project or a company that can give you a qualifying role.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>Related routes that are often confused with HQA</h2>
       </div>
@@ -228,9 +229,9 @@ const faqItems = [
       <p class="action-line"><Button href="/hqa-visa-family" variant="text">Family rules for article 90</Button></p>
       <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Where the €175,000 fits in</h2>
       <p>Private providers sell packages that combine a company, an incubator place, a research project with a university and legal work. The package creates the activity. The visa and permit are still granted under articles 61 and 90.</p>
@@ -242,15 +243,15 @@ const faqItems = [
       <p class="action-line"><Button href="/portugal-hqa-visa-investment" variant="text">What the €175,000 actually buys</Button></p>
       <p class="action-line"><Button href="/hqa-visa-cost" variant="text">Full cost breakdown</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Is the HQA visa legitimate?</h2>
       <p>The legal tools are real and have been in Portuguese law for years. The investment packages are private products. Some are well run, some are not. Judge each provider on its contract, its partners and its answers to hard questions.</p>
       <p class="action-line"><Button href="/hqa-visa-due-diligence" variant="text">How to check a provider</Button></p>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -261,18 +262,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal advice. Speak to a qualified Portuguese lawyer about your own situation.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

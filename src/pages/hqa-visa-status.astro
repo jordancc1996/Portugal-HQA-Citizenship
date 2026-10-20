@@ -8,6 +8,7 @@ import ChecklistForm from "../components/ChecklistForm.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-visa-status");
 
@@ -70,7 +71,7 @@ const ogImage = await getImage({
 </PageIntro>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Current status</h2>
       </div>
@@ -119,9 +120,9 @@ const ogImage = await getImage({
 <div class="measure">
 <p>The family rule is explained on the <a href="/hqa-visa-family">family page</a>. The citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>Law changes</h2>
       </div>
@@ -165,9 +166,9 @@ const ogImage = await getImage({
         </table>
       </Table>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>What we are waiting for</h2>
       <ul>
@@ -176,7 +177,7 @@ const ogImage = await getImage({
         <li><strong>Clear guidance on presence for package holders.</strong> We have not found official guidance on "no minimum stay" claims. The <a href="/guides/hqa-visa-presence-requirements">absence limits in the law</a> are explained separately.</li>
       </ul>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -187,11 +188,11 @@ const ogImage = await getImage({
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal advice. Rules change. Speak to a qualified Portuguese lawyer before you commit money.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

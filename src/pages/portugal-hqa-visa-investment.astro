@@ -12,6 +12,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import hero from "../assets/images/university-of-coimbra-paco-das-escolas.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/portugal-hqa-visa-investment");
 
@@ -113,7 +114,7 @@ const faqItems = [
     <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
   </PageHero>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
 <KeyFacts
       items={[
@@ -139,10 +140,10 @@ const faqItems = [
 <div class="measure">
 <p class="sources">Sources: Lei 23/2007, Lei Orgânica 1/2026, provider price lists.</p>
 </div>
-</div>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>What the €175,000 pays for</h2>
       <p>Providers bundle several services into one price. The exact split differs, but most packages include:</p>
@@ -182,9 +183,9 @@ const faqItems = [
       <p>Family members usually cost extra. Providers quote about €2,500 to €5,000 for each dependent.</p>
       <p class="action-line"><Button href="/hqa-visa-cost" variant="text">See the full cost breakdown</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>How the package connects to your residence permit</h2>
       <p>The investment does not buy a visa. It creates the conditions for one.</p>
@@ -203,9 +204,9 @@ const faqItems = [
       <p class="action-line"><Button href="/hqa-visa-family" variant="text">Family rules for article 90</Button></p>
       <p class="action-line"><Button href="/hqa-visa-requirements" variant="text">Requirements and who qualifies</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>The risks, stated plainly</h2>
       <p><strong>Your money funds a business.</strong> If the company or the research fails, you can lose some or all of the investment. Nothing in Portuguese law guarantees a return.</p>
@@ -214,9 +215,9 @@ const faqItems = [
       <p><strong>You must live in Portugal.</strong> A temporary permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. Some marketing says this route needs "no minimum stay". We have not found a legal basis that makes that true for everyone.</p>
       <p class="action-line"><Button href="/guides/hqa-visa-presence-requirements" variant="text">Presence rules explained</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Timeline from investment to citizenship</h2>
       </div>
@@ -262,17 +263,17 @@ const faqItems = [
 <p>Months 0 to 4 are typical provider estimates, not legal deadlines. AIMA's legal deadline to decide a residence application is 90 days, extendable by 30.</p>
       <p class="action-line"><Button href="/guides/hqa-visa-citizenship-10-year-rule" variant="text">Citizenship under the 10-year rule</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Tax: IFICI is possible, not automatic</h2>
       <p>Portugal's IFICI regime taxes eligible Portuguese work income at 20% for 10 years and exempts most foreign income. A highly qualified activity permit does not give you IFICI on its own. You qualify only if your role and your employer fit one of the eligible categories, such as a certified startup or certified research and development work. You must register by 15 January of the year after you become tax resident.</p>
       <p class="action-line"><Button href="/guides/hqa-visa-ifici-tax" variant="text">HQA visa and IFICI tax</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>HQA package or Golden Visa fund?</h2>
       </div>
@@ -320,9 +321,9 @@ const faqItems = [
 <p>The HQA package costs less but asks more of you: you need to live in Portugal and build something real. The Golden Visa fund costs more but asks for very little time in the country.</p>
       <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Full comparison</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Red flags in HQA marketing</h2>
       <ul>
@@ -336,9 +337,9 @@ const faqItems = [
       <p>None of these proves a provider is dishonest. Each one is a reason to ask harder questions.</p>
       <p class="action-line"><Button href="/hqa-visa-due-diligence" variant="text">Due diligence guide</Button></p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Questions to ask before you sign</h2>
       <ol>
@@ -352,7 +353,7 @@ const faqItems = [
         <li>What will family members cost, and which article will their permits use?</li>
       </ol>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -363,18 +364,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal, tax or investment advice. Rules change. Speak to a qualified Portuguese lawyer before you commit money.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

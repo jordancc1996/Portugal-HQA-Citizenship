@@ -31,10 +31,9 @@ Desktop (1440px):
 - **Header:** wordmark top-left ("Portugal HQA Citizenship" in Inter 700), one Menu button on the right at every screen size. The button opens a full-screen white menu with the same links. White background, thin bottom rule. No dropdown mega-menus.
 - **Hero:** split layout. Left half: H1 with the keyword, a two-sentence honest summary, one primary button. Right half: one sharp, full-height photograph of Portugal. No video, no slider, no overlay text on the photo.
 - **Key facts strip** directly under the hero: 4 short facts with sources (for example: "No legal minimum investment", "Citizenship after 10 years of legal residence", "Permit valid 2 years, then 3-year renewals", "Last verified: [date]").
-- **Content sections:** one idea per screen. Generous white space (96 to 160px between sections). Text column max 680px for reading.
-- **Cream band** (one per page at most) for the lead magnet or the "How we verify information" statement.
+- **Content sections:** full-width bands with equal padding. Paper and cream alternate, and a page has at most one Atlantic band, for the checklist. Text stays in the reading column. Tables use the wide column.
 - **Guides list** in the Julia Bell "Insights" style: title, one-line summary, "Last verified" date and author line. No cards, no thumbnails grid clutter.
-- **Footer:** independence statement, disclaimer, sources policy, privacy, contact. Plain text links.
+- **Footer:** Ink background, white text, white links, same container and left edge. The closing band of the page.
 
 Mobile (390px): single column, photo moves under the H1, key facts stack 2x2, full-width button, 20px side padding.
 

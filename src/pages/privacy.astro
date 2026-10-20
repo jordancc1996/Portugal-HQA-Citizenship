@@ -8,6 +8,7 @@ import { siteConfig } from "../data/site";
 import { verifiedOn } from "../data/pages";
 import { isNoindex } from "../data/reviews";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const description =
   "How Portugal HQA Citizenship collects, uses, shares and protects the personal data you send through our forms, and how to exercise your rights.";
@@ -64,14 +65,14 @@ const ogImage = await getImage({
 </PageIntro>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Who we are</h2>
       <p>Portugal HQA Citizenship is an independent information website at portugalhqacitizenship.com. Contact: <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
 <h2>What we collect</h2>
       </div>
@@ -100,9 +101,9 @@ const ogImage = await getImage({
 <div class="measure">
 <p>We do not ask for passport numbers, financial account details or documents.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Why we use it</h2>
       <ul>
@@ -113,9 +114,9 @@ const ogImage = await getImage({
       </ul>
       <p>We use your data on the basis of your consent. You can withdraw consent at any time.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Who we share it with</h2>
       <ul>
@@ -123,35 +124,35 @@ const ogImage = await getImage({
         <li><strong>Service providers who run our website and forms,</strong> such as our form processor (Formcarry) and our hosting provider (Vercel). They process data for us and do not use it for their own purposes.</li>
       </ul>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>How long we keep it</h2>
       <p>We keep your data only as long as needed for the purpose you gave it for, and delete it when you ask us to.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Your rights</h2>
       <p>You can ask to access, correct or delete your data, to restrict or object to its use, or to receive a copy of it. You can withdraw consent at any time. Email <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
       <p>You can also complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (CNPD).</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Cookies and analytics</h2>
       <p>This site does not use advertising cookies. If we add analytics, we will update this policy and ask for your consent where required.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Changes</h2>
       <p>We will post any changes to this policy on this page with a new date.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

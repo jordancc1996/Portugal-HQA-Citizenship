@@ -6,6 +6,7 @@ import ConsultationForm from "../components/ConsultationForm.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const description =
   "HQA visa consultation for investors: tell us about your plans and, with your consent, we introduce you to advisors or providers who fit your situation.";
@@ -60,7 +61,7 @@ const ogImage = await getImage({
 </PageIntro>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>How it works</h2>
       <ol>
@@ -70,9 +71,9 @@ const ogImage = await getImage({
         <li>You decide whether to work with them. Any agreement is between you and them.</li>
       </ol>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>What to know first</h2>
       <ul>
@@ -81,20 +82,20 @@ const ogImage = await getImage({
         <li>We recommend you also hire your own independent Portuguese lawyer before you sign anything.</li>
       </ul>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Request a consultation</h2>
       <ConsultationForm idPrefix="consult" />
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Before you speak to anyone</h2>
       <p>Read our <a href="/hqa-visa-due-diligence">due diligence guide</a> and download the free checklist, so you know which questions to ask.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

@@ -10,6 +10,7 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
 import hero from "../assets/images/lisbon-praca-do-comercio-arch.webp";
+import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/portugal-hqa-vs-golden-visa");
 
@@ -105,7 +106,7 @@ const faqItems = [
     <p class="small disclaimer" slot="disclaimer">This page is general information, not legal, tax or investment advice.</p>
   </PageHero>
 
-  <div class="container facts">
+  <Section tone="cream" as="div">
 <div class="wide">
     <KeyFacts
       items={[
@@ -128,9 +129,9 @@ const faqItems = [
       ]}
     />
 </div>
-</div>
+</Section>
 
-  <section class="container section">
+  <Section tone="paper">
 <div class="measure">
 <h2>Side by side</h2>
       </div>
@@ -217,10 +218,10 @@ const faqItems = [
 <div class="measure">
 <p>The package price is explained on the <a href="/hqa-visa-cost">cost page</a>. Absence limits are explained on the <a href="/guides/hqa-visa-presence-requirements">presence page</a>. The 2-year family rule is explained on the <a href="/hqa-visa-family">family page</a>. The 10-year citizenship rule is explained in the <a href="/guides/hqa-visa-citizenship-10-year-rule">citizenship guide</a>. IFICI is explained in the <a href="/guides/hqa-visa-ifici-tax">IFICI guide</a>.</p>
     </div>
-</section>
+</Section>
 
   <div class="reading">
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
 <h2>Golden Visa options in 2026</h2>
       </div>
@@ -262,9 +263,9 @@ const faqItems = [
 <p>Real estate routes closed to new applicants on 7 October 2023.</p>
 <p>The job, research and culture amounts can be 20% lower in low-density areas. The fund and company routes are not reduced.</p>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Which route fits you</h2>
       <div class="fit-pair">
@@ -288,9 +289,9 @@ const faqItems = [
         </div>
       </div>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>What both routes have in common</h2>
       <ul>
@@ -299,7 +300,7 @@ const faqItems = [
         <li><strong>Both depend on AIMA.</strong> AIMA's legal deadline to decide is 90 days, extendable by 30.</li>
       </ul>
     </div>
-</section>
+</Section>
   </div>
 
   <LeadMagnetBand
@@ -310,18 +311,18 @@ const faqItems = [
   </LeadMagnetBand>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure"><h2>Frequently asked questions</h2>
       <FAQ items={faqItems} />
     
 </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>Disclaimer</h2>
       <p>This page gives general information, not legal, tax or investment advice. Speak to a qualified Portuguese lawyer before you commit money.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>

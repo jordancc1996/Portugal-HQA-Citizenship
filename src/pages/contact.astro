@@ -6,6 +6,7 @@ import { getImage } from "astro:assets";
 import { siteConfig } from "../data/site";
 import { verifiedOn } from "../data/pages";
 import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import Section from "../components/Section.astro";
 
 const description =
   "Contact Portugal HQA Citizenship by email for corrections, questions about our guides or privacy requests. For introductions, use the consultation page.";
@@ -59,7 +60,7 @@ const ogImage = await getImage({
 </PageIntro>
 
   <div class="reading end">
-    <section class="container section">
+    <Section tone="cream">
 <div class="measure">
       <h2>What to email us about</h2>
       <ul>
@@ -68,13 +69,13 @@ const ogImage = await getImage({
         <li><strong>Privacy requests.</strong> To see, correct or delete your data, or to withdraw consent.</li>
       </ul>
     </div>
-</section>
+</Section>
 
-    <section class="container section">
+    <Section tone="paper">
 <div class="measure">
       <h2>Looking for advice on your situation?</h2>
       <p>Use our <a href="/consultation">consultation page</a>. With your consent, we can introduce you to advisors or providers.</p>
     </div>
-</section>
+</Section>
   </div>
 </BaseLayout>
