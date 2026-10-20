@@ -265,5 +265,10 @@ Why: Reports and releases can be added later without a second structural pass, a
 Change: Size the open-menu links to the screen height, place the consultation button in a right column from 1024px, and hide Reports and Press while those hubs have no published items.
 Why: The consultation button sat below a short screen, and every page linked to an empty hub.
 
+## 2026-10-20
+
+Change: Pin the Node engine to 22.x.
+Why: Vercel warned that a >= range would move to the next major Node version on its own.
+
 
 
