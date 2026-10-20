@@ -25,41 +25,45 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
       </summary>
       <div class="panel">
         <div class="container panel-body">
-          <nav aria-label="Primary">
-            <ul class="links">
-              {
-                menuLinks.map((link) => (
-                  <li>
-                    <a href={link.href} aria-current={current === link.href ? "page" : undefined}>
-                      {link.label}
+          <div class="menu-grid">
+            <nav aria-label="Primary">
+              <ul class="links">
+                {
+                  menuLinks.map((link) => (
+                    <li>
+                      <a href={link.href} aria-current={current === link.href ? "page" : undefined}>
+                        {link.label}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </nav>
+            <div class="menu-aside">
+              <div class="actions">
+                <a
+                  class="consult"
+                  href="/consultation"
+                  aria-current={current === "/consultation" ? "page" : undefined}
+                >
+                  Request a consultation
+                </a>
+                {
+                  reportsReady && (
+                    <a class="reports-link" href="/reports">
+                      Read our reports
+                      <svg class="arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false">
+                        <path d="M3 13 L13 3 M13 3 H6.5 M13 3 V9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                      </svg>
                     </a>
-                  </li>
-                ))
-              }
-            </ul>
-            <div class="actions">
-              <a
-                class="consult"
-                href="/consultation"
-                aria-current={current === "/consultation" ? "page" : undefined}
-              >
-                Request a consultation
-              </a>
-              {
-                reportsReady && (
-                  <a class="reports-link" href="/reports">
-                    Read our reports
-                    <svg class="arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false">
-                      <path d="M3 13 L13 3 M13 3 H6.5 M13 3 V9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
-                    </svg>
-                  </a>
-                )
-              }
+                  )
+                }
+              </div>
+              <p class="menu-mail">
+                <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
+              </p>
             </div>
-          </nav>
-          <p class="menu-mail">
-            <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
-          </p>
+          </div>
         </div>
       </div>
     </details>
@@ -265,6 +269,10 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
     padding-bottom: 32px;
   }
 
+  .menu-grid {
+    width: 100%;
+  }
+
   .links {
     list-style: none;
     margin: 0;
@@ -282,7 +290,7 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
     min-height: 48px;
     color: var(--color-ink);
     font-family: var(--font-serif);
-    font-size: 34px;
+    font-size: clamp(34px, min(6.2vh, 4.4vw), 56px);
     font-weight: 400;
     line-height: 1.1;
     text-decoration: none;
@@ -394,10 +402,6 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
       min-height: calc(100dvh - 81px);
     }
 
-    .links a {
-      font-size: 44px;
-    }
-
     .actions {
       flex-direction: row;
       align-items: center;
@@ -405,8 +409,22 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
   }
 
   @media (min-width: 1024px) {
-    .links a {
-      font-size: 56px;
+    .menu-grid {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .menu-aside {
+      flex: none;
+    }
+
+    .actions {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
     }
   }
 

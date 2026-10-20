@@ -260,5 +260,10 @@ Why: The menu should read as a quiet panel. Reports and Press stay hidden until 
 Change: Add the reports and press routes, content collections and schema. Empty hubs stay noindex until an item is published.
 Why: Reports and releases can be added later without a second structural pass, and an empty hub does not enter the index.
 
+## 2026-10-20
+
+Change: Size the open-menu links to the screen height, place the consultation button in a right column from 1024px, and hide Reports and Press while those hubs have no published items.
+Why: The consultation button sat below a short screen, and every page linked to an empty hub.
+
 
 

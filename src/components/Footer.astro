@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro";
+import { isNoindex } from "../data/reviews";
 import { siteConfig } from "../data/site";
 
 const links = [
@@ -11,7 +12,7 @@ const links = [
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
   { href: "/contact", label: "Contact" },
-];
+].filter((link) => (link.href !== "/reports" && link.href !== "/press") || !isNoindex(link.href));
 ---
 
 <footer class="site-footer">

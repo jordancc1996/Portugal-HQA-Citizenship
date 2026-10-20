@@ -1,13 +1,4 @@
-const pageFiles = import.meta.glob("../pages/**/*.astro");
-
-export function pageExists(href: string) {
-  const slug = href.replace(/^\//, "");
-  if (!slug) return true;
-  return Object.keys(pageFiles).some((file) => {
-    const path = file.replaceAll("\\", "/");
-    return path.endsWith(`/pages/${slug}.astro`) || path.endsWith(`/pages/${slug}/index.astro`);
-  });
-}
+import { isNoindex } from "./reviews";
 
 const allLinks = [
   { href: "/", label: "Home" },
@@ -22,6 +13,6 @@ const allLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const menuLinks = allLinks.filter((link) => !link.whenReady || pageExists(link.href));
+export const menuLinks = allLinks.filter((link) => !link.whenReady || !isNoindex(link.href));
 
-export const reportsReady = pageExists("/reports");
+export const reportsReady = !isNoindex("/reports");
