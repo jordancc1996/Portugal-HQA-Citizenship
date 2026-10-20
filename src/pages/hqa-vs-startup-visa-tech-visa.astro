@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Button from "../components/Button.astro";
-import PageIntro from "../components/PageIntro.astro";
+import PageHero from "../components/PageHero.astro";
 import KeyFacts from "../components/KeyFacts.astro";
 import Table from "../components/Table.astro";
 import UnknownsBox from "../components/UnknownsBox.astro";
@@ -11,7 +11,7 @@ import ChecklistForm from "../components/ChecklistForm.astro";
 import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
-import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import hero from "../assets/images/lisbon-parque-das-nacoes.webp";
 import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-vs-startup-visa-tech-visa");
@@ -21,10 +21,10 @@ const description =
 
 const headline = "HQA vs StartUP Visa Portugal: And the Tech Visa";
 const pageUrl = "https://portugalhqacitizenship.com/hqa-vs-startup-visa-tech-visa";
-const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const heroAlt = "Parque das Nações waterfront in Lisbon";
 
 const ogImage = await getImage({
-  src: defaultHero,
+  src: hero,
   width: 1200,
   height: 630,
   fit: "cover",
@@ -66,7 +66,7 @@ const faqItems = [
   canonicalPath="/hqa-vs-startup-visa-tech-visa"
   dateModified={lastVerified}
   ogImage={ogImage.src}
-  ogImageAlt={ogAlt}
+  ogImageAlt={heroAlt}
   ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
   ogImageHeight={Number(ogImage.attributes.height ?? 630)}
   schema={[
@@ -84,10 +84,14 @@ const faqItems = [
     },
   ]}
 >
-  <PageIntro
+  <PageHero
   title={headline}
+  photo={hero}
+  photoAlt={heroAlt}
   verified={lastVerified}
   path="/hqa-vs-startup-visa-tech-visa"
+  maxWidth={960}
+  priority
 >
   <Breadcrumbs slot="crumbs"
     items={[
@@ -99,7 +103,7 @@ const faqItems = [
       HQA vs Startup Visa Portugal is a common comparison because the routes look alike: both involve a young company and an incubator. The difference is in the legal basis. HQA packages aim for a residence permit for highly qualified activity under article 90. The StartUP Visa uses article 89, which has different family rules. The Tech Visa is a third route, for people hired by a certified company.
     </p>
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
-</PageIntro>
+</PageHero>
 
   <Section tone="cream" as="div">
 <div class="wide">

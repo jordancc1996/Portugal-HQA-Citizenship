@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Button from "../../components/Button.astro";
-import PageIntro from "../../components/PageIntro.astro";
+import PageHero from "../../components/PageHero.astro";
 import KeyFacts from "../../components/KeyFacts.astro";
 import Table from "../../components/Table.astro";
 import UnknownsBox from "../../components/UnknownsBox.astro";
@@ -11,7 +11,7 @@ import ChecklistForm from "../../components/ChecklistForm.astro";
 import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
-import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import hero from "../../assets/images/lisbon-gare-do-oriente.webp";
 import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/hqa-visa-presence-requirements");
@@ -21,10 +21,10 @@ const description =
 
 const headline = "HQA Visa Minimum Stay: How Long You Must Live in Portugal";
 const pageUrl = "https://portugalhqacitizenship.com/guides/hqa-visa-presence-requirements";
-const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const heroAlt = "Gare do Oriente railway station in Lisbon";
 
 const ogImage = await getImage({
-  src: defaultHero,
+  src: hero,
   width: 1200,
   height: 630,
   fit: "cover",
@@ -68,7 +68,7 @@ const faqItems = [
   canonicalPath="/guides/hqa-visa-presence-requirements"
   dateModified={lastVerified}
   ogImage={ogImage.src}
-  ogImageAlt={ogAlt}
+  ogImageAlt={heroAlt}
   ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
   ogImageHeight={Number(ogImage.attributes.height ?? 630)}
   schema={[
@@ -86,10 +86,14 @@ const faqItems = [
     },
   ]}
 >
-  <PageIntro
+  <PageHero
   title={headline}
+  photo={hero}
+  photoAlt={heroAlt}
   verified={lastVerified}
   path="/guides/hqa-visa-presence-requirements"
+  maxWidth={960}
+  priority
 >
   <Breadcrumbs slot="crumbs"
     items={[
@@ -102,7 +106,7 @@ const faqItems = [
       HQA visa minimum stay rules come down to two absence limits: 6 months in a row or 8 months in total. The highly qualified activity permit is a permit to live and work in Portugal. A temporary permit can be cancelled if you spend more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. The Golden Visa's 7-day rule does not apply.
     </p>
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or tax advice.</p>
-</PageIntro>
+</PageHero>
 
   <Section tone="cream" as="div">
 <div class="wide">

@@ -59,6 +59,10 @@ In the packages we researched, the money funds a company and a research project.
 
 ---
 
+Lisbon at sunset.
+
+---
+
 ## The honest timeline
 
 | Stage | When | What happens |

@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import PageIntro from "../../components/PageIntro.astro";
+import PageHero from "../../components/PageHero.astro";
 import GuideList from "../../components/GuideList.astro";
 import Section from "../../components/Section.astro";
 import { getImage } from "astro:assets";
 import { pages, verifiedOn } from "../../data/pages";
-import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import hero from "../../assets/images/lisbon-hilltop-view.webp";
 
 const lastVerified = verifiedOn("/guides");
 
@@ -17,10 +17,10 @@ const headline = "HQA Visa Guides: Independent, Verified Answers";
 const lead =
   "HQA visa guides on this site answer the questions investors ask most before they commit money to a Portuguese highly qualified activity package. Each guide shows the date we last checked it, links to the law where it matters, and says plainly what is still unclear.";
 const pageUrl = "https://portugalhqacitizenship.com/guides";
-const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const heroAlt = "View over Lisbon from a hilltop viewpoint";
 
 const ogImage = await getImage({
-  src: defaultHero,
+  src: hero,
   width: 1200,
   height: 630,
   fit: "cover",
@@ -100,7 +100,7 @@ const listed = groups.flatMap((group) => group.guides);
   canonicalPath="/guides"
   dateModified={lastVerified}
   ogImage={ogImage.src}
-  ogImageAlt={ogAlt}
+  ogImageAlt={heroAlt}
   ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
   ogImageHeight={Number(ogImage.attributes.height ?? 630)}
   schema={[
@@ -128,10 +128,14 @@ const listed = groups.flatMap((group) => group.guides);
     },
   ]}
 >
-  <PageIntro
+  <PageHero
   title={headline}
+  photo={hero}
+  photoAlt={heroAlt}
   verified={lastVerified}
   path="/guides"
+  maxWidth={960}
+  priority
 >
   <Breadcrumbs slot="crumbs"
     items={[
@@ -140,7 +144,7 @@ const listed = groups.flatMap((group) => group.guides);
       ]}
   />
   <p class="lead" slot="lead">{lead}</p>
-</PageIntro>
+</PageHero>
 
   <div class="reading groups">
     {

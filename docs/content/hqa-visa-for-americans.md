@@ -6,7 +6,8 @@ title: Portugal HQA Visa for Americans - What US Investors Should Know
 metaTitle: Portugal HQA Visa for Americans - What US Investors Should Know | Portugal HQA Citizenship
 metaDescription: Portugal HQA visa for Americans in 2026: how US citizens apply, the 10-year citizenship path, the US tax rules that still apply abroad and what to ask first.
 lastVerified: 2026-10-20
-heroImage: none
+heroImage: lisbon-25-de-abril-bridge.webp
+heroAlt: The 25 de Abril Bridge and the Cristo Rei statue across the Tagus in Lisbon
 breadcrumb: Home > HQA visa for Americans
 ---
 

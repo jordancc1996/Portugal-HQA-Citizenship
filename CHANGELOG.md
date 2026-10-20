@@ -230,5 +230,10 @@ Why: The header uses the same menu at every screen size, with the wordmark on th
 Change: Build pages from full-width paper, cream and Atlantic bands, and set the footer on Ink.
 Why: A single white column did not show where one section ended and the next began.
 
+## 2026-10-20
+
+Change: Add nine Lisbon photographs, switch eight text pages to a photo hero, and add one photo break on the home page and one on the citizenship guide.
+Why: Those pages were text only. The new photos are Unsplash License images taken in Portugal, and each page still has at most one photo break.
+
 
 

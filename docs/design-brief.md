@@ -88,6 +88,16 @@ Every image must show something the section is actually about. Never a generic h
 | Process page | A real Portuguese residence card design shown only from official sources, or Lisbon's Avenida da Liberdade | The process ends in Lisbon |
 | Family page | Lisbon or Cascais residential street, school-age context | Families relocate to these areas |
 | Comparison pages | Simple tables and charts instead of photos | Data explains more than a picture |
+| Americans page | 25 de Abril Bridge and Cristo Rei, Lisbon | Hero for the page written for US investors |
+| Presence guide | Gare do Oriente, Lisbon | Hero for the minimum-stay guide |
+| What is the HQA visa | Champalimaud Foundation, Lisbon | Hero for the legal-basis guide |
+| Due diligence | Reading room at Torre do Tombo, Lisbon | Hero for the page about checking a provider |
+| Permanent residency guide | Tiled residential building, Lisbon | Hero for the page about staying after 5 years |
+| HQA vs Startup Visa | Parque das Nações waterfront, Lisbon | Hero for the route comparison |
+| IFICI guide | Praça do Comércio on the Tagus, Lisbon | Hero for the tax guide |
+| Guides index | View over Lisbon from a hilltop | Hero for the guide list |
+| Home photo break | Lisbon at sunset, from a hill | One photo between body sections |
+| Citizenship guide photo break | Alfama rooftops, already used on the home hero | One photo between body sections |
 
 Photo rules:
 - Real photographs only. Natural light, true color, crisp focus, no heavy filters, no text on images, no AI-generated pictures of real places.

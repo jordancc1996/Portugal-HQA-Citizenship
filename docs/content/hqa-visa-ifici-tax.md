@@ -6,7 +6,8 @@ title: HQA Visa IFICI Tax - Who Actually Qualifies
 metaTitle: HQA Visa IFICI Tax - Who Actually Qualifies | Portugal HQA Citizenship
 metaDescription: HQA visa IFICI tax for 2026: the 20% rate for 10 years, why the permit does not qualify you on its own, the eligible roles and the 15 January deadline.
 lastVerified: 2026-10-20
-heroImage: none
+heroImage: lisbon-praca-do-comercio-tagus.webp
+heroAlt: Praça do Comércio on the Tagus River in Lisbon
 breadcrumb: Home > Guides > HQA visa and IFICI tax
 ---
 

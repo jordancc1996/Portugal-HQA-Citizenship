@@ -12,6 +12,8 @@ import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
 import hero from "../../assets/images/assembleia-da-republica-lisbon.webp";
+import rooftops from "../../assets/images/lisbon-alfama-rooftops.webp";
+import PhotoBreak from "../../components/PhotoBreak.astro";
 import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/hqa-visa-citizenship-10-year-rule");
@@ -224,7 +226,13 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="paper">
+    <PhotoBreak
+      src={rooftops}
+      alt="Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline"
+      caption="Most applicants now need 10 years of legal residence for a Portuguese passport (7 for EU and CPLP nationals)."
+    />
+
+    <Section tone="cream">
 <div class="measure">
       <UnknownsBox level={2}>
         <p><strong>When the clock starts.</strong> The old rule that counted time from your permit application was revoked. Several law firms say the clock now starts when your first residence card is issued. The law text does not say this directly. It defines legal residence as living in Portugal with your situation regularised under any visa or permit. Whether time on your D3 visa, or time spent waiting for AIMA, counts is not settled.</p>
@@ -234,7 +242,7 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="cream">
+    <Section tone="paper">
 <div class="measure">
       <h2>The other requirements for citizenship</h2>
       <ul>
@@ -246,7 +254,7 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="paper">
+    <Section tone="cream">
 <div class="measure">
       <h2>How the law got here</h2>
       <ul>
@@ -257,7 +265,7 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="cream">
+    <Section tone="paper">
 <div class="measure">
       <h2>Does the Golden Visa get you citizenship faster?</h2>
       <p>No. Golden Visa holders follow the same 10-year rule (7 years for EU and CPLP nationals). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.</p>

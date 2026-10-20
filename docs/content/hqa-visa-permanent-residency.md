@@ -6,7 +6,8 @@ title: HQA Visa Permanent Residency - What Changes After 5 Years
 metaTitle: HQA Visa Permanent Residency - What Changes After 5 Years | Portugal HQA Citizenship
 metaDescription: HQA visa permanent residency in Portugal after 5 years: the requirements, the basic Portuguese test, how it differs from citizenship and when to apply.
 lastVerified: 2026-10-20
-heroImage: none
+heroImage: lisbon-tiled-residential-building.webp
+heroAlt: Tiled residential building with iron balconies in Lisbon
 breadcrumb: Home > Guides > HQA visa permanent residency
 ---
 

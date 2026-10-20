@@ -114,4 +114,13 @@ The owner may sell leads in future. Do not add a new claim that the site is paid
 | `/privacy` | We do not sell your data. We are not paid for introductions. | Sentence deleted. Nothing added in its place. | The owner may sell leads in future. The policy and consent wording must be reviewed before that starts. | none |
 | `llms.txt` | This site is independent, takes no referral fees, and program facts are checked against Portuguese law with the date shown on each page. | This site is independent, and program facts are checked against Portuguese law with the date shown on each page. | Remove the no-fee claim from the generator. | none |
 
+## Photo captions, 20 October 2026
+
+These lines are new visible copy under photographs. They do not add a fact that is not already on the page.
+
+| Page | Before | After | Reason | Fact key |
+|---|---|---|---|---|
+| `/` | (none) | Lisbon at sunset. | Caption under the home photo break. | none |
+| `/guides/hqa-visa-citizenship-10-year-rule` | (none) | Most applicants now need 10 years of legal residence for a Portuguese passport (7 for EU and CPLP nationals). | Caption under the citizenship photo break. The 10-year and 7-year figures are already on the page. | none |
+
 

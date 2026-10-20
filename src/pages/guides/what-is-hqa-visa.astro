@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Button from "../../components/Button.astro";
-import PageIntro from "../../components/PageIntro.astro";
+import PageHero from "../../components/PageHero.astro";
 import KeyFacts from "../../components/KeyFacts.astro";
 import Table from "../../components/Table.astro";
 import LeadMagnetBand from "../../components/LeadMagnetBand.astro";
@@ -10,7 +10,7 @@ import ChecklistForm from "../../components/ChecklistForm.astro";
 import FAQ from "../../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../../data/pages";
-import defaultHero from "../../assets/images/lisbon-alfama-rooftops.webp";
+import hero from "../../assets/images/champalimaud-foundation-lisbon.webp";
 import Section from "../../components/Section.astro";
 
 const lastVerified = verifiedOn("/guides/what-is-hqa-visa");
@@ -20,10 +20,10 @@ const description =
 
 const headline = "What Is the HQA Visa? The Legal Basis in Plain English";
 const pageUrl = "https://portugalhqacitizenship.com/guides/what-is-hqa-visa";
-const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const heroAlt = "The Champalimaud Foundation research centre in Lisbon";
 
 const ogImage = await getImage({
-  src: defaultHero,
+  src: hero,
   width: 1200,
   height: 630,
   fit: "cover",
@@ -67,7 +67,7 @@ const faqItems = [
   canonicalPath="/guides/what-is-hqa-visa"
   dateModified={lastVerified}
   ogImage={ogImage.src}
-  ogImageAlt={ogAlt}
+  ogImageAlt={heroAlt}
   ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
   ogImageHeight={Number(ogImage.attributes.height ?? 630)}
   schema={[
@@ -85,10 +85,14 @@ const faqItems = [
     },
   ]}
 >
-  <PageIntro
+  <PageHero
   title={headline}
+  photo={hero}
+  photoAlt={heroAlt}
   verified={lastVerified}
   path="/guides/what-is-hqa-visa"
+  maxWidth={960}
+  priority
 >
   <Breadcrumbs slot="crumbs"
     items={[
@@ -101,7 +105,7 @@ const faqItems = [
       What is the HQA visa? It is an informal name for Portugal's residence route for highly qualified activity, not the name of an official program. "HQA" stands for highly qualified activity. The route rests on two articles of Portugal's immigration law, Lei 23/2007, and there are several ways to qualify. Only one of them involves buying an investment package.
     </p>
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
-</PageIntro>
+</PageHero>
 
   <Section tone="cream" as="div">
 <div class="wide">

@@ -6,7 +6,8 @@ title: HQA vs Startup Visa Portugal - And the Tech Visa
 metaTitle: HQA vs Startup Visa Portugal - And the Tech Visa | Portugal HQA Citizenship
 metaDescription: HQA vs Startup Visa Portugal in 2026: how investment packages, the StartUP Visa and the Tech Visa differ in cost, legal basis, family rules and who they suit.
 lastVerified: 2026-10-20
-heroImage: none
+heroImage: lisbon-parque-das-nacoes.webp
+heroAlt: Parque das Nações waterfront in Lisbon
 breadcrumb: Home > HQA vs Startup Visa and Tech Visa
 ---
 

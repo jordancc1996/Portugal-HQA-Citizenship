@@ -12,6 +12,8 @@ import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { pages, verifiedOn } from "../data/pages";
 import hero from "../assets/images/lisbon-alfama-rooftops.webp";
+import sunset from "../assets/images/lisbon-sunset-from-hill.webp";
+import PhotoBreak from "../components/PhotoBreak.astro";
 import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/");
@@ -172,7 +174,13 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="paper">
+    <PhotoBreak
+      src={sunset}
+      alt="Lisbon at sunset seen from a hill"
+      caption="Lisbon at sunset."
+    />
+
+    <Section tone="cream">
 <div class="measure">
 <h2>The honest timeline</h2>
       </div>
@@ -226,7 +234,7 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="cream">
+    <Section tone="paper">
 <div class="measure">
       <h2>Who this route suits, and who it does not</h2>
       <div class="suit">
@@ -250,7 +258,7 @@ const faqItems = [
     </div>
 </Section>
 
-    <Section tone="paper">
+    <Section tone="cream">
 <div class="measure">
 <h2>HQA packages and the Golden Visa</h2>
       </div>

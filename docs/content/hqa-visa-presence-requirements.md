@@ -6,7 +6,8 @@ title: HQA Visa Minimum Stay - How Long You Must Live in Portugal
 metaTitle: HQA Visa Minimum Stay - How Long You Must Live in Portugal | Portugal HQA Citizenship
 metaDescription: HQA visa minimum stay rules for 2026: the 6-month and 8-month absence limits, why the Golden Visa's 7 days do not apply, and what "no minimum stay" claims mean.
 lastVerified: 2026-10-19
-heroImage: none
+heroImage: lisbon-gare-do-oriente.webp
+heroAlt: Gare do Oriente railway station in Lisbon
 breadcrumb: Home > Guides > HQA visa minimum stay
 ---
 

@@ -6,7 +6,8 @@ title: Is the HQA Visa Legit - A Due Diligence Guide
 metaTitle: Is the HQA Visa Legit - A Due Diligence Guide | Portugal HQA Citizenship
 metaDescription: Is the HQA visa legit? The legal route is real, but €175,000 packages vary. Use our 2026 due diligence guide: 15 questions, red flags and how to check claims.
 lastVerified: 2026-10-19
-heroImage: none
+heroImage: torre-do-tombo-reading-room.webp
+heroAlt: Reading room at Torre do Tombo, Portugal's national archive, in Lisbon
 breadcrumb: Home > HQA visa due diligence
 ---
 

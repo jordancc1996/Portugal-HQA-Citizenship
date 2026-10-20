@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Button from "../components/Button.astro";
-import PageIntro from "../components/PageIntro.astro";
+import PageHero from "../components/PageHero.astro";
 import KeyFacts from "../components/KeyFacts.astro";
 import Table from "../components/Table.astro";
 import UnknownsBox from "../components/UnknownsBox.astro";
@@ -11,7 +11,7 @@ import ChecklistForm from "../components/ChecklistForm.astro";
 import FAQ from "../components/FAQ.astro";
 import { getImage } from "astro:assets";
 import { verifiedOn } from "../data/pages";
-import defaultHero from "../assets/images/lisbon-alfama-rooftops.webp";
+import hero from "../assets/images/lisbon-25-de-abril-bridge.webp";
 import Section from "../components/Section.astro";
 
 const lastVerified = verifiedOn("/hqa-visa-for-americans");
@@ -21,10 +21,10 @@ const description =
 
 const headline = "Portugal HQA Visa for Americans: What US Investors Should Know";
 const pageUrl = "https://portugalhqacitizenship.com/hqa-visa-for-americans";
-const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
+const heroAlt = "The 25 de Abril Bridge and the Cristo Rei statue across the Tagus in Lisbon";
 
 const ogImage = await getImage({
-  src: defaultHero,
+  src: hero,
   width: 1200,
   height: 630,
   fit: "cover",
@@ -65,7 +65,7 @@ const faqItems = [
   canonicalPath="/hqa-visa-for-americans"
   dateModified={lastVerified}
   ogImage={ogImage.src}
-  ogImageAlt={ogAlt}
+  ogImageAlt={heroAlt}
   ogImageWidth={Number(ogImage.attributes.width ?? 1200)}
   ogImageHeight={Number(ogImage.attributes.height ?? 630)}
   schema={[
@@ -83,10 +83,14 @@ const faqItems = [
     },
   ]}
 >
-  <PageIntro
+  <PageHero
   title={headline}
+  photo={hero}
+  photoAlt={heroAlt}
   verified={lastVerified}
   path="/hqa-visa-for-americans"
+  maxWidth={960}
+  priority
 >
   <Breadcrumbs slot="crumbs"
     items={[
@@ -98,7 +102,7 @@ const faqItems = [
       The Portugal HQA visa for Americans works the same way as for any other non-EU applicant, with one big difference: the United States taxes its citizens wherever they live. US citizens can apply for the highly qualified activity route, move to Portugal and, after 10 years of legal residence, apply for Portuguese citizenship. You will still file US tax returns every year.
     </p>
   <p class="small disclaimer" slot="disclaimer">This page is general information, not legal or tax advice.</p>
-</PageIntro>
+</PageHero>
 
   <Section tone="cream" as="div">
 <div class="wide">

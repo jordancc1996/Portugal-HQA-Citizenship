@@ -6,7 +6,8 @@ title: What Is the HQA Visa - The Legal Basis in Plain English
 metaTitle: What Is the HQA Visa - The Legal Basis in Plain English | Portugal HQA Citizenship
 metaDescription: What is the HQA visa? A plain-English guide to Portugal's highly qualified activity visa: articles 61 and 90, the 4 ways to qualify and where €175,000 fits in.
 lastVerified: 2026-10-19
-heroImage: none
+heroImage: champalimaud-foundation-lisbon.webp
+heroAlt: The Champalimaud Foundation research centre in Lisbon
 breadcrumb: Home > Guides > What is the HQA visa?
 ---
 

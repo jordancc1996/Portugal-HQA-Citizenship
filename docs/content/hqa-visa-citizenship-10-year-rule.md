@@ -59,6 +59,10 @@ The law also allows breaks. All periods of legal residence are added together, a
 
 ---
 
+Most applicants now need 10 years of legal residence for a Portuguese passport (7 for EU and CPLP nationals).
+
+---
+
 ## What we don't know yet
 
 **When the clock starts.** The old rule that counted time from your permit application was revoked. Several law firms say the clock now starts when your first residence card is issued. The law text does not say this directly. It defines legal residence as living in Portugal with your situation regularised under any visa or permit. Whether time on your D3 visa, or time spent waiting for AIMA, counts is not settled.
