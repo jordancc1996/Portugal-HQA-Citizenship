@@ -24,7 +24,7 @@ This page is general information, not legal advice.
 ## Key facts
 
 1. **10 years for most people.** Applicants from outside the EU, and from outside countries where Portuguese is an official language, need 10 years of legal residence.
-2. **7 years for some nationals.** EU nationals and nationals of countries where Portuguese is an official language need 7 years.
+2. **7 years for EU nationals and nationals of countries where Portuguese is an official language.** EU nationals and nationals of countries where Portuguese is an official language need 7 years.
 3. **In force since 19 May 2026.** The law was published on 18 May 2026.
 4. **Pending applications keep the old rules.** Applications already pending on 19 May 2026 are decided under the previous law.
 
@@ -99,7 +99,7 @@ No. Golden Visa holders follow the same 10-year rule (7 years for EU nationals a
 
 ---
 
-## [Cream band] Plan with the real timeline
+## [Cream band] Plan with the actual timeline
 
 Our free HQA due diligence checklist includes the questions to ask any provider about the citizenship path.
 

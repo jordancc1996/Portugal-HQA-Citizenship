@@ -26,7 +26,7 @@ This page is general information, not legal, tax or investment advice.
 1. **The legal basis is Lei 23/2007.** Article 61 covers the D3 residence visa. Article 90 covers the residence permit for highly qualified activity.
 2. **There is no investment requirement in law.** The investment is how a package creates the qualifying activity.
 3. **Qualifications matter.** Highly qualified activity means work that needs specialised technical skills or a matching qualification.
-4. **Absence limits apply.** A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity.
+4. **Absence limits apply.** A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified.
 
 ---
 
@@ -92,7 +92,7 @@ Consulates publish their own checklists, and they differ by country. Use the che
 
 ## Who this route suits
 
-- Founders, researchers and senior specialists with a project to build in Portugal
+- Founders, researchers and senior specialists with a concrete project to build in Portugal
 - People who can meet the absence limits on a temporary permit
 - Investors who accept that the money is at risk in a business
 
