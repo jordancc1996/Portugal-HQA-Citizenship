@@ -290,5 +290,10 @@ Why: The owner decided to publish while every review date is still empty. The pa
 Change: State that HQA is a plain description, not a mark, and say where Formcarry and Vercel process personal data. The heading check keeps Europe as a proper noun.
 Why: The 21 October 2026 open checks confirmed the trademark wording and the transfer terms. Retention stays as already published.
 
+## 2026-10-21
+
+Change: Add the full review pack under docs/legal/full-review-pack. Page copy and review dates were not changed.
+Why: The 21 October 2026 memo said the short pack was not enough to approve any page.
+
 
 

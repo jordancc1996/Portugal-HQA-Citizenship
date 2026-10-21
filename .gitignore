@@ -28,3 +28,7 @@ Thumbs.db
 
 # jetbrains setting folder
 .idea/
+
+# third-party pages in the lawyer pack stay out of the repository
+docs/legal/full-review-pack.zip
+docs/legal/full-review-pack/03-sources/*.pdf
