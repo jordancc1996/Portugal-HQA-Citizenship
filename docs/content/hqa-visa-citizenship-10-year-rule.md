@@ -13,7 +13,7 @@ breadcrumb: Home > Guides > HQA visa citizenship
 
 # HQA Visa Citizenship: The 10-Year Rule Explained
 
-HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU and CPLP nationals need 7 years. Many websites still promise a passport after 5 years. That is no longer true for new applications.
+HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU nationals and nationals of countries where Portuguese is an official language need 7 years. The 7 years and the 10 years are minimum residence conditions, not guarantees. Many websites still promise Portuguese nationality after 5 years. That is no longer true for new applications.
 
 Last verified: 19 October 2026 · Legally reviewed by an independent Portuguese lawyer on [review date]
 
@@ -23,8 +23,8 @@ This page is general information, not legal advice.
 
 ## Key facts
 
-1. **10 years for most people.** Applicants from outside the EU and the CPLP need 10 years of legal residence.
-2. **7 years for EU and CPLP nationals.** CPLP is the community of Portuguese-speaking countries, including Brazil.
+1. **10 years for most people.** Applicants from outside the EU, and from outside countries where Portuguese is an official language, need 10 years of legal residence.
+2. **7 years for some nationals.** EU nationals and nationals of countries where Portuguese is an official language need 7 years.
 3. **In force since 19 May 2026.** The law was published on 18 May 2026.
 4. **Pending applications keep the old rules.** Applications already pending on 19 May 2026 are decided under the previous law.
 
@@ -37,11 +37,11 @@ Source: Lei Orgânica n.º 1/2026, Diário da República n.º 95/2026.
 | | Before 19 May 2026 | From 19 May 2026 |
 |---|---|---|
 | Legal residence needed (most nationals) | 5 years | 10 years |
-| Legal residence needed (EU and CPLP nationals) | 5 years | 7 years |
+| Legal residence needed (EU nationals and nationals of countries where Portuguese is an official language) | 5 years | 7 years |
 | When the clock started | Counted from the permit application, under a 2024 rule | That 2024 rule was revoked |
 | Applications already filed | Old rules | Old rules still apply if pending on 19 May 2026 |
 
-The law also allows breaks. All periods of legal residence are added together, as long as they fall within a window of 12 years (9 years for EU and CPLP nationals).
+The law also allows breaks. All periods of legal residence are added together, as long as they fall within a window of 12 years (9 years for EU nationals and nationals of countries where Portuguese is an official language).
 
 ---
 
@@ -59,7 +59,7 @@ The law also allows breaks. All periods of legal residence are added together, a
 
 ---
 
-Most applicants now need 10 years of legal residence for a Portuguese passport (7 for EU and CPLP nationals).
+Most applicants now need 10 years of legal residence before they can apply for Portuguese nationality (7 for EU nationals and nationals of countries where Portuguese is an official language).
 
 ---
 
@@ -75,7 +75,9 @@ We will update this page when these points are settled.
 
 ## The other requirements for citizenship
 
-- **Language.** You must show knowledge of Portuguese through a test or certificate. The required level is set by regulation, not by the law itself.
+Residence is one of several conditions in article 6, alongside age, language and culture, means of subsistence, security checks and the criminal-record test.
+
+- **Language.** You must show knowledge of Portuguese through a test or certificate. The required level is set by regulation, not by the law itself. For nationals of countries where Portuguese is an official language, the law presumes the Portuguese-language element is met unless lack of Portuguese is manifest. That presumption does not remove the separate requirements concerning Portuguese culture, history, and national symbols.
 - **Knowledge of rights and duties.** A test of civic knowledge is part of the new law.
 - **Means of support.** You must show you can support yourself.
 - **Criminal record.** A final conviction with an effective prison sentence of more than 3 years for certain serious crimes can block an application.
@@ -84,7 +86,6 @@ We will update this page when these points are settled.
 
 ## How the law got here
 
-- **December 2025.** Portugal's Constitutional Court struck down 4 rules in an earlier version of the law (Acórdão 1133/2025 of 15 December 2025). One of them would have applied the new rules to applications already pending.
 - **18 May 2026.** Parliament's revised law was published as Lei Orgânica n.º 1/2026.
 - **19 May 2026.** The law came into force.
 
@@ -92,7 +93,7 @@ We will update this page when these points are settled.
 
 ## Does the Golden Visa get you citizenship faster?
 
-No. Golden Visa holders follow the same 10-year rule (7 years for EU and CPLP nationals). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.
+No. Golden Visa holders follow the same 10-year rule (7 years for EU nationals and nationals of countries where Portuguese is an official language). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.
 
 [Text link] Portugal HQA vs Golden Visa → /portugal-hqa-vs-golden-visa
 
@@ -109,7 +110,7 @@ Our free HQA due diligence checklist includes the questions to ask any provider 
 ## Frequently asked questions
 
 **How long does HQA visa citizenship take now?**
-Most applicants need 10 years of legal residence. EU and CPLP nationals need 7 years.
+Most applicants need 10 years of legal residence. EU nationals and nationals of countries where Portuguese is an official language need 7 years.
 
 **I already applied for citizenship before 19 May 2026. Does the new rule apply to me?**
 No. Applications already pending on 19 May 2026 are decided under the previous rules.
@@ -121,7 +122,7 @@ No. The transition rule covers pending applications only. If you had not applied
 Portugal allows dual citizenship. Whether you can keep your current citizenship depends on the law of your own country.
 
 **Is permanent residence the same as citizenship?**
-No. Permanent residence is possible after 5 years and lets you stop renewing a temporary permit. Citizenship needs 10 years for most people and gives you a Portuguese passport.
+No. Permanent residence is possible after 5 years and lets you stop renewing a temporary permit. Portuguese nationality needs 10 years of legal residence for most people, and residence is only one of the conditions.
 
 ---
 

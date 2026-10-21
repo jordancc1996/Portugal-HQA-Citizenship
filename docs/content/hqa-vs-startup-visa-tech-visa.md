@@ -24,8 +24,8 @@ This page is general information, not legal advice.
 ## Key facts
 
 1. **Different articles.** HQA uses article 90, the StartUP Visa uses article 89, the Tech Visa uses article 90 through a certified company.
-2. **Family rules differ.** Article 90 families skip the 2-year wait. Article 89 families do not.
-3. **Different costs.** HQA packages cost about €175,000. The StartUP Visa has no investment minimum.
+2. **Family rules differ.** Article 90 families are exempt from the 2-year wait. Article 89 families are not in that list, so the wait applies unless one of the exceptions does.
+3. **Different costs.** HQA packages cost about €175,000, reported by providers, October 2026. No government body sets or checks that price. The StartUP Visa has no investment minimum.
 4. **All lead to the same citizenship rule.** 10 years of legal residence for most nationals.
 
 Article 90 families and the 2-year wait are explained on the [family page](/hqa-visa-family). The package price is explained on the [cost page](/hqa-visa-cost). The shared citizenship rule is explained in the [citizenship guide](/guides/hqa-visa-citizenship-10-year-rule).
@@ -39,9 +39,9 @@ Article 90 families and the 2-year wait are explained on the [family page](/hqa-
 | Legal basis | Articles 61 and 90 | Article 89 | Article 90, Portaria 328/2018 |
 | Who it is for | Investors taking a highly qualified role in a funded project | Founders with their own startup idea | Skilled workers hired by a certified company |
 | Who approves the company | Provider and its partners | An incubator certified by IAPMEI | IAPMEI certifies the employer |
-| Investment | About €175,000 (private price) | No minimum; you need funds to support yourself | None |
+| Investment | About €175,000 (reported by providers, October 2026) | No minimum; you need funds to support yourself | None |
 | Family 2-year wait | Exempt | Not exempt | Exempt |
-| Citizenship | 10 years (7 for EU and CPLP nationals) | 10 years (7 for EU and CPLP nationals) | 10 years (7 for EU and CPLP nationals) |
+| Citizenship | 10 years (7 for EU nationals and nationals of countries where Portuguese is an official language) | 10 years (7 for EU nationals and nationals of countries where Portuguese is an official language) | 10 years (7 for EU nationals and nationals of countries where Portuguese is an official language) |
 
 ---
 
@@ -49,7 +49,7 @@ Article 90 families and the 2-year wait are explained on the [family page](/hqa-
 
 **HQA investment package**
 - You want a ready-made structure and are willing to pay for it
-- You plan to live in Portugal
+- You can meet the absence limits on a temporary permit
 - You want family members exempt from the 2-year wait
 
 **StartUP Visa**

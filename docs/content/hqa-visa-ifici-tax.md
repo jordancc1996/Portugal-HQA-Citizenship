@@ -44,7 +44,7 @@ You must not have been tax resident in Portugal in any of the previous 5 years, 
 | Roles in companies recognised by AICEP or IAPMEI | AICEP or IAPMEI |
 | Teaching and scientific research in higher education | Institution and tax authority rules |
 
-For the highly qualified professions category in Portaria 352/2024/1, the role generally requires a doctorate, or a degree plus at least 3 years of professional experience. Other categories have their own education rules.
+For the highly qualified professions category in Portaria 352/2024/1, the role generally requires a doctorate, or a degree plus at least 3 years of professional experience. Other categories have their own education rules. Each category has its own conditions. Check yours with a Portuguese tax adviser.
 
 ---
 

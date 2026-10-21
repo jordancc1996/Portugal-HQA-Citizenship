@@ -13,7 +13,7 @@ breadcrumb: Home > Guides > HQA visa minimum stay
 
 # HQA Visa Minimum Stay: How Long You Must Live in Portugal
 
-HQA visa minimum stay rules come down to two absence limits: 6 months in a row or 8 months in total. The highly qualified activity permit is a permit to live and work in Portugal. A temporary permit can be cancelled if you spend more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. The Golden Visa's 7-day rule does not apply.
+HQA visa minimum stay rules come down to two absence limits: 6 months in a row or 8 months in total. The highly qualified activity permit is a permit to live and work in Portugal. A temporary permit may be cancelled if you spend more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, unless the absence is justified. The Golden Visa's 7-day rule does not apply.
 
 Last verified: 19 October 2026 · Legally reviewed by an independent Portuguese lawyer on [review date]
 
@@ -23,8 +23,8 @@ This page is general information, not legal or tax advice.
 
 ## Key facts
 
-1. **6 months in a row.** More than 6 consecutive months abroad can cost you the permit.
-2. **8 months in total.** More than 8 non-consecutive months abroad during the permit's validity can also cost you the permit.
+1. **6 months in a row.** A temporary permit may be cancelled after more than 6 consecutive months outside Portugal during the permit's total validity.
+2. **8 months in total.** A temporary permit may be cancelled after more than 8 non-consecutive months outside Portugal during the permit's total validity.
 3. **Justified absences are an exception.** The law allows for absences with a valid reason, but the decision is case by case.
 4. **7 days is a Golden Visa rule.** It does not apply to the highly qualified activity permit.
 
@@ -36,9 +36,11 @@ People often mix these up. They follow different rules.
 
 | | What it means | What the rule is |
 |---|---|---|
-| Keeping your permit | Not losing the permit while it is valid | No more than 6 consecutive or 8 non-consecutive months abroad, unless justified |
+| Keeping your permit | Not losing the permit while it is valid | A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, unless justified |
 | Renewing your permit | Getting the next 3-year permit | You must still meet the conditions, including carrying out the activity in Portugal |
 | Counting time for citizenship | Building up 10 years of legal residence | Time with a valid permit counts, within a 12-year window |
+
+For permanent residence the limits are 24 months in a row, or 30 months in total within 3 years (article 85(2)(b)).
 
 [Text link] Citizenship under the 10-year rule → /guides/hqa-visa-citizenship-10-year-rule
 
@@ -64,7 +66,7 @@ What we know:
 
 | | HQA permit | Golden Visa |
 |---|---|---|
-| Minimum time in Portugal | Live there; absence limits apply | 7 days in year 1, then 14 days |
+| Minimum time in Portugal | Absence limits during the permit's total validity | 7 days in year 1, then 14 days |
 | Suits someone who | Is moving to Portugal | Wants a backup residence |
 
 [Text link] Portugal HQA vs Golden Visa → /portugal-hqa-vs-golden-visa
@@ -90,7 +92,7 @@ Our free HQA due diligence checklist includes the presence questions to ask any 
 ## Frequently asked questions
 
 **What is the HQA visa minimum stay?**
-There is no fixed number of days. The rule works the other way: more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's validity can cost you the permit, unless the absence is justified.
+There is no fixed number of days. A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, unless the absence is justified.
 
 **Can I live in the US and keep an HQA permit?**
 Not if you spend most of the year in the US. The permit is for carrying out a highly qualified activity in Portugal.

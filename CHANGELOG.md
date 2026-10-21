@@ -270,5 +270,10 @@ Why: The consultation button sat below a short screen, and every page linked to 
 Change: Pin the Node engine to 22.x.
 Why: Vercel warned that a >= range would move to the next major Node version on its own.
 
+## 2026-10-21
+
+Change: Apply the lawyer's round 1 wording on investment price, family rules, nationality, absence limits, permanent residence, Tech Visa, IFICI and legal review.
+Why: The 21 October 2026 memo corrected those sentences. It is not a page approval, so review dates stay empty.
+
 
 

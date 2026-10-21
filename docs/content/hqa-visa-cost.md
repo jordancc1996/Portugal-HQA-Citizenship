@@ -12,7 +12,7 @@ breadcrumb: Home > HQA visa cost
 
 # HQA Visa Portugal Cost: The Full Breakdown
 
-HQA visa Portugal cost starts with a private package of about €175,000, but it does not end there. You will also pay for family members, legal work, government fees, documents and renewals. This page lists every cost we know of, who sets it, and how sure we are of the number. Where we could not confirm a figure, we say so.
+HQA visa Portugal cost starts with a private package of about €175,000, reported by providers, October 2026, but it does not end there. No government body sets or checks that price. You will also pay for family members, legal work, government fees, documents and renewals. This page lists every cost we know of, who sets it, and how sure we are of the number. Where we could not confirm a figure, we say so.
 
 Last verified: 19 October 2026 · Legally reviewed by an independent Portuguese lawyer on [review date]
 
@@ -22,8 +22,8 @@ This page is general information, not legal, tax or investment advice.
 
 ## Key facts
 
-1. **No price is set by law.** Portuguese law sets no minimum investment for the highly qualified activity route.
-2. **Packages cost about €170,000 to €200,000.** €175,000 is the most common quote.
+1. **No minimum payment in article 90.** Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific.
+2. **Packages cost about €170,000 to €200,000.** €175,000 is the most common quote, reported by providers, October 2026. No government body sets or checks them.
 3. **Family members cost extra.** Providers quote about €2,500 to €5,000 per dependent.
 4. **Government fees changed on 1 March 2026.** We have not yet confirmed the new amounts.
 
@@ -33,7 +33,7 @@ This page is general information, not legal, tax or investment advice.
 
 | Cost | Typical amount | Who sets it | How sure we are |
 |---|---|---|---|
-| Investment package | €170,000 to €200,000 | Provider | Reported by providers |
+| Investment package | €170,000 to €200,000 | Provider | Reported by providers, October 2026 |
 | Each family member | €2,500 to €5,000 | Provider | Reported by providers |
 | Your own Portuguese lawyer | €5,000 to €10,000 | Lawyer | Reported, varies widely |
 | D3 visa fee at the consulate | About €90 to €110 per person | Portuguese state | Not confirmed |
@@ -43,18 +43,18 @@ This page is general information, not legal, tax or investment advice.
 | Health insurance | Depends on age and cover | Insurer | Varies |
 | Permit renewals (years 2 and 5) | AIMA fees again, plus legal help | Portuguese state, lawyer | Not confirmed |
 
-Package prices and per-dependent fees come from provider websites. No government body publishes or checks them.
+Package prices and per-dependent fees come from provider websites. No government body sets or checks them.
 
 ---
 
 ## What the package price usually includes
 
 - Setting up a Portuguese company
-- A place in a certified incubator, often for about 3 years in the packages we researched
+- A place in a certified incubator
 - A research and development project with a Portuguese university or research center
 - Legal and filing work for the visa and first permit
 
-One provider's published breakdown splits a €175,000 package into about €150,000 for incubation and research and €25,000 for legal and setup costs. Ask your provider for a line-by-line split in writing.
+Ask your provider for a line-by-line split in writing. The €175,000 figure is reported by providers, October 2026. No government body sets or checks it.
 
 [Text link] What the €175,000 actually buys → /portugal-hqa-visa-investment
 
@@ -75,15 +75,9 @@ One provider's published breakdown splits a €175,000 package into about €150
 
 ## Is the money refundable?
 
-It depends entirely on your contract. We have seen three approaches in provider terms:
+Whether any part is refundable, held in escrow or repayable depends on the provider's contract. Read the refund and return terms before you pay.
 
-| Approach | What it means |
-|---|---|
-| Fully non-refundable | You do not get money back, even if the visa is refused |
-| Refund on refusal | Part of the money is returned if the visa is refused |
-| Refund minus amounts paid out | You get back what has not yet been paid to universities or incubators |
-
-In the packages we researched, the money funds a company and a research project. Once it is spent, it is gone, whatever happens to your application.
+In the packages we researched, the money funds a company and a research project.
 
 ---
 
@@ -131,13 +125,13 @@ Our free HQA due diligence checklist lists the cost and refund questions to ask 
 For one person, expect about €175,000 for the package plus legal, government and document costs. A family adds €2,500 to €5,000 per person in provider fees, plus their own government fees.
 
 **Is €175,000 a government fee?**
-No. It is a private price for a package of services. Portuguese law sets no investment amount for this route.
+No. It is a private price for a package of services, reported by providers, October 2026. Article 90 does not set a minimum investment payment. No government body sets or checks it.
 
 **Can I pay in installments?**
 Some providers offer staged payments. This is a contract term, not a legal rule. Get the schedule and the refund terms in writing.
 
 **Do I pay the €175,000 again at renewal?**
-The packages we researched are sold as a one-time price that covers about 3 years of incubation. Ask what happens after that period and what your renewal requires. You pay government fees and, usually, legal fees at each renewal.
+Ask the provider whether the quoted price is paid once, and what a renewal requires. You pay government fees and, usually, legal fees at each renewal.
 
 **Why don't you list exact government fees?**
 AIMA changed its fees on 1 March 2026. We only publish numbers we can confirm from an official source.
