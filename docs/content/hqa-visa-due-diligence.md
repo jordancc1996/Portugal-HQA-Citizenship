@@ -4,7 +4,7 @@ url: /hqa-visa-due-diligence
 primaryKeyword: is the hqa visa legit
 title: Is the HQA Visa Legit - A Due Diligence Guide
 metaTitle: Is the HQA Visa Legit - A Due Diligence Guide | Portugal HQA Citizenship
-metaDescription: Is the HQA visa legit? The legal route is real, but €175,000 packages vary. Use our 2026 due diligence guide: 15 questions, red flags and how to check claims.
+metaDescription: Is the HQA visa legit? The route is in the law, but €175,000 packages vary. Use our 2026 due diligence guide: 15 questions, red flags and how to check claims.
 lastVerified: 2026-10-19
 heroImage: torre-do-tombo-reading-room.webp
 heroAlt: Reading room at Torre do Tombo, Portugal's national archive, in Lisbon
@@ -13,7 +13,7 @@ breadcrumb: Home > HQA visa due diligence
 
 # Is the HQA Visa Legit? A Due Diligence Guide
 
-Is the HQA visa legit? The legal route is real: Portugal's immigration law has a residence visa and permit for highly qualified activity. The €175,000 investment packages are private products, and their quality varies. This guide shows you how to check a provider before you pay, what to ask and which claims should make you stop.
+Is the HQA visa legit? The legal route is in Portugal's immigration law: a residence visa and permit for highly qualified activity. The €175,000 figure is reported by providers, October 2026. No government body sets or checks it. The packages are private products, and they vary. This guide shows you how to check a provider before you pay, what to ask and which claims should make you stop.
 
 Last verified: 19 October 2026 · Legally reviewed by an independent Portuguese lawyer on [review date]
 
@@ -23,8 +23,8 @@ This page is general information, not legal or investment advice.
 
 ## Key facts
 
-1. **The route is real.** Articles 61 and 90 of Lei 23/2007 set out the visa and the permit.
-2. **The packages are private.** No government body sets their price or approves them.
+1. **The route is in the law.** Articles 61 and 90 of Lei 23/2007 set out the visa and the permit.
+2. **The packages are private.** No government body sets or checks their price.
 3. **The money is at risk.** In the packages we researched, it funds a company and a research project.
 4. **You can check many claims yourself.** Lawyers, incubators and universities can be verified.
 

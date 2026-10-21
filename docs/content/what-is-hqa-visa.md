@@ -50,7 +50,7 @@ Under article 90, you need one of these:
 3. **A certified company.** A statement from a company certified for the Tech Visa by IAPMEI, the Portuguese agency for business and innovation.
 4. **A cultural activity.** An activity recognised as being of national cultural interest.
 
-The investment packages sold at about €175,000 are a way to create the second or third situation: they set up a research project or a company that can give you a qualifying role.
+The investment packages sold at about €175,000, reported by providers, October 2026, are a way to create the second or third situation: they set up a research project or a company that can give you a qualifying role. No government body sets or checks that price.
 
 ---
 
@@ -63,7 +63,7 @@ The investment packages sold at about €175,000 are a way to create the second 
 | Golden Visa | Residence through a legal minimum investment | Article 90-A |
 | D7 visa | Residence for people with regular passive income | A separate visa type |
 
-The difference matters. Families of article 90 permit holders are exempt from the 2-year family reunification wait. Families of article 89 (StartUP Visa) holders are not.
+The difference matters. Families of article 90 permit holders are exempt from the 2-year family reunification wait. Article 89 families are not in that list, so the wait applies unless one of the exceptions does. The full list is on the family page.
 
 The fuller comparison of [HQA, the StartUP Visa and the Tech Visa](/hqa-vs-startup-visa-tech-visa) is separate from the Golden Visa comparison.
 
@@ -79,7 +79,7 @@ Private providers sell packages that combine a company, an incubator place, a re
 
 That means two things:
 
-- **The €175,000 is a price, not a legal threshold.** Providers set it.
+- **The €175,000 is a reported price, not a legal threshold.** Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific. The figure is reported by providers, October 2026. No government body sets or checks it.
 - **The visa is not bought.** It is granted because you carry out a highly qualified activity in Portugal, and it stays valid only while you keep doing so.
 
 [Text link] What the €175,000 actually buys → /portugal-hqa-visa-investment

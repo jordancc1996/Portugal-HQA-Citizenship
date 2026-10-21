@@ -26,7 +26,7 @@ This page is general information, not legal, tax or investment advice.
 1. **The legal basis is Lei 23/2007.** Article 61 covers the D3 residence visa. Article 90 covers the residence permit for highly qualified activity.
 2. **There is no investment requirement in law.** The investment is how a package creates the qualifying activity.
 3. **Qualifications matter.** Highly qualified activity means work that needs specialised technical skills or a matching qualification.
-4. **You must live in Portugal.** Long absences can cost you the permit.
+4. **Absence limits apply.** A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity.
 
 ---
 
@@ -53,7 +53,7 @@ You also need to meet the general conditions for any Portuguese residence permit
 
 ## Qualifications
 
-Portuguese law describes highly qualified activity as work that needs specialised technical skills or a matching qualification. Under Portaria 328/2018, the Tech Visa asks for a degree at level 6 (a bachelor's degree or equivalent), or a level 5 higher technical course plus at least 5 years of specialized experience.
+Portuguese law describes highly qualified activity as work that needs specialised technical skills or a matching qualification. The Tech Visa programme (Portaria 328/2018) looks for an ISCED 2011 level 6 qualification, or level 5 with five years' experience in specialised technical functions. Education is one of several conditions. The official description is on the [IAPMEI Tech Visa page](https://www.iapmei.pt/en/Paginas/Tech-Visa.aspx).
 
 Investment packages usually expect a university degree and experience that fits the research project. Check the provider's exact criteria before you pay.
 
@@ -92,8 +92,8 @@ Consulates publish their own checklists, and they differ by country. Use the che
 
 ## Who this route suits
 
-- Founders, researchers and senior specialists with a real project to build in Portugal
-- People who plan to live in Portugal for most of the year
+- Founders, researchers and senior specialists with a project to build in Portugal
+- People who can meet the absence limits on a temporary permit
 - Investors who accept that the money is at risk in a business
 
 It is likely the wrong route if you want residence with very little time in Portugal. The Golden Visa asks for 7 days in the first year and 14 days after that.

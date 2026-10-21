@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-10-20",
+  "lastVerified": "2026-10-21",
   "facts": {
     "legalBasis": {
       "value": "Residence visa for highly qualified activity and residence permit for highly qualified activity (articles 61 and 90 of Lei 23/2007, as amended, latest by Lei 62/2026)",
@@ -7,22 +7,22 @@
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "legalMinimumInvestment": {
-      "value": "None. Portuguese law sets no minimum investment for the highly qualified activity route.",
+      "value": "Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific.",
       "status": "CURRENT",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "packagePriceReported": {
-      "value": "About €170,000 to €200,000 for private incubator and university R&D packages, often quoted at €175,000",
+      "value": "About €170,000 to €200,000, often quoted at €175,000, reported by providers, October 2026. No government body sets or checks these prices.",
       "status": "REPORTED",
-      "source": "Provider and law firm websites; not set by law"
+      "source": "Provider websites, October 2026; not set or checked by any government body"
     },
     "permitValidity": {
-      "value": "2 years from issue, then renewable for successive 3-year periods",
+      "value": "First permit 2 years, then 3-year renewals (article 75)",
       "status": "CURRENT",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "absenceLimit": {
-      "value": "A temporary permit can be cancelled after more than 6 consecutive months or 8 non-consecutive months outside Portugal during its validity without good reason (article 85(2)). It is not cancelled if the holder proves professional, business, cultural or social activity during the absence (article 85(4)). A longer absence should be justified to AIMA before leaving, or afterwards in exceptional cases (article 85(3)).",
+      "value": "A temporary permit may be cancelled after more than 6 consecutive months or 8 non-consecutive months outside Portugal during the permit's total validity without good reason (article 85(2)). It is not cancelled if the holder proves professional, business, cultural or social activity during the absence (article 85(4)). A longer absence should be justified to AIMA before leaving, or afterwards in exceptional cases (article 85(3)). For permanent residence the limits are 24 months in a row, or 30 months in total within 3 years (article 85(2)(b)).",
       "status": "CURRENT",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
@@ -32,27 +32,27 @@
       "source": "https://sites.google.com/site/leximigratoria/artigo-90-o-a-autorizacao-de-residencia-para-atividade-de-investimento"
     },
     "familyReunification": {
-      "value": "The 2-year wait (article 98(1)) does not apply to minors or incapacitated dependants, to a spouse or partner who is a parent or adopter of a dependent child with the holder, or to family of holders under articles 90, 90-A or 121-A (article 98(3)). Article 89 holders are not in that list. The wait can be waived or reduced in exceptional cases (article 98(4)).",
+      "value": "These rules apply to applications made after Lei 61/2025 came into force on 23 October 2025. Your filing date can change which rules apply. The 2-year wait (article 98(1)) does not apply to dependent minors or incapacitated members, to a spouse or partner who is the parent or adoptive parent of a dependent minor or incapacitated person, or to families of article 90, 90-A and 121-A holders (article 98(3)). Other exceptional cases may have the wait waived or reduced by ministerial decision (article 98(4)). The marriage or union must be valid and recognised, and both partners must be at least 18 when the application is made. Article 89 families are not in that list, so the 2-year wait (or 15 months for a spouse who lived with the holder for at least 18 months before entry) applies unless one of these exceptions does.",
       "status": "CONFIRMED",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "familyDecisionDeadline": {
-      "value": "AIMA must decide a family reunification request within 9 months. Except for the ordinary 2-year and 15-month cases, it can extend once by the same period in exceptional circumstances and must tell the applicant (article 105).",
+      "value": "AIMA must decide within 9 months. For article 90 families the law allows one extension of the same length, but only in exceptional circumstances linked to the complexity of the application, and AIMA must tell you. It is not automatic. We have no official data on how often AIMA uses it (article 105).",
       "status": "CONFIRMED",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "familyIntegration": {
-      "value": "After the family permit is granted, family members must take Portuguese language and constitutional values training, and children must attend compulsory school. Renewal depends on it, with a humanitarian exception (article 101(3) to (5)). The article 90 exemption from the waiting period is not repeated here.",
+      "value": "Once the family permit is granted, family members must take Portuguese language and constitutional values training, and children must attend compulsory school. Renewal depends on it, with exceptions. This applies to article 90 families too. The practical details are set by a regulatory decree, which we have not yet seen in force (article 101(3) to (5)).",
       "status": "CONFIRMED",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "permanentResidence": {
-      "value": "After 5 years of temporary residence, with no sentence over 1 year in prison in the last 5 years, means of subsistence, housing and basic Portuguese (article 80). The permanent permit has no expiry, but the card is renewed every 5 years (article 76).",
+      "value": "Permanent residence status has no fixed expiry date. The residence card must be renewed every five years, and sooner if a registered identification detail changes (article 76). Article 80 requires 5 years of temporary residence, no sentence or sentences adding up to more than 1 year in prison in the last 5 years, means of subsistence, housing and basic Portuguese.",
       "status": "CONFIRMED",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "citizenshipYears": {
-      "value": "10 years of legal residence for most nationals, 7 years for EU and CPLP nationals",
+      "value": "10 years of legal residence for most nationals, 7 years for EU nationals and nationals of countries where Portuguese is an official language. These are minimum residence conditions, not guarantees.",
       "status": "CONFIRMED",
       "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
     },
@@ -66,13 +66,18 @@
       "status": "CONFIRMED",
       "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
     },
+    "languagePresumption": {
+      "value": "For nationals of countries where Portuguese is an official language, the law presumes the Portuguese-language element is met unless lack of Portuguese is manifest. That presumption does not remove the separate requirements concerning Portuguese culture, history, and national symbols.",
+      "status": "CONFIRMED",
+      "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+    },
     "citizenshipClockStart": {
       "value": "Not settled. The old rule counting time from the permit application was revoked. Several law firms say time now counts from the first residence card. The law text does not say this expressly.",
       "status": "UNVERIFIED",
       "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
     },
     "ificiRate": {
-      "value": "20% tax on eligible Portuguese work income for 10 years, with most foreign income exempt. Not automatic for highly qualified activity permit holders: it depends on the employer and the role.",
+      "value": "20% tax on eligible Portuguese work income for 10 years, with most foreign income exempt. Not automatic for highly qualified activity permit holders: it depends on the employer and the role. Each category has its own conditions. Check yours with a Portuguese tax adviser.",
       "status": "CONFIRMED",
       "source": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Folhetos_informativos/Documents/incentivos_investigacao.pdf"
     },
@@ -87,12 +92,12 @@
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "goldenVisaRenewal": {
-      "value": "The Golden Visa permit (article 90-A) is renewed for periods of 2 years (article 90-A(2)). The highly qualified activity permit is renewed for periods of 3 years (article 75(1)).",
+      "value": "First permit 2 years, then 3-year renewals (article 75). The Golden Visa permit is renewed for 2-year periods (article 90-A(2)).",
       "status": "CONFIRMED",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
     "goldenVisaLowDensity": {
-      "value": "The job-creation, research and arts and culture amounts can be 20% lower in low-density territories. The fund and company routes are not reduced (article 3(2) and (3)).",
+      "value": "The job-creation, research and arts and culture amounts can be 20% lower in low-density territories, defined by Portaria 208/2017 as under 100 inhabitants per km2 or GDP per head below 75% of the national average. The fund and company routes are not reduced (article 3(2) and (3)).",
       "status": "CONFIRMED",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },
@@ -107,7 +112,7 @@
       "source": "https://aima.gov.pt"
     },
     "residenceWindow": {
-      "value": "All periods of legal residence are added together if they fall within 12 years (9 years for EU and CPLP nationals)",
+      "value": "All periods of legal residence are added together if they fall within 12 years (9 years for EU nationals and nationals of countries where Portuguese is an official language)",
       "status": "CONFIRMED",
       "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
     },
@@ -132,9 +137,9 @@
       "source": "https://apcmc.pt/legislacao/ias-para-2026-fixado-em-e-53713/"
     },
     "techVisaQualification": {
-      "value": "Tech Visa workers need an ISCED level 6 qualification, or a level 5 higher technical course plus at least 5 years of specialized experience (Portaria 328/2018, as amended)",
+      "value": "The Tech Visa programme (Portaria 328/2018) looks for an ISCED 2011 level 6 qualification, or level 5 with five years' experience in specialised technical functions. Education is one of several conditions.",
       "status": "CURRENT",
-      "source": "https://arquivo.pt/wayback/20231215195537mp_/https://imigrante.sef.pt/en/solicitar/trabalhar/art90-techvisa"
+      "source": "https://www.iapmei.pt/en/Paginas/Tech-Visa.aspx"
     },
     "naturalisationCriminalBar": {
       "value": "A final conviction with an effective prison sentence of more than 3 years for certain serious crimes blocks naturalisation",
@@ -142,12 +147,12 @@
       "source": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
     },
     "constitutionalCourtRuling": {
-      "value": "Acórdão 1133/2025 of 15 December 2025 found 4 rules of the draft nationality law unconstitutional",
+      "value": "On 15 December 2025 an earlier draft of the nationality law was partly struck down. That event is history. It is not support for any current rule.",
       "status": "CONFIRMED",
       "source": "https://www.cortecostituzionale.it/uploads/report/12-Portogallo-TC-sentenza-1133-2025-694c02fd1bb3d.pdf"
     },
     "familyPermitDuration": {
-      "value": "A family member's residence permit runs for the same length as the main applicant's permit (article 107 of Lei 23/2007)",
+      "value": "It runs for the same length as the main applicant's permit (article 107(1) of Lei 23/2007). After 2 years, or earlier in some cases, family members can get their own permit (article 107(3) and (4)).",
       "status": "CURRENT",
       "source": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
     },

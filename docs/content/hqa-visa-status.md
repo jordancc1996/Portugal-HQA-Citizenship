@@ -26,7 +26,7 @@ Last verified: 20 October 2026 · Legally reviewed by an independent Portuguese 
 | Investment packages | Offered by private providers |
 | Legal minimum investment | None |
 | Family 2-year wait | Not applied to article 90 permit holders |
-| Citizenship | 10 years of legal residence (7 for EU and CPLP nationals) |
+| Citizenship | 10 years of legal residence (7 for EU nationals and nationals of countries where Portuguese is an official language) |
 | AIMA decision deadline | 90 days, extendable by 30 |
 | Government fees | Changed on 1 March 2026; new amounts not yet confirmed by us |
 
@@ -39,7 +39,7 @@ The family rule is explained on the [family page](/hqa-visa-family). The citizen
 | Date | Change | What it means for HQA |
 |---|---|---|
 | 23 October 2025 | Lei 61/2025 changed the foreigners law | A 2-year wait for most family reunification; article 90 families exempt |
-| 15 December 2025 | Constitutional Court struck down 4 rules of a draft nationality law | The final law had to be revised |
+| 15 December 2025 | Acórdão 1133/2025 | An earlier draft was partly struck down. This row records that event. It is not support for any current rule. |
 | 1 March 2026 | New AIMA fee table | Government fees changed; exact amounts not yet confirmed |
 | 19 May 2026 | Lei Orgânica 1/2026 in force | Citizenship after 10 years for most nationals |
 | 11 September 2026 | Lei 62/2026 in force | AIMA must decide residence applications within 90 days, extendable by 30 |

@@ -38,7 +38,7 @@ const ogImage = await getImage({
 const faqItems = [
   {
     question: "How long does HQA visa citizenship take now?",
-    answer: "Most applicants need 10 years of legal residence. EU and CPLP nationals need 7 years.",
+    answer: "Most applicants need 10 years of legal residence. EU nationals and nationals of countries where Portuguese is an official language need 7 years.",
   },
   {
     question: "I already applied for citizenship before 19 May 2026. Does the new rule apply to me?",
@@ -57,7 +57,7 @@ const faqItems = [
   {
     question: "Is permanent residence the same as citizenship?",
     answer:
-      "No. Permanent residence is possible after 5 years and lets you stop renewing a temporary permit. Citizenship needs 10 years for most people and gives you a Portuguese passport.",
+      "No. Permanent residence is possible after 5 years and lets you stop renewing a temporary permit. Portuguese nationality needs 10 years of legal residence for most people, and residence is only one of the conditions.",
   },
 ];
 ---
@@ -77,7 +77,7 @@ const faqItems = [
       "@type": "WebPage",
       name: headline,
       description:
-        "HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU and CPLP nationals need 7 years. Many websites still promise a passport after 5 years. That is no longer true for new applications.",
+        "HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU nationals and nationals of countries where Portuguese is an official language need 7 years. The 7 years and the 10 years are minimum residence conditions, not guarantees. Many websites still promise Portuguese nationality after 5 years. That is no longer true for new applications.",
       url: pageUrl,
     },
     {
@@ -105,7 +105,7 @@ const faqItems = [
       ]}
     />
     <p class="lead" slot="lead">
-      HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU and CPLP nationals need 7 years. Many websites still promise a passport after 5 years. That is no longer true for new applications.
+      HQA visa citizenship now takes 10 years of legal residence for most applicants. Portugal changed its nationality law with Lei Orgânica n.º 1/2026, which has been in force since 19 May 2026. EU nationals and nationals of countries where Portuguese is an official language need 7 years. The 7 years and the 10 years are minimum residence conditions, not guarantees. Many websites still promise Portuguese nationality after 5 years. That is no longer true for new applications.
     </p>
     <p class="small disclaimer" slot="disclaimer">This page is general information, not legal advice.</p>
   </PageHero>
@@ -116,11 +116,11 @@ const faqItems = [
       items={[
         {
           lead: "10 years for most people.",
-          text: "Applicants from outside the EU and the CPLP need 10 years of legal residence.",
+          text: "Applicants from outside the EU, and from outside countries where Portuguese is an official language, need 10 years of legal residence.",
         },
         {
-          lead: "7 years for EU and CPLP nationals.",
-          text: "CPLP is the community of Portuguese-speaking countries, including Brazil.",
+          lead: "7 years for EU nationals and nationals of countries where Portuguese is an official language.",
+          text: "That group is nationals of countries where Portuguese is an official language.",
         },
         {
           lead: "In force since 19 May 2026.",
@@ -160,7 +160,7 @@ const faqItems = [
               <td>10 years</td>
             </tr>
             <tr>
-              <th scope="row">Legal residence needed (EU and CPLP nationals)</th>
+              <th scope="row">Legal residence needed (EU nationals and nationals of countries where Portuguese is an official language)</th>
               <td>5 years</td>
               <td>7 years</td>
             </tr>
@@ -179,7 +179,7 @@ const faqItems = [
       </Table>
       </div>
 <div class="measure">
-<p>The law also allows breaks. All periods of legal residence are added together, as long as they fall within a window of 12 years (9 years for EU and CPLP nationals).</p>
+<p>The law also allows breaks. All periods of legal residence are added together, as long as they fall within a window of 12 years (9 years for EU nationals and nationals of countries where Portuguese is an official language).</p>
     </div>
 </Section>
 
@@ -229,7 +229,7 @@ const faqItems = [
     <PhotoBreak
       src={rooftops}
       alt="Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline"
-      caption="Most applicants now need 10 years of legal residence for a Portuguese passport (7 for EU and CPLP nationals)."
+      caption="Most applicants now need 10 years of legal residence before they can apply for Portuguese nationality (7 for EU nationals and nationals of countries where Portuguese is an official language)."
     />
 
     <Section tone="cream">
@@ -245,8 +245,9 @@ const faqItems = [
     <Section tone="paper">
 <div class="measure">
       <h2>The other requirements for citizenship</h2>
+      <p>Residence is one of several conditions in article 6, alongside age, language and culture, means of subsistence, security checks and the criminal-record test.</p>
       <ul>
-        <li><strong>Language.</strong> You must show knowledge of Portuguese through a test or certificate. The required level is set by regulation, not by the law itself.</li>
+        <li><strong>Language.</strong> You must show knowledge of Portuguese through a test or certificate. The required level is set by regulation, not by the law itself. For nationals of countries where Portuguese is an official language, the law presumes the Portuguese-language element is met unless lack of Portuguese is manifest. That presumption does not remove the separate requirements concerning Portuguese culture, history, and national symbols.</li>
         <li><strong>Knowledge of rights and duties.</strong> A test of civic knowledge is part of the new law.</li>
         <li><strong>Means of support.</strong> You must show you can support yourself.</li>
         <li><strong>Criminal record.</strong> A final conviction with an effective prison sentence of more than 3 years for certain serious crimes can block an application.</li>
@@ -258,7 +259,7 @@ const faqItems = [
 <div class="measure">
       <h2>How the law got here</h2>
       <ul>
-        <li><strong>December 2025.</strong> Portugal's Constitutional Court struck down 4 rules in an earlier version of the law (Acórdão 1133/2025 of 15 December 2025). One of them would have applied the new rules to applications already pending.</li>
+        
         <li><strong>18 May 2026.</strong> Parliament's revised law was published as Lei Orgânica n.º 1/2026.</li>
         <li><strong>19 May 2026.</strong> The law came into force.</li>
       </ul>
@@ -268,7 +269,7 @@ const faqItems = [
     <Section tone="paper">
 <div class="measure">
       <h2>Does the Golden Visa get you citizenship faster?</h2>
-      <p>No. Golden Visa holders follow the same 10-year rule (7 years for EU and CPLP nationals). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.</p>
+      <p>No. Golden Visa holders follow the same 10-year rule (7 years for EU nationals and nationals of countries where Portuguese is an official language). The Golden Visa asks for less time in Portugal each year, but it does not shorten the citizenship wait.</p>
       <p class="action-line"><Button href="/portugal-hqa-vs-golden-visa" variant="text">Portugal HQA vs Golden Visa</Button></p>
     </div>
 </Section>

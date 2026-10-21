@@ -13,7 +13,7 @@ breadcrumb: Home > HQA visa investment
 
 # Portugal HQA Visa Investment: What €175,000 Actually Buys
 
-A Portugal HQA visa investment is money you pay into a private package that sets up a Portuguese company and a research project. Portuguese law does not require that payment. The law sets no minimum investment for the highly qualified activity route. Providers charge about €170,000 to €200,000 for packages that combine a company, an incubator place, university research work and legal fees. This page explains what that money pays for, how it connects to your residence permit, what can go wrong, and what to ask before you sign.
+A Portugal HQA visa investment is money paid to a private provider. Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific. Providers report about €170,000 to €200,000, often €175,000, reported by providers, October 2026. No government body sets or checks them. This page explains what that money pays for, how it connects to your residence permit, what can go wrong, and what to ask before you sign.
 
 Last verified: 19 October 2026 · Legally reviewed by an independent Portuguese lawyer on [review date]
 
@@ -24,9 +24,9 @@ This page is general information, not legal, tax or investment advice.
 ## Key facts
 
 1. **No legal minimum.** Articles 61 and 90 of Lei 23/2007 set no investment amount for highly qualified activity.
-2. **The price is private.** Packages are sold at about €170,000 to €200,000, most often quoted at €175,000.
-3. **The money is at risk.** In the packages we researched, the money funds a company and a research project. It is not a deposit, and returns are not promised.
-4. **Citizenship takes 10 years.** Most applicants need 10 years of legal residence under Lei Orgânica 1/2026. EU and CPLP nationals need 7.
+2. **The price is reported.** Packages are sold at about €170,000 to €200,000, most often quoted at €175,000, reported by providers, October 2026. No government body sets or checks them.
+3. **The money is at risk.** In the packages we researched, the money funds a company and a research project. Whether any part is refundable, held in escrow or repayable depends on the provider's contract. Read the refund and return terms before you pay.
+4. **Citizenship takes 10 years.** Most applicants need 10 years of legal residence under Lei Orgânica 1/2026. EU nationals and nationals of countries where Portuguese is an official language need 7.
 
 Sources: Lei 23/2007, Lei Orgânica 1/2026, provider price lists.
 
@@ -39,11 +39,11 @@ Providers bundle several services into one price. The exact split differs, but m
 | Part of the package | What it is |
 |---|---|
 | Portuguese company | A new company (usually a limited company, "Lda") set up in your name |
-| Incubator place | A place in a certified Portuguese incubator, often for about 3 years |
+| Incubator place | A place in a certified Portuguese incubator |
 | Research project | Research and development work with a Portuguese university or research center, often including paid local researchers |
 | Legal and filing work | Company setup, visa file, residence permit file |
 
-One provider's published breakdown splits a €175,000 package into about €150,000 for incubation and research and €25,000 for legal and setup costs. Treat any split as the provider's own figure. No government body publishes or checks these prices.
+No government body sets or checks these prices. They are reported by providers, October 2026. Ask your provider for a line-by-line split in writing.
 
 Family members usually cost extra. Providers quote about €2,500 to €5,000 for each dependent.
 
@@ -61,7 +61,7 @@ The investment does not buy a visa. It creates the conditions for one.
 4. In Portugal, AIMA, the immigration agency, issues a residence permit for highly qualified activity (article 90).
 5. You renew the permit while you keep meeting the conditions.
 
-**What we don't know yet:** providers do not always say which legal article your file uses. This matters. Families of article 90 permit holders are exempt from the 2-year family reunification wait introduced in October 2025. Holders under article 89, the StartUP Visa route, are not exempt. Ask your provider in writing which article your application uses, and have your own lawyer confirm it.
+**What we don't know yet:** providers do not always say which legal article your file uses. This matters. Families of article 90 permit holders are exempt from the 2-year family reunification wait introduced in October 2025. Article 89 families are not in that list, so the 2-year wait (or 15 months for a spouse who lived with the holder for at least 18 months before entry) applies unless one of the exceptions does. Ask your provider in writing which article your application uses, and have your own lawyer confirm it.
 
 [Text link] Family rules for article 90 → /hqa-visa-family
 
@@ -73,11 +73,11 @@ The investment does not buy a visa. It creates the conditions for one.
 
 **Your money funds a business.** If the company or the research fails, you can lose some or all of the investment. Nothing in Portuguese law guarantees a return.
 
-**Refund terms vary.** Some packages are fully non-refundable. Others refund part of the money if the visa is refused, minus amounts already paid to universities or incubators. Read the refund clause before you pay anything.
+**Refund and return terms.** Whether any part is refundable, held in escrow or repayable depends on the provider's contract. Read the refund and return terms before you pay.
 
 **Renewal depends on the conditions still being met.** If the company stops operating, or loses a certification it needs, your next renewal may be at risk. The law does not spell out what happens in each case. Ask a Portuguese lawyer before you sign.
 
-**You must live in Portugal.** A temporary permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified. Some marketing says this route needs "no minimum stay". We have not found a legal basis that makes that true for everyone.
+**Absence limits apply.** A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, unless the absence is justified. Some marketing says this route needs "no minimum stay". We have not found a legal basis that makes that true for everyone.
 
 [Text link] Presence rules explained → /guides/hqa-visa-presence-requirements
 
@@ -92,7 +92,7 @@ The investment does not buy a visa. It creates the conditions for one.
 | First residence permit (2 years) | Year 0 |
 | Renewal (3 years) | Year 2 |
 | Renewal and permanent residence option | Year 5 |
-| Citizenship application | Year 10 (7 for EU and CPLP nationals) |
+| Citizenship application | Year 10 (7 for EU nationals and nationals of countries where Portuguese is an official language) |
 
 Months 0 to 4 are typical provider estimates, not legal deadlines. AIMA's legal deadline to decide a residence application is 90 days, extendable by 30.
 
@@ -115,10 +115,10 @@ Portugal's IFICI regime taxes eligible Portuguese work income at 20% for 10 year
 | Minimum set by law | None | €500,000 |
 | Typical cost | About €175,000 | €500,000 plus fees |
 | What the money buys | A company and a research project | Units in a qualifying investment fund |
-| Time in Portugal | Live there; long absences can cost the permit | 7 days in year 1, then 14 days |
+| Time in Portugal | A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity | 7 days in year 1, then 14 days |
 | Citizenship | 10 years of legal residence | 10 years of legal residence |
 
-The HQA package costs less but asks more of you: you need to live in Portugal and build something real. The Golden Visa fund costs more but asks for very little time in the country.
+The HQA package costs less but asks more of you: a temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity. The Golden Visa fund costs more but asks for very little time in the country.
 
 [Text link] Full comparison → /portugal-hqa-vs-golden-visa
 
@@ -161,22 +161,22 @@ Our free HQA due diligence checklist has 15 questions, the contract terms to che
 ## Frequently asked questions
 
 **How much is the Portugal HQA visa investment?**
-Portuguese law sets no amount. Private packages cost about €170,000 to €200,000, most often €175,000, plus fees for each family member.
+Article 90 does not set a minimum investment payment. Private packages cost about €170,000 to €200,000, most often €175,000, reported by providers, October 2026, plus fees for each family member. No government body sets or checks them.
 
 **Do I get my €175,000 back?**
-Not necessarily. The money funds a company and research. Refund terms depend on your contract, and some packages are fully non-refundable.
+Whether any part is refundable, held in escrow or repayable depends on the provider's contract. Read the refund and return terms before you pay.
 
 **Is the HQA visa investment a government program?**
 No. The residence visa and permit are set in Portuguese law, but the investment packages are private products sold by providers.
 
 **Does the HQA investment lead to citizenship?**
-It can, over time. Most applicants need 10 years of legal residence, plus Portuguese language and other requirements. EU and CPLP nationals need 7 years.
+It can, over time. Most applicants need 10 years of legal residence, plus Portuguese language and other requirements. EU nationals and nationals of countries where Portuguese is an official language need 7 years.
 
 **Can my family come with me?**
 Yes. Family members of article 90 permit holders are exempt from the 2-year waiting period that applies to most permits since October 2025. Confirm which article your file uses.
 
 **Is it cheaper than the Golden Visa?**
-The upfront amount is lower: about €175,000 against €500,000 for the fund route. But you must live in Portugal, and the money is at risk in a business.
+The upfront amount is lower: about €175,000 against €500,000 for the fund route. A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, and the money is at risk in a business.
 
 ---
 

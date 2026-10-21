@@ -11,7 +11,7 @@ heroImage: lisbon-alfama-rooftops.webp
 
 # Portugal HQA Visa: An Independent, Verified Guide
 
-The Portugal HQA visa is a residence route for highly qualified activity, and Portuguese law sets no minimum investment for it. Private providers sell packages priced near €175,000 as one way to use the route. This site explains what those packages are, what they are not, and how long the road to a Portuguese passport now takes.
+The Portugal HQA visa is a residence route for highly qualified activity. Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific. Packages are often quoted near €175,000, reported by providers, October 2026. No government body sets or checks them. This site explains what those packages are, what they are not, and how long the road to Portuguese nationality now takes.
 
 [Button] Get the due diligence checklist
 [Text link] Read the investment guide → /portugal-hqa-visa-investment
@@ -22,10 +22,10 @@ Last verified: 19 October 2026 · Legally reviewed by an independent Portuguese 
 
 ## Key facts
 
-1. **No legal minimum investment.** The route rests on articles 61 and 90 of Portugal's immigration law (Lei 23/2007). No article sets an investment amount.
-2. **€175,000 is a private price.** Incubator and university research packages are sold at about €170,000 to €200,000. The price is set by providers, not by law.
-3. **Citizenship takes 10 years.** Since 19 May 2026, most applicants need 10 years of legal residence. EU and CPLP nationals need 7.
-4. **You have to live in Portugal.** More than 6 consecutive months, or 8 months in total, abroad can cost you the permit. The Golden Visa's 7-day rule does not apply.
+1. **No minimum payment in article 90.** Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific.
+2. **€175,000 is a reported price.** Incubator and university research packages are sold at about €170,000 to €200,000, reported by providers, October 2026. No government body sets or checks them.
+3. **Citizenship takes 10 years.** Since 19 May 2026, most applicants need 10 years of legal residence. EU nationals and nationals of countries where Portuguese is an official language need 7.
+4. **Absence limits apply.** A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity. The Golden Visa's 7-day rule does not apply.
 
 Sources: Lei 23/2007, Lei Orgânica 1/2026. Package prices are reported by providers. See [how we verify](/methodology).
 
@@ -53,7 +53,7 @@ Private providers combine several services into one price:
 - A research and development project with a Portuguese university or research center
 - Legal and filing fees
 
-In the packages we researched, the money funds a company and a research project. It is risk capital, not a deposit. Refund terms differ from provider to provider, and some packages are fully non-refundable. Ask for the contract before you pay anything.
+In the packages we researched, the money funds a company and a research project. Whether any part is refundable, held in escrow or repayable depends on the provider's contract. Read the refund and return terms before you pay.
 
 [Text link] See the full cost breakdown → /hqa-visa-cost
 
@@ -71,7 +71,7 @@ Lisbon at sunset.
 | First permit | Year 0 | AIMA issues a 2-year residence permit |
 | Renewals | Years 2 and 5 | Renewed for 3 years at a time |
 | Permanent residence | Year 5 | Possible with basic Portuguese and other conditions |
-| Citizenship | Year 10 | 10 years of legal residence (7 for EU and CPLP nationals) |
+| Citizenship | Year 10 | 10 years of legal residence (7 for EU nationals and nationals of countries where Portuguese is an official language) |
 
 **What we don't know yet:** the new nationality law removed the old rule that counted time from your permit application. Several law firms say the clock now starts when your first residence card is issued. The law text does not say this directly. We will update this page when the government publishes its implementing rules.
 
@@ -83,15 +83,15 @@ Lisbon at sunset.
 
 **It can suit you if:**
 
-- You have a real business or research idea you want to build in Portugal
-- You plan to live in Portugal for most of the year
+- You have a business or research idea you want to build in Portugal
+- You can meet the absence limits on a temporary permit
 - You can treat the investment as money at risk
 
 **It is likely the wrong route if:**
 
 - You want a residence permit with minimal time in Portugal
 - You need to be certain of getting your capital back
-- You want a passport in less than 10 years (7 for EU and CPLP nationals)
+- You want Portuguese nationality in less than 10 years (7 for EU nationals and nationals of countries where Portuguese is an official language)
 
 ---
 
@@ -100,8 +100,8 @@ Lisbon at sunset.
 | | HQA investment package | Golden Visa |
 |---|---|---|
 | Minimum set by law | None | €250,000 to €500,000, depending on the option |
-| Typical cost | About €175,000 (private price) | €500,000 for the fund route |
-| Time in Portugal | Live there; long absences can cost the permit | 7 days in year 1, then 14 days |
+| Typical cost | About €175,000 (reported by providers, October 2026) | €500,000 for the fund route |
+| Time in Portugal | A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity | 7 days in year 1, then 14 days |
 | Family waiting period | None for art. 90 holders | None |
 | Citizenship | 10 years of legal residence | 10 years of legal residence |
 
@@ -135,7 +135,7 @@ Download our free HQA due diligence checklist. It lists the 15 questions to ask 
 
 - **Independent.** We are not a provider and do not sell investment packages.
 - **Sourced.** Every legal claim names its source, and we link the official text where one exists.
-- **Legally reviewed.** An independent Portuguese lawyer reviews every page. Each page shows its review date.
+- **Legal review.** Pages are reviewed by an independent Portuguese lawyer before launch. A page shows its review date only after that review is complete.
 - **Dated.** Every page shows when we last checked it. We log changes on our [status page](/hqa-visa-status).
 
 [Text link] Our methodology → /methodology
@@ -148,16 +148,16 @@ Download our free HQA due diligence checklist. It lists the 15 questions to ask 
 The underlying visa and permit are real and are set out in articles 61 and 90 of Lei 23/2007. "HQA visa" is an informal label, not an official program name.
 
 **Is €175,000 the official minimum?**
-No. Portuguese law sets no minimum investment for this route. €175,000 is the price private providers commonly charge for their packages.
+No. Article 90 does not set a minimum investment payment. Some private providers sell packages that include company and research-project services; their price and scope are provider-specific. €175,000 is reported by providers, October 2026. No government body sets or checks it.
 
 **How long until I can get Portuguese citizenship?**
-Under Lei Orgânica 1/2026, in force since 19 May 2026, most applicants need 10 years of legal residence. EU and CPLP nationals need 7.
+Under Lei Orgânica 1/2026, in force since 19 May 2026, most applicants need 10 years of legal residence. EU nationals and nationals of countries where Portuguese is an official language need 7.
 
 **Can I bring my family?**
 Yes. Family members of article 90 permit holders are exempt from the 2-year waiting period that applies to most other permits since October 2025.
 
 **Do I need to live in Portugal?**
-Yes. A temporary permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified.
+The law does not set a number of days you must be in Portugal. A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, unless the absence is justified.
 
 ---
 

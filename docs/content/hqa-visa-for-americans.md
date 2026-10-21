@@ -24,7 +24,7 @@ This page is general information, not legal or tax advice.
 ## Key facts
 
 1. **Same Portuguese rules.** Americans follow the same visa, permit and residence rules as other non-EU nationals.
-2. **10 years to citizenship.** The US is not an EU or CPLP country, so the 10-year rule applies.
+2. **10 years to citizenship.** The US is not an EU country, and Portuguese is not an official language there, so the 10-year rule applies.
 3. **US tax does not stop.** US citizens must file US tax returns while living abroad.
 4. **Dual citizenship is possible.** Both the US and Portugal allow it.
 
@@ -66,13 +66,13 @@ Your Portuguese company, its shares and any research rights may also create US r
 
 ## Can I keep my US citizenship?
 
-Yes. The United States does not require you to give up your citizenship when you become Portuguese, and Portugal allows dual citizenship. You would hold both passports.
+Yes. The United States does not require you to give up your citizenship when you become Portuguese, and Portugal allows dual citizenship. You can hold both nationalities.
 
 ---
 
 ## Living in Portugal from the US
 
-- **You must live there.** The highly qualified activity permit can be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during its validity, unless the absence is justified.
+- **Absence limits apply.** A temporary permit may be cancelled after more than 6 consecutive months, or 8 non-consecutive months, outside Portugal during the permit's total validity, unless the absence is justified.
 - **Time zones.** Lisbon is 5 hours ahead of New York and 8 hours ahead of San Francisco for most of the year.
 - **Health insurance.** US health plans rarely cover you in Portugal. You need cover that is valid there.
 
