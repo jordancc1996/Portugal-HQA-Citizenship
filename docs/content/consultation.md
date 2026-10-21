@@ -37,6 +37,8 @@ An HQA visa consultation here is a request for an introduction to an independent
 
 (ConsultationForm with the sharing consent box)
 
+Please do not include passport numbers, medical details, criminal records or information about children. Share only what is needed for the introduction.
+
 ---
 
 ## Before you speak to anyone

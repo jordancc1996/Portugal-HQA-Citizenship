@@ -4,7 +4,7 @@ url: /about
 primaryKeyword: about portugal hqa citizenship
 title: About Portugal HQA Citizenship - Independent Information
 metaTitle: About Portugal HQA Citizenship - Independent Information | Portugal HQA Citizenship
-metaDescription: About Portugal HQA Citizenship: an independent site for the 2026 HQA visa rules. Pages are reviewed by an independent Portuguese lawyer before launch.
+metaDescription: About Portugal HQA Citizenship: an independent site explaining the 2026 HQA visa rules. Every page is being reviewed by an independent Portuguese lawyer.
 lastVerified: 2026-10-20
 heroImage: none
 breadcrumb: Home > About
@@ -23,7 +23,7 @@ Last verified: 20 October 2026 · Legally reviewed by an independent Portuguese 
 - Explain the HQA route in plain English, with links to the law
 - Show what the investment packages cost and what they do not cover
 - Say clearly what is not yet known
-- Date every page, and show a review date only after the lawyer's review is complete
+- Date every page, and show a review date once its review is complete
 
 ---
 
@@ -43,7 +43,7 @@ If you request a consultation, we may introduce you to advisors or providers who
 
 ## Legal review
 
-Pages are reviewed by an independent Portuguese lawyer before launch. A page shows its review date only after that review is complete. The lawyer is not named at their request.
+We are having every page reviewed by an independent Portuguese lawyer. A page shows its review date once its review is complete. The lawyer is not named at their request.
 
 [Text link] How we verify information → /methodology
 

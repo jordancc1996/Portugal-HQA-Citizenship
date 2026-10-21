@@ -108,8 +108,9 @@ Show a ✓/✗ table for these five checks and fix every ✗ before writing the 
 ## Launch
 
 - The Vercel production build command stays `npm run build`.
-- When `VERCEL_ENV` is `production`, that command runs `npm run check:reviews` first. The build stops while any indexable route has a null review date.
+- The site launched before the lawyer's review. check:reviews now warns instead of failing. Add real review dates only after the lawyer approves a page.
+- When `VERCEL_ENV` is `production`, that command runs `npm run check:reviews` and prints pages without a review date as a warning. The build continues.
 - Local builds and Vercel preview builds skip that check and log one line: "Skipped check:reviews because VERCEL_ENV is not production."
-- Do not invent a review date to make production pass. Store a real date in `src/data/reviews.ts` only after the lawyer review.
+- Do not invent a review date. Store a real date in `src/data/reviews.ts` only after the lawyer approves that page.
 - Do not deploy unless asked.
 - Vercel needs PUBLIC_FORMCARRY_CHECKLIST_URL (checklist form) and PUBLIC_FORMCARRY_CONSULT_URL (consultation form) set for Production and Preview.

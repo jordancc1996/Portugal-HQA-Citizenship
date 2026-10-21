@@ -280,5 +280,10 @@ Why: The 21 October 2026 memo corrected those sentences. It is not a page approv
 Change: Finish the round 1 leftovers on nationality, absence limits, the citizenship timeline heading, and two content files that did not match their pages.
 Why: The built cost page was already right. The permanent-residence, requirements and citizenship lines still used the older wording.
 
+## 2026-10-21
+
+Change: Launch before the lawyer's review. The production check now warns and continues, and the site says the review is still in progress. Privacy, terms and the consultation note match what the site actually does.
+Why: The owner decided to publish while every review date is still empty. The pages should not say a review already happened, or that the checklist is emailed.
+
 
 

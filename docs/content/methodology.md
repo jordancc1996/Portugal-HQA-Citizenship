@@ -4,7 +4,7 @@ url: /methodology
 primaryKeyword: how we verify hqa visa information
 title: How We Verify HQA Visa Information - Methodology
 metaTitle: How We Verify HQA Visa Information - Methodology | Portugal HQA Citizenship
-metaDescription: How we verify HQA visa information: 4 source levels, using Portuguese law first. Pages are reviewed by an independent Portuguese lawyer before launch.
+metaDescription: How we verify HQA visa information: 4 source levels, using Portuguese law first. Every page on this site is being reviewed by an independent Portuguese lawyer.
 lastVerified: 2026-10-20
 heroImage: none
 breadcrumb: Home > Methodology
@@ -46,7 +46,7 @@ Where the law is unclear, we add a "What we don't know yet" box instead of guess
 
 ## Legal review
 
-Pages are reviewed by an independent Portuguese lawyer before launch. A page shows its review date only after that review is complete. The lawyer is not named at their request.
+We are having every page reviewed by an independent Portuguese lawyer. A page shows its review date once its review is complete. The lawyer is not named at their request.
 
 ---
 

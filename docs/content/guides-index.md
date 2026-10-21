@@ -4,7 +4,7 @@ url: /guides
 primaryKeyword: hqa visa guides
 title: HQA Visa Guides - Independent, Verified Answers
 metaTitle: HQA Visa Guides - Independent, Verified Answers | Portugal HQA Citizenship
-metaDescription: HQA visa guides for investors in 2026: cost, family, tax, presence and the 10-year path. Pages are reviewed by an independent Portuguese lawyer before launch.
+metaDescription: HQA visa guides for investors in 2026: cost, family, tax, presence and the 10-year path. Every page is being reviewed by an independent Portuguese lawyer.
 lastVerified: 2026-10-20
 heroImage: lisbon-hilltop-view.webp
 heroAlt: View over Lisbon from a hilltop viewpoint
