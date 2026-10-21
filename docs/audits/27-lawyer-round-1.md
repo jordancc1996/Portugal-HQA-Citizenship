@@ -107,3 +107,39 @@ Grep of `dist/` for "passport in", "150,000", "about 3 years", "not a deposit" a
 Grep of `dist/` for "1133/2025": only `dist/hqa-visa-status/index.html` and `dist/markdown/hqa-visa-status.md`.
 
 Local build skipped `check:reviews` because `VERCEL_ENV` is not production. A production build will still stop while review dates are null.
+
+## Round 1 leftovers
+
+The cost content file already matched the built page. It does not contain the €150,000 / €25,000 split, "often for about 3 years", "The money funds a real company and real research", or "covers about 3 years of incubation". Those sentences are not on the built page either.
+
+A unit-by-unit check of every `docs/content/*.md` file against the visible text of its built page found two real wording gaps. Link labels, form placeholders, breadcrumb text and the image-credits render note were ignored.
+
+| Page | Content had | Built page | Action |
+|---|---|---|---|
+| `/guides/what-is-hqa-visa` | The legal tools are real and have been in Portuguese law for years. | The legal tools are in Portuguese law and have been there for years. | Content file updated to the page. |
+| `/guides/hqa-visa-citizenship-10-year-rule` | 7 years for some nationals. | The lead named EU nationals and nationals of countries where Portuguese is an official language. The following sentence named only the second group. | Both now say the full group needs 7 years. The narrower sentence contradicted the memo. |
+
+Other sentences changed in this pass, in the content file and the page:
+
+- Permanent residence table: "Portuguese nationality, which also makes you an EU citizen."
+- Permanent residence FAQ answer now states the 7-year group and that residence is only one condition. The question already asked about Portuguese nationality, not a passport.
+- Requirements key fact now includes "during its validity, unless the absence is justified."
+- Requirements audience line now says "a concrete project".
+- Citizenship band heading is now "Plan with the actual timeline."
+
+The permanent-residence lead already said "It does not give you Portuguese nationality." The key fact already said "before they can apply for Portuguese nationality."
+
+### Remaining search hits
+
+| Phrase | Where | Decision |
+|---|---|---|
+| can cost you | none in `docs/content` or `src/pages` | Already gone. |
+| you must live | `/guides/hqa-visa-presence-requirements` title, meta title and H1: "How Long You Must Live in Portugal" | Left. This is the published title. The body states the absence limits. |
+| will be cancelled | none | Already gone. |
+| lose the permit | Presence FAQ: "If you lose the permit through long absences, that time stops counting." | Left. It says what happens to the citizenship clock if the permit ends. It does not say a long absence will cancel the permit. |
+| passport | Requirements table: "Valid passport." | Left. It is a document. |
+| passport | Americans step: "Gather your documents: passport..." | Left, as requested. |
+| passport | Americans dual-citizenship answer | Already "You can hold both nationalities." Left. |
+| passport | Privacy: "We do not ask for passport numbers..." | Left. It names data the form does not collect. |
+
+The rebuild after these edits passed. Fact checks passed for 21 indexable pages. Heading checks passed for 227 headings.

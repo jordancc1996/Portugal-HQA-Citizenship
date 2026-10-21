@@ -50,7 +50,7 @@ Source: Lei 23/2007, articles 76 and 80.
 | | Permanent residence | Citizenship |
 |---|---|---|
 | When | After 5 years | After 10 years (7 for EU nationals and nationals of countries where Portuguese is an official language) |
-| What you get | Permanent residence status has no fixed expiry date. The residence card must be renewed every five years, and sooner if a registered identification detail changes | Portuguese nationality |
+| What you get | Permanent residence status has no fixed expiry date. The residence card must be renewed every five years, and sooner if a registered identification detail changes (article 76) | Portuguese nationality, which also makes you an EU citizen |
 | Language | Basic Portuguese | Portuguese test or certificate |
 | Renewals | Every 5 years | None |
 | Voting in national elections | No | Yes |
@@ -87,7 +87,7 @@ After at least 5 years with a temporary residence permit, if you meet the other 
 Basic knowledge, proved with a recognised certificate, such as a CAPLE test or an A2-level Portuguese course.
 
 **Does permanent residence give me Portuguese nationality?**
-No. Portuguese nationality is a separate application. Most people can apply after 10 years of legal residence.
+No. Nationality is a separate application. Most people can apply after 10 years of legal residence (7 for EU nationals and nationals of countries where Portuguese is an official language), and residence is only one of the conditions.
 
 **Do I still need my HQA company after I get permanent residence?**
 Your permanent residence does not depend on the highly qualified activity. Your investment and company are a separate matter.

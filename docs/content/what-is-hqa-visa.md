@@ -90,7 +90,7 @@ That means two things:
 
 ## Is the HQA visa legitimate?
 
-The legal tools are real and have been in Portuguese law for years. The investment packages are private products. Some are well run, some are not. Judge each provider on its contract, its partners and its answers to hard questions.
+The legal tools are in Portuguese law and have been there for years. The investment packages are private products. Some are well run, some are not. Judge each provider on its contract, its partners and its answers to hard questions.
 
 [Text link] How to check a provider → /hqa-visa-due-diligence
 

@@ -275,5 +275,10 @@ Why: Vercel warned that a >= range would move to the next major Node version on 
 Change: Apply the lawyer's round 1 wording on investment price, family rules, nationality, absence limits, permanent residence, Tech Visa, IFICI and legal review.
 Why: The 21 October 2026 memo corrected those sentences. It is not a page approval, so review dates stay empty.
 
+## 2026-10-21
+
+Change: Finish the round 1 leftovers on nationality, absence limits, the citizenship timeline heading, and two content files that did not match their pages.
+Why: The built cost page was already right. The permanent-residence, requirements and citizenship lines still used the older wording.
+
 
 
