@@ -52,6 +52,7 @@ Show a ✓/✗ table for these five checks and fix every ✗ before writing the 
 - Banned words: additionally, crucial, delve, emphasize, enhance, enduring, foster, garner, highlight, intricate, landscape, pivotal, showcase, tapestry, testament, underscore, valuable, vibrant, robust, leverage, seamless, unlock, game changer, exclusive, guaranteed.
 - No "not just X but Y", no rhetorical-question openers, no fake urgency, no exclamation marks, no hype.
 - Write "is" not "serves as", "has" not "boasts".
+- "HQA" means highly qualified activity. It is a plain description of the permit under Lei 23/2007, article 90, and belongs to no one. Never put a trademark symbol (™ or ®) after "HQA" or after "Portugal HQA Citizenship", never call HQA our brand or program, and never imply that any company owns the route.
 
 ## Headings
 
