@@ -285,5 +285,10 @@ Why: The built cost page was already right. The permanent-residence, requirement
 Change: Launch before the lawyer's review. The production check now warns and continues, and the site says the review is still in progress. Privacy, terms and the consultation note match what the site actually does.
 Why: The owner decided to publish while every review date is still empty. The pages should not say a review already happened, or that the checklist is emailed.
 
+## 2026-10-21
+
+Change: State that HQA is a plain description, not a mark, and say where Formcarry and Vercel process personal data. The heading check keeps Europe as a proper noun.
+Why: The 21 October 2026 open checks confirmed the trademark wording and the transfer terms. Retention stays as already published.
+
 
 

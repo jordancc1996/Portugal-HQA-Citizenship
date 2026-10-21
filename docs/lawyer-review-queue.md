@@ -186,4 +186,14 @@ The owner launched before the lawyer's full review. No date was written to `src/
 
 `llms.txt` still has no separate line saying a lawyer reviews every page. The `/guides`, `/about` and `/methodology` descriptions in that file follow the new meta descriptions.
 
+## Open checks, 2026-10-21
+
+Source: `docs/legal/open-checks-2026-10-21.md`. The retention sentences were not changed.
+
+| Page | Before | After |
+|---|---|---|
+| AGENTS.md writing rules | (no sentence defining HQA) | "HQA" means highly qualified activity. It is a plain description of the permit under Lei 23/2007, article 90, and belongs to no one. Never put a trademark symbol (™ or ®) after "HQA" or after "Portugal HQA Citizenship", never call HQA our brand or program, and never imply that any company owns the route. |
+| `/privacy` | Formcarry receives the form submissions and Vercel hosts the website. | Formcarry receives the form submissions and Vercel hosts the website. They process this data on our instructions under their data processing terms. |
+| `/privacy` | (no section) | Transfers outside Europe: Formcarry and Vercel are companies based in the United States. Formcarry stores submissions in the European Union, but some of its service providers, including email delivery and spam filtering, are in the United States. Vercel may process your IP address in the United States. Both companies' data processing terms include the EU Standard Contractual Clauses, and Vercel is also certified under the EU-U.S. Data Privacy Framework. |
+
 

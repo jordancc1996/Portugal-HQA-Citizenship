@@ -48,7 +48,13 @@ We use your data on the basis of your consent. You can withdraw consent at any t
 ## Who we share it with
 
 - We share a consultation request only with the advisor or provider you asked to be introduced to, and only if you ticked the sharing box. We do not sell your data.
-- Formcarry receives the form submissions and Vercel hosts the website.
+- Formcarry receives the form submissions and Vercel hosts the website. They process this data on our instructions under their data processing terms.
+
+---
+
+## Transfers outside Europe
+
+Formcarry and Vercel are companies based in the United States. Formcarry stores submissions in the European Union, but some of its service providers, including email delivery and spam filtering, are in the United States. Vercel may process your IP address in the United States. Both companies' data processing terms include the EU Standard Contractual Clauses, and Vercel is also certified under the EU-U.S. Data Privacy Framework.
 
 ---
 

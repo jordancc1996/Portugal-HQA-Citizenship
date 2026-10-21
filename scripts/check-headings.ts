@@ -43,6 +43,7 @@ export const headingExceptions = [
   "Lei",
   "D3",
   "D7",
+  "Europe",
   "EU",
   "US",
 ];
