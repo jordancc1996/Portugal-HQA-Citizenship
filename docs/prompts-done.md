@@ -1687,3 +1687,295 @@ Context: read AGENTS.md and docs/audits/17-launch-readiness.md first. Save a sho
 5. Confirm robots.txt, the sitemap and canonicals are unchanged.
 QA: npm run check, npm run build (locally VERCEL_ENV is unset, so check:reviews is skipped). Then run `VERCEL_ENV=production npm run build` (or the Windows equivalent) once and confirm it fails on the null review dates. Add a CHANGELOG entry. Do not commit.
 ```
+
+
+---
+
+## Prompt 45: Last two fact fixes and the lawyer pack
+
+```
+Context: read AGENTS.md, docs/audits/18-statute-fixes.md and docs/lawyer-review-queue.md first. Every visible change goes into BOTH docs/content/*.md and the matching .astro page (and any JSON-LD string that copies it). Keep the writing rules. Do not commit.
+
+1. /guides/hqa-visa-permanent-residency: the key fact says the permit is "Valid 5 years". That is wrong. Article 76 says the permanent permit has no expiry and the card is renewed every 5 years. Change it to match the permanentResidence fact: "No expiry date. The card is renewed every 5 years." Check the rest of the page and the home timeline for the same mistake and fix it the same way.
+2. D3 visa validity: article 58(2) of Lei 23/2007 says the residence visa allows two entries and a stay of four months, not "120 days". Update residenceVisaValidity in docs/facts.json to "The D3 residence visa allows two entries and a stay of up to 4 months (article 58(2))", status CURRENT, source https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis. Change "120 days" to "4 months" wherever it appears on the site.
+3. docs/lawyer-review-queue.md: on the row that deleted the low-density sentence, add a note "Restored in a narrower form in Prompt 43 (article 3(2)): job, research and culture amounts only." Add rows for changes 1 and 2.
+4. Create docs/lawyer-pack.md, a cover note the owner can send to the lawyer. Plain English, no lawyer name. Sections:
+   - What the site is (independent, no fees, no company name) and what we are asking (a review of all 21 indexable pages, the privacy policy and the terms).
+   - How to reply: for each page, "approved" with a date, or the changes needed. List the 21 URLs plus /privacy and /terms in a table with columns URL | Approved (yes/no) | Review date | Notes.
+   - The changed-sentence table: link to docs/lawyer-review-queue.md and say it lists every sentence changed since the first draft.
+   - Open legal questions in one numbered list: the data controller wording without a company name; retention periods; the checklist is shown as a link, not emailed; the CPLP language presumption on the citizenship page; whether the family integration duty in article 101 applies in practice to article 90 families; how AIMA applies the article 105 extension; whether the IFICI education wording is right per category; the residence-card renewal wording.
+   - What happens after: the owner puts the dates in src/data/reviews.ts, and the production build refuses to deploy until every indexable page has one.
+5. npm run build (all checks pass). Add a CHANGELOG entry.
+```
+
+---
+
+## Prompt 46: Put the project under Git (local only, no push)
+
+```
+Context: Vercel deploys from a Git repository. This prompt only sets up Git locally. Do not push. Do not create a remote. Do not deploy.
+
+1. If the folder is not a Git repository, run git init with the default branch main.
+2. Create or update .gitignore so it excludes: node_modules/, dist/, .astro/, .env, .env.*, except .env.example, .vercel/, .DS_Store, Thumbs.db, and *.log.
+3. Confirm .env.example has PUBLIC_FORMCARRY_CHECKLIST_URL= and PUBLIC_FORMCARRY_CONSULT_URL= with empty values and no real secrets. Search the repo for any real URL or key in tracked files and report it.
+4. Run npm run check and npm run build one last time.
+5. Make one commit with the message "Initial site: 21 pages, audits 01-19, launch gate on review dates". Show git status (clean) and git log --oneline.
+Report what was ignored, the commit hash and the file count. Do not push.
+```
+
+---
+
+## Prompt 47: Remove the "no referral fees" claims (run after 45 and 46)
+
+```
+Context: read AGENTS.md first. The owner may sell leads to providers in future, so every statement that the site takes no fees, commissions or payment, or does not sell data, must come out now. Do NOT add any new statement about being paid or selling leads. Keep everything else, including "independent" in titles and H1s, and "We do not sell investment packages" (still true). Every visible change goes into BOTH docs/content/*.md and the matching .astro page or component, and into any JSON-LD string that copies it. Save a report to docs/audits/20-fee-claims-removed.md.
+
+1. Search src/, docs/content/, scripts/ (including the llms.txt generator) and public/ for: referral, commission, fee(s) from, no fees, not paid, unpaid, paid for introductions, do not sell your data, sell your data. List every hit with file and line before changing anything.
+2. Remove or reword each claim. Examples:
+   - Footer: "Portugal HQA Citizenship is an independent information site. We take no referral fees or commissions from any provider, incubator, university or law firm." becomes "Portugal HQA Citizenship is an independent information site."
+   - Home "How we work": delete the "Independent. We take no referral fees..." bullet, or reduce it to "Independent. We are not a provider and do not sell investment packages."
+   - About, methodology, contact, consultation ("What to know first"), cost, due diligence and the guides: delete the no-fee sentences. Where a sentence says introductions are unpaid, delete that part only.
+   - Methodology meta description ends "and no fees from any provider". Replace that clause with something already true on the page (for example "and dated updates"), keep it 150 to 160 characters, and rerun the 5-location check for that page.
+   - llms.txt line: "This site is independent, takes no referral fees, and program facts are checked..." becomes "This site is independent, and program facts are checked against Portuguese law with the date shown on each page."
+   - Privacy draft: delete "We do not sell your data. We are not paid for introductions." Do not add anything in its place. Add a row to docs/lawyer-review-queue.md saying the owner may sell leads in future and the policy and consent wording must be reviewed before that starts.
+3. Do not change the consent checkboxes, the forms, the payloads or the sharing wording.
+4. AGENTS.md: remove any rule that says the site takes no referral fees or commissions. Keep "no company name on the site".
+5. docs/lawyer-pack.md: remove "no fees" from the description of the site. Add one open question: "The owner may sell consultation leads to advisors or providers in future. What disclosure, consent wording and privacy-policy changes are needed before the first lead is sold?"
+6. Add every changed sentence to docs/lawyer-review-queue.md.
+7. npm run build (all checks pass). Grep dist/ for referral, commission, unpaid and "sell your data": there must be no hits. Add a CHANGELOG entry. Do not commit (if Prompt 46 already made the first commit, make a second commit with the message "Remove no-fee claims").
+```
+
+---
+
+## Prompt 48: Menu-only header and a bold wordmark (design only)
+
+```
+Context: read AGENTS.md and src/components/Header.astro first. Design and CSS only. Do not change any page copy, link targets, schema, metadata or SEO files. Save a short report to docs/audits/21-header.md.
+
+The owner wants the header to work like the design reference (Julia Bell Art Advisory): the wordmark on the left and one larger menu button on the right at EVERY screen size, instead of the row of text links on desktop.
+
+1. Header bar (inside .container, same left edge as the page):
+   - Left: the wordmark "Portugal HQA Citizenship" in Inter 700 (bold), 20px below 768px and 22px from 768px, letter-spacing 0.01em, Ink color, no underline. Add the latin 700 subset: @import "@fontsource/inter/latin-700.css" in global.css. Do not use bold Inter anywhere else.
+   - Right: a menu button with a clear three-line icon (three 28px wide lines, 2px thick, 7px apart, Ink color) and the visible word "Menu" next to it in Inter 500 15px. The whole button is at least 48 x 48px. When open, the icon becomes an X and the word becomes "Close".
+   - Header height about 80px desktop, 64px mobile. Keep the hairline under the header.
+2. Remove the desktop text-link nav row. Keep ONE nav element inside the existing <details> menu, so the links stay in the HTML for search engines and work without JavaScript. aria-label="Primary" stays. Escape closes it (keep the current script).
+3. Open menu: a full-screen white panel at every size, content inside .container:
+   - The 7 links stacked, left-aligned, in Newsreader 400 at 36px on desktop and 28px on mobile, line-height 1.2, 16px between links, no underline until hover/focus. The current page is marked with aria-current and a thin underline.
+   - "Request a consultation" sits below the list, separated by a hairline, as the solid Atlantic button style.
+   - A small line at the bottom in Inter 13px graphite: the site email (from siteConfig) as a mailto link.
+   - Body scroll is locked while the menu is open; focus moves to the first link; Tab stays inside the panel; the close button is always visible top-right in the same spot as the open button.
+4. No animation beyond a 150ms fade. No new colors, shadows or dependencies.
+5. Update /styleguide and the AGENTS.md design section ("Header: wordmark in Inter 700, one menu button at all sizes, full-screen menu").
+QA: npm run check and npm run build (all checks pass). Confirm the 7 links are still in every built page's HTML, the wordmark and H1 share the same left edge, and nothing scrolls sideways at 375px. Add a CHANGELOG entry. Commit with the message "Menu-only header and bold wordmark" if the project is under Git.
+```
+
+---
+
+## Prompt 49: Section bands, so each section reads as its own block (design only)
+
+```
+Context: read AGENTS.md, docs/design-brief.md and src/styles/global.css first. Layout and CSS only. Do not change any copy, heading, link, schema, metadata or image. dist/markdown and every ld+json block must be byte-for-byte identical before and after (compare them). Save a report to docs/audits/22-section-bands.md.
+
+The problem: every page is one long white column, so readers cannot see where one section ends and the next begins. Claude measured the design reference (Julia Bell Art Advisory, 1280px): white hero and intro, then a full-width cream band (#FEF1E6 there, about 950px tall) for a whole section, then white again, then a black full-width closing band (about 800px) for the contact block and footer. Each band is a full-bleed background with its content inside the same container, and big, equal padding.
+
+THE FIX
+1. New component src/components/Section.astro with a prop tone = "paper" | "cream" | "atlantic", and an optional id. It renders a full-bleed <section> (or <div> when the content already has its own <section>) with the background color, and puts the content inside .container. Padding top and bottom: 64px below 768px, 112px from 768px. Replace the old .section margin-top spacing with this padding so spacing is always equal.
+2. Tones:
+   - paper: #FFFFFF, Ink text.
+   - cream: #F7F1E8, Ink text. Hairlines stay #E5DFD6. Table header cells and the "What we don't know yet" box use the paper color on cream bands so they still stand out.
+   - atlantic: #1F3A68 background, white text, links white with underline, small text #E5DFD6. Buttons on this band: white background, Atlantic text. Inputs keep a white background. Focus ring white. Check every pair passes WCAG AA.
+3. Rhythm rule for every page (apply it in the page templates, not by hand per sentence):
+   - Hero or intro: paper.
+   - Key facts: cream band, directly after the hero.
+   - Body sections after that alternate paper and cream, starting with paper. Two bands of the same tone are never next to each other. A section with a table, timeline or comparison table should land on cream where the alternation allows it, so data blocks stand out.
+   - The checklist (lead magnet) band becomes the one atlantic band on the page. At most one atlantic band per page.
+   - The FAQ is paper (or cream if the band before it is paper).
+   - Footer: Ink #141414 background, white text, links white, small text #B8B2A8, same container and left edge. It reads as the closing band like the reference.
+4. Text stays in .measure and tables in .wide inside each band, so the one-left-edge rule still holds.
+5. Header stays white with its hairline.
+6. Update /styleguide to show the three tones and the footer, and update the AGENTS.md design section: "Pages are built from full-width Section bands: paper, cream, at most one atlantic (the checklist), Ink footer. Never two equal tones in a row."
+
+QA
+- npm run check, npm run build (all checks pass).
+- For home, /hqa-visa-cost and /guides/hqa-visa-citizenship-10-year-rule, list the band order (tone per section) in the report.
+- Confirm no horizontal scroll at 375px, the same left edge in every band, and AA contrast for every text color on every tone.
+Add a CHANGELOG entry. Commit "Section bands" if the project is under Git.
+```
+
+---
+
+## Prompt 50: Eight new photos and one photo break per pillar page
+
+```
+Context: read AGENTS.md, docs/design-brief.md, src/components/Photo.astro, src/components/PageHero.astro and src/data/image-credits.ts first. Claude picked these photos on Unsplash and checked each one is a free Unsplash License photo taken in Portugal. Do not use any other photo. Save a report to docs/audits/23-photos.md.
+
+Download each from https://images.unsplash.com/{image-id}?w=2400&q=90&fm=jpg, convert to WebP at quality 82 with a 2400px maximum width (never upscale), save in src/assets/images/ with the file name below, and delete the temporary JPG.
+
+| Page | Unsplash photo | Image id | File name | Alt text | Photographer |
+|---|---|---|---|---|---|
+| /hqa-visa-for-americans | https://unsplash.com/photos/gOLCAOuc7iA | photo-1558102400-72da9fdbecae | lisbon-25-de-abril-bridge.webp | The 25 de Abril Bridge and the Cristo Rei statue across the Tagus in Lisbon | Svetlana Gumerova |
+| /guides/hqa-visa-presence-requirements | https://unsplash.com/photos/AJw0K4WFijo | photo-1756738625052-3ac323f11270 | lisbon-gare-do-oriente.webp | Gare do Oriente railway station in Lisbon | Ana Almao |
+| /guides/what-is-hqa-visa | https://unsplash.com/photos/bnyyfiIr6Fs | photo-1602189668646-46d4015e34e3 | champalimaud-foundation-lisbon.webp | The Champalimaud Foundation research centre in Lisbon | Dessy Dimcheva |
+| /hqa-visa-due-diligence | https://unsplash.com/photos/bNIBFiGSa_M | photo-1732456747831-58ee56ad43a6 | torre-do-tombo-reading-room.webp | Reading room at Torre do Tombo, Portugal's national archive, in Lisbon | Filipe Nobre |
+| /guides/hqa-visa-permanent-residency | https://unsplash.com/photos/0vk2oVZA-PU | photo-1733111132483-585ed1e61c5d | lisbon-tiled-residential-building.webp | Tiled residential building with iron balconies in Lisbon | Beth Macdonald |
+| /hqa-vs-startup-visa-tech-visa | https://unsplash.com/photos/HWODQ5dPqNw | photo-1791070244938-9aef042e7caf | lisbon-parque-das-nacoes.webp | Parque das Nações waterfront in Lisbon | Filipe Nobre |
+| /guides/hqa-visa-ifici-tax | https://unsplash.com/photos/ucq-IXcZk40 | photo-1731960197617-cc0ad319db47 | lisbon-praca-do-comercio-tagus.webp | Praça do Comércio on the Tagus River in Lisbon | Mircea Solomiea |
+| /guides | https://unsplash.com/photos/7SNsq7MpbzA | photo-1726182408945-3bbed11afa2c | lisbon-hilltop-view.webp | View over Lisbon from a hilltop viewpoint | João Reguengos |
+| home (photo break only) | https://unsplash.com/photos/kfVxX0vt3Xc | photo-1688297483354-3057315926a1 | lisbon-sunset-from-hill.webp | Lisbon at sunset seen from a hill | Thomas Winkler |
+
+1. The eight page photos: switch those pages from PageIntro to PageHero with the photo, keeping the same H1, lead, actions, breadcrumbs and Last verified line. Use the same Photo settings as the other heroes (maxWidth 960, quality 82, eager, fetchpriority high, 4/5 frame on desktop, 3/2 on mobile). Make each page's 1200x630 Open Graph JPG from its new hero, like the existing hero pages.
+2. New component src/components/PhotoBreak.astro: a full-width photo inside .container .wide, aspect ratio 21/9 from 1024px and 4/3 below, object-fit cover, with an optional one-line caption in Inter 13px graphite underneath. loading="eager" (no lazy loading anywhere), quality 80, maxWidth 1600. It sits in its own paper band between two sections. At most one per page.
+3. Add one PhotoBreak to these two pages, placed between two body sections near the middle (never directly after the hero):
+   - home: lisbon-sunset-from-hill.webp, caption "Lisbon at sunset."
+   - /guides/hqa-visa-citizenship-10-year-rule: lisbon-alfama-rooftops.webp, caption "Most applicants now need 10 years of legal residence for a Portuguese passport (7 for EU and CPLP nationals)."
+   Captions are new visible copy: add them to docs/content and to docs/lawyer-review-queue.md.
+4. Credits: add all nine photos to src/data/image-credits.ts (photographer, Unsplash URL, where used) so /image-credits lists them, and add them to the photo table in docs/design-brief.md.
+5. Pages that stay text-only on purpose: /hqa-visa-status, /hqa-visa-cost, /methodology, /about, /contact, /consultation, /image-credits, /privacy, /terms. The cost page's tables do the visual work.
+QA: npm run build (all checks pass). Report each new file's pixel size and KB, the largest srcset file served per photo (keep each under about 400 KB), and confirm no loading="lazy". The Markdown output may change only on /image-credits and where captions were added. Add a CHANGELOG entry. Commit "New photos and photo breaks" if the project is under Git.
+```
+
+
+---
+
+## Prompt 51: Add the two Formcarry endpoints
+
+```
+The site now has two Formcarry forms:
+- Checklist form ("Portugal HQA Citizenship Checklist"): https://formcarry.com/s/udkvAS-hBVy
+- Consultation form ("Portugal HQA Citizenship Consultation"): https://formcarry.com/s/8ht8txeHTKq
+Each payload also keeps its "source" field. Do not change the form code unless a check below fails.
+
+1. Create (or overwrite) the .env file in the project root with exactly:
+   PUBLIC_FORMCARRY_CHECKLIST_URL=https://formcarry.com/s/udkvAS-hBVy
+   PUBLIC_FORMCARRY_CONSULT_URL=https://formcarry.com/s/8ht8txeHTKq
+   .env is already in .gitignore. Run git status and confirm .env is NOT listed. Leave .env.example with empty values.
+2. Confirm src/scripts/checklist-form.ts uses PUBLIC_FORMCARRY_CHECKLIST_URL and src/scripts/consultation-form.ts uses PUBLIC_FORMCARRY_CONSULT_URL (not swapped). Confirm src/scripts/formcarry.ts sends Accept: application/json and Content-Type: application/json, and that success still requires response.ok and Formcarry code 200. Report the exact headers.
+3. Run npm run build. In dist/_astro, confirm udkvAS-hBVy appears only in the checklist script and 8ht8txeHTKq only in the consultation script. Then restart npm run preview.
+4. Do NOT send a test submission. Claude will run one real test of each form in the browser after the owner approves it.
+5. Add a line to the Launch section of AGENTS.md: "Vercel needs PUBLIC_FORMCARRY_CHECKLIST_URL (checklist form) and PUBLIC_FORMCARRY_CONSULT_URL (consultation form) set for Production and Preview."
+Add a CHANGELOG entry. Commit "Formcarry endpoints configured" (the commit must not include .env).
+```
+
+
+---
+
+## Prompt 52: New logo (docs/brand/logo-option-ph-mark.webp)
+
+```
+Context: read AGENTS.md, src/components/Header.astro, src/components/Footer.astro and src/styles/global.css first. The owner's four logo options are in docs/brand/:
+- docs/brand/logo-option-ph-mark.webp  <- CHOSEN: the "PH" monogram on the left, "PORTUGAL" in a large serif, "HQA CITIZENSHIP" in small, widely spaced capitals underneath
+- docs/brand/logo-option-regular.webp (not used)
+- docs/brand/logo-option-spaced.webp (not used)
+- docs/brand/logo-option-bold.webp (not used)
+Open docs/brand/logo-option-ph-mark.webp and use it as the reference. Do not redesign it, add elements, or change the wording. The docs/brand/ files are references only and are not shipped on the site.
+
+1. Measure the reference (1440 x 360 px): the mark's height and stroke width, the PORTUGAL cap height, the HQA CITIZENSHIP cap height and letter-spacing, and the gaps between them. Use those ratios below.
+2. Build the logo as code so it stays sharp and light:
+   - src/components/Logo.astro renders the lockup: the PH mark (inline SVG) on the left; to its right "PORTUGAL" in Newsreader 400, all caps, letter-spacing 0.02em; under it "HQA CITIZENSHIP" in Inter 500, all caps, letter-spacing 0.32em, about 28% of the PORTUGAL size. Both text lines share one left edge. Match the proportions in the reference image as closely as you can.
+   - The PH mark: recreate it as a simple SVG (src/assets/brand/logo-mark.svg) from straight strokes only, like the reference: a "P" whose bowl sits on the left stem and an "H" sharing that stem, stroke width about 9% of the mark height, square ends, viewBox 0 0 48 48, fill/stroke currentColor. Also save a full lockup SVG as src/assets/brand/logo-full.svg with the text converted to paths if you can do that reliably; if not, keep the lockup as live text in Logo.astro and say so.
+   - Color: Atlantic #1F3A68 by default (not the green in the reference). The component takes a tone prop: "atlantic" or "white".
+   - Accessibility: the home link has aria-label="Portugal HQA Citizenship, home"; the SVG mark is aria-hidden="true". The visible text stays real text so it reads correctly.
+3. Header: replace the current Inter Bold wordmark with Logo. The PORTUGAL line is 26px from 768px and 21px below 768px. The mark matches the height of both text lines together. Keep the logo on the container's left edge and the menu button exactly as it is. If "HQA CITIZENSHIP" ends up under 7px tall on mobile, report it.
+4. Footer: Logo in white at about 80% of the header size, above the footer text, on the dark footer band.
+5. Favicons from the mark: public/favicon.svg (Atlantic mark on transparent), public/favicon.ico (16 and 32 px, Atlantic mark on white), public/apple-touch-icon.png (180 x 180, white mark on #1F3A68 with about 18% padding). Also export public/brand/logo-mark-512.png (512 x 512, white mark on #1F3A68) for the owner's email profile picture. Add <link rel="apple-touch-icon" href="/apple-touch-icon.png"> to BaseLayout.astro. If the mark breaks up at 16px, thicken the strokes in the favicon version only and report it.
+6. Remove the Inter 700 font import if nothing else uses it.
+7. Do not add the logo to JSON-LD, Open Graph images or page copy. No ® or ™.
+8. Update /styleguide (logo in Atlantic, in white on the footer band, favicon sizes) and the AGENTS.md design section: "Logo: Logo.astro (PH mark plus PORTUGAL / HQA CITIZENSHIP) in Atlantic, white on dark bands. Favicons from logo-mark.svg."
+QA: npm run check and npm run build (all checks pass). Confirm the logo and the H1 share the same left edge at 1280px and 375px, nothing scrolls sideways at 375px, and the header height is unchanged or within 8px. Report the file sizes of the SVGs and PNGs. Add a CHANGELOG entry. Commit "New logo and favicons".
+```
+
+---
+
+## Prompt 53: No white boxes inside cream bands (CSS only)
+
+```
+Context: read AGENTS.md and src/components/Section.astro first. CSS only. Do not change copy, headings, links, schema or images. dist/markdown and every ld+json block must stay identical.
+
+The owner wants cream sections to read as one solid cream block. Right now, inside cream bands, the table header row and the "What we don't know yet" box have white backgrounds, which looks patchy. Apply this to every component sitewide, using one rule set scoped to the cream tone (for example [data-tone="cream"] or .tone-cream), not page by page.
+
+Inside a cream band:
+1. Tables: no background on any cell, header included. The header row is set apart by type and lines only: header text in Inter 500 14px Ink, a 1px Ink (#141414) bottom border under the header row, 1px #E5DFD6 lines between body rows. Remove the vertical cell borders and the outer box border on cream so the table reads as clean rows. Keep tabular figures and the mobile horizontal scroll.
+2. "What we don't know yet" box (UnknownsBox): no background fill. Keep the 2px Atlantic left border and the padding, so it is still clearly marked.
+3. The same rule for anything else that sets a white or paper background inside cream: KeyFacts, FAQ items, GuideList rows, SourceNote, form fields' surrounding wrappers. Form inputs themselves stay white so people can see where to type.
+4. On paper (white) bands, keep the current look, but use the same row-style tables (header bottom border in Ink, row lines, no vertical borders) so tables look the same on every band. The header row on paper bands gets no fill either.
+5. On the atlantic band nothing changes except that no white box appears inside it other than the input fields.
+Update /styleguide to show a table and the unknowns box on paper and on cream. Add one line to the AGENTS.md design section: "No white boxes inside cream bands. Tables are row style everywhere. Only form inputs stay white."
+QA: npm run build (all checks pass). Check home, /hqa-visa-cost and /portugal-hqa-vs-golden-visa: list every element inside a cream band that still has a non-transparent background (only inputs are allowed). Confirm text contrast on cream passes WCAG AA. Add a CHANGELOG entry. Commit "Solid cream bands".
+```
+
+---
+
+## Prompt 54: Full-screen menu redesign (design only)
+
+```
+Context: read AGENTS.md and src/components/Header.astro first. Design and CSS only, plus the two new menu items. Do not change page copy, schema or SEO files. Save a short report to docs/audits/24-menu.md.
+
+The owner wants the open menu to feel like a confident full-screen panel: big links stacked on the left and a big call to action, on our cream instead of a bright color.
+
+1. Panel: full screen, background cream #F7F1E8, content inside .container (same left edge as the logo and the H1). The logo stays visible top-left in Atlantic; the close button (X icon plus "Close") stays top-right in the same spot as the menu button.
+2. Links, stacked and left-aligned, in this order: Home, Investment, Costs, Requirements, Citizenship, Guides, Reports, Press, About, Contact. Newsreader 400, 56px from 1024px, 44px from 768px, 34px below 768px, line-height 1.1, Ink color, no bullets, 4px between links. Hover and focus: Atlantic color plus a 2px underline offset 6px. The current page: Atlantic with the underline.
+   Reports and Press point to /reports and /press, which Prompt 55 creates. If those routes do not exist yet when you run this, hide those two items until they do.
+3. Calls to action under the links, 40px below the last link, side by side from 768px and stacked below:
+   - Primary: "Request a consultation" as a solid Atlantic button, white text, Inter 500 18px, height 60px, padding 0 32px, 4px radius.
+   - Secondary: "Read our reports" with an arrow icon (↗ style, drawn as an inline SVG), outlined: 1px Atlantic border, Atlantic text, same size as the primary. Links to /reports.
+4. Below the buttons, small Inter 14px graphite: the contact email as a mailto link.
+5. Behaviour stays as it is now: links live in the <details> in the HTML, Escape closes, focus moves to the first link, Tab stays in the panel, body scroll locked, 150ms fade only.
+6. Contrast: check Ink, Atlantic and graphite on cream pass WCAG AA. Tap targets at least 48px tall on mobile.
+Update /styleguide with a screenshot-style example of the open menu (a static copy of the panel). QA: npm run build (all checks pass); confirm nothing scrolls sideways at 375px with the menu open, and the longest link ("Requirements") fits on one line at 375px. Add a CHANGELOG entry. Commit "Full-screen menu".
+```
+
+---
+
+## Prompt 55: Reports and Press sections (structure only)
+
+```
+Context: read AGENTS.md, docs/research-brief.md, src/data/pages.ts, src/data/reviews.ts, astro.config.mjs and scripts/machine-layer.ts first. Build the structure for two new sections. Do NOT write report or press release content: Claude writes it into docs/content/ later. Save a report to docs/audits/25-reports-press.md.
+
+1. Routes (follow the existing URL rules: lowercase, hyphenated, no dates in slugs, no trailing slash):
+   - /reports: the Reports hub. Lists every report: title, one-line summary, publication date, Last verified date, and a link. Uses PageIntro and Section bands like the other pages.
+   - /reports/[slug]: one page per report, from a content collection src/content/reports/ (Markdown with front matter: title, metaTitle, description, slug, datePublished, dateModified, lastVerified, pdf (optional path in /public/downloads/), summary, keyFindings (list)). Page layout: PageHero or PageIntro, key findings in a cream band, the body, a "Download the PDF" button if pdf is set, sources, FAQ if present, checklist band.
+   - /press: the Press room. Lists every release newest first: headline, date, one-line summary. Also a short "For journalists" block with the contact email and a note that releases may be republished with a link to the original.
+   - /press/[slug]: one page per release, from src/content/press/ (front matter: headline, metaTitle, description, slug, datePublished, dateModified, dateline (city), summary, syndicatedTo (list of {outlet, url, date}, optional)). Page layout: dateline and date at the top, body, "About Portugal HQA Citizenship" boilerplate from siteConfig, media contact email, and an "Also published on" list built from syndicatedTo.
+2. Schema: /reports/[slug] uses Article (headline, datePublished, dateModified from front matter, isPartOf the WebSite id). /press/[slug] uses NewsArticle with the same date fields. Hubs use CollectionPage with an ItemList. Never invent dates: they come from front matter only. No Organization schema, no author names.
+3. Indexing rule: a hub with no published items is noindex and out of the sitemap, llms.txt, content-index.json and the Markdown set, the same way privacy and terms work. It becomes indexable automatically when the first item is published. Each item page must have a review date in reviews.ts before production, like every other page.
+4. Canonicals: every report and release has a self-referencing canonical on https://portugalhqacitizenship.com. Add a docs/press-syndication.md checklist (see below) and do not add any cross-domain canonical on our own pages.
+5. Add /reports and /press to the footer and to the menu (Prompt 54), to the llms.txt section map under a new "Reports and press" section, and to the internal-link rules in AGENTS.md (each report links to the topic pages it draws on; each topic page may link to a report only where the report adds data).
+6. docs/press-syndication.md (write this file):
+   - Publish every release on /press/[slug] first. Wait until the page is live and indexed (check in Search Console) before sending it anywhere else.
+   - When another site republishes it, ask them first to add a noindex tag to their copy (Google's recommendation for syndicated content since 2023), and always a visible link back to our original. If they will not use noindex, ask for rel="canonical" pointing to our URL as a fallback; Google treats a cross-domain canonical only as a hint.
+   - Wire services usually add nofollow links and do not set canonicals. Use them for reach, not rankings.
+   - Record every republication in the release's syndicatedTo list so the "Also published on" list stays accurate.
+   - Never copy a release onto our own site twice, never backdate, and never change a datePublished after publication.
+7. QA: npm run build (all checks pass, including test:facts and check:headings). Confirm /reports and /press are noindex and absent from the sitemap while empty. Add a CHANGELOG entry. Commit "Reports and press structure".
+```
+
+
+---
+
+## Prompt 56: Menu fits the screen, and hide Reports and Press until they have content
+
+```
+Context: read AGENTS.md, src/components/Header.astro, src/components/Footer.astro and docs/audits/24-menu.md and 25-reports-press.md first. Small fixes only. Save a short report to docs/audits/26-menu-fit.md.
+
+Claude checked the open menu at 1280 x 800. It looks right (cream panel, logo top-left, Close top-right, big serif links on the left edge), but two things need fixing:
+
+1. The two buttons sit below the fold. With 10 links at 56px (62px per line) the buttons start at y = 805 on an 800px-tall screen, so "Request a consultation" is not visible without scrolling. Fix: size the links by screen height as well as width, for example font-size: clamp(34px, min(6.2vh, 4.4vw), 56px), keep line-height 1.1 and the 48px minimum tap height. Confirm the buttons are fully visible without scrolling at 1280 x 720, 1280 x 800, 1440 x 900 and 375 x 812. If they still are not at 1280 x 720, place the buttons and email in a right-hand column from 1024px, bottom-aligned with the last link, instead of under the list.
+2. Reports and Press are now linked from the menu, the "Read our reports" button and the footer, but both hubs are empty and noindex, so every page links visitors to an empty page. Use the same check that decides noindex for those hubs (the content collection has no published items): while a hub is empty, hide its menu item, its footer link and, for Reports, the "Read our reports" button. They reappear automatically on the build after the first item is published. The hub routes themselves stay as they are (noindex).
+QA: npm run build (all checks pass). Report the button positions at the four screen sizes and confirm no page links to /reports or /press while the collections are empty. Add a CHANGELOG entry. Commit "Menu fits the screen".
+```
+
+
+---
+
+## Prompt 58: Create a preview branch for Vercel
+
+```
+The Vercel production build of main failed on purpose: scripts/review-gate.ts runs check:reviews when VERCEL_ENV is "production", and every review date is still null. That is the launch lock and must stay. We need a Preview deployment so Claude can check the live build before launch.
+
+1. In package.json, change "engines": { "node": ">=22.22.0" } to "engines": { "node": "22.x" } so Vercel stops warning about automatic major upgrades. Run npm install so package-lock.json stays in sync, then npm run build locally to confirm it still passes.
+2. Commit that change on main with the message "Pin Node 22" and push to origin main. (The production build of main will still fail on review dates. That is expected.)
+3. Create a branch named staging from main and push it: git checkout -b staging, git push -u origin staging. Vercel builds every non-production branch as a Preview, where VERCEL_ENV is "preview", so the review gate is skipped and the site builds.
+4. Switch back to main: git checkout main.
+5. Report the commit hashes and confirm the staging branch is on GitHub.
+Do not change review-gate.ts or check-reviews.ts. Do not add review dates.
+```
