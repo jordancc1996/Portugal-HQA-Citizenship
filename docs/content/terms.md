@@ -13,7 +13,7 @@ breadcrumb: Home > Terms
 
 # Terms of Use
 
-By using portugalhqacitizenship.com you agree to these terms. Last updated: 20 October 2026.
+By using portugalhqacitizenship.com you agree to these terms. Last updated: 21 October 2026.
 
 ---
 
@@ -43,4 +43,8 @@ Photos are used under the Unsplash License. See [image credits](/image-credits).
 
 ## Contact
 
+Portugal HQA Citizenship
+
 hello@portugalhqacitizenship.com
+
+Privacy questions: privacy@portugalhqacitizenship.com

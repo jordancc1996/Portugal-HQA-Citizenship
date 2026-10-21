@@ -13,7 +13,7 @@ const description =
   "Terms of use for portugalhqacitizenship.com: general information only, no legal or investment advice, no guarantees, and how introductions to advisors work.";
 
 const headline = "Terms of Use";
-const lead = "By using portugalhqacitizenship.com you agree to these terms. Last updated: 20 October 2026.";
+const lead = "By using portugalhqacitizenship.com you agree to these terms. Last updated: 21 October 2026.";
 const pageUrl = "https://portugalhqacitizenship.com/terms";
 const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
 const mailto = `mailto:${siteConfig.contactEmail}`;
@@ -108,7 +108,9 @@ const ogImage = await getImage({
     <Section tone="cream">
 <div class="measure">
       <h2>Contact</h2>
+      <p>{siteConfig.siteName}</p>
       <p><a href={mailto}>{siteConfig.contactEmail}</a></p>
+      <p>Privacy questions: <a href={`mailto:${siteConfig.privacyEmail}`}>{siteConfig.privacyEmail}</a></p>
     </div>
 </Section>
   </div>

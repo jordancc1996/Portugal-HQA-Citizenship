@@ -15,10 +15,10 @@ const description =
 
 const headline = "Privacy Policy";
 const lead =
-  'This policy explains how Portugal HQA Citizenship ("we") collects and uses personal data sent through this website. Last updated: 20 October 2026.';
+  'This policy explains how Portugal HQA Citizenship ("we") collects and uses personal data sent through this website. Last updated: 21 October 2026.';
 const pageUrl = "https://portugalhqacitizenship.com/privacy";
 const ogAlt = "Rooftops of Alfama in Lisbon with São Vicente de Fora church on the skyline";
-const mailto = `mailto:${siteConfig.contactEmail}`;
+const privacyMailto = `mailto:${siteConfig.privacyEmail}`;
 const lastVerified = verifiedOn("/privacy");
 
 const ogImage = await getImage({
@@ -68,7 +68,7 @@ const ogImage = await getImage({
     <Section tone="cream">
 <div class="measure">
       <h2>Who we are</h2>
-      <p>Portugal HQA Citizenship is an independent information website at portugalhqacitizenship.com. Contact: <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
+      <p>Portugal HQA Citizenship operates this website. Contact for privacy questions and requests: <a href={privacyMailto}>{siteConfig.privacyEmail}</a>.</p>
     </div>
 </Section>
 
@@ -107,7 +107,7 @@ const ogImage = await getImage({
 <div class="measure">
       <h2>Why we use it</h2>
       <ul>
-        <li>To send you the checklist you asked for</li>
+        <li>When you request the checklist, we use your name and email to process the request, and the page then shows a link to the checklist. We do not email it.</li>
         <li>To reply to your consultation request</li>
         <li>To introduce you to advisors or providers, only if you tick the sharing box</li>
         <li>To email you about rule changes, only if you tick the updates box</li>
@@ -120,8 +120,8 @@ const ogImage = await getImage({
 <div class="measure">
       <h2>Who we share it with</h2>
       <ul>
-        <li><strong>Advisors or providers we introduce you to,</strong> only if you consent on the consultation form. They handle your data under their own privacy policies.</li>
-        <li><strong>Service providers who run our website and forms,</strong> such as our form processor (Formcarry) and our hosting provider (Vercel). They process data for us and do not use it for their own purposes.</li>
+        <li>We share a consultation request only with the advisor or provider you asked to be introduced to, and only if you ticked the sharing box. We do not sell your data.</li>
+        <li>Formcarry receives the form submissions and Vercel hosts the website.</li>
       </ul>
     </div>
 </Section>
@@ -129,14 +129,14 @@ const ogImage = await getImage({
     <Section tone="cream">
 <div class="measure">
       <h2>How long we keep it</h2>
-      <p>We keep your data only as long as needed for the purpose you gave it for, and delete it when you ask us to.</p>
+      <p>Checklist requests: deleted within 30 days, unless you asked for update emails. Consultation requests: kept while we arrange the introduction you asked for, then deleted within 6 months. Update emails: kept until you unsubscribe, and reviewed after 24 months without activity.</p>
     </div>
 </Section>
 
     <Section tone="paper">
 <div class="measure">
       <h2>Your rights</h2>
-      <p>You can ask to access, correct or delete your data, to restrict or object to its use, or to receive a copy of it. You can withdraw consent at any time. Email <a href={mailto}>{siteConfig.contactEmail}</a>.</p>
+      <p>You can ask to access, correct or delete your data, to restrict or object to its use, or to receive a copy of it. You can withdraw consent at any time. Email <a href={privacyMailto}>{siteConfig.privacyEmail}</a>.</p>
       <p>You can also complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (CNPD).</p>
     </div>
 </Section>
@@ -144,7 +144,7 @@ const ogImage = await getImage({
     <Section tone="cream">
 <div class="measure">
       <h2>Cookies and analytics</h2>
-      <p>This site does not use advertising cookies. If we add analytics, we will update this policy and ask for your consent where required.</p>
+      <p>This site does not use analytics or advertising cookies.</p>
     </div>
 </Section>
 

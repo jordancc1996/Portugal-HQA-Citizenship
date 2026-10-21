@@ -135,7 +135,7 @@ Download our free HQA due diligence checklist. It lists the 15 questions to ask 
 
 - **Independent.** We are not a provider and do not sell investment packages.
 - **Sourced.** Every legal claim names its source, and we link the official text where one exists.
-- **Legal review.** Pages are reviewed by an independent Portuguese lawyer before launch. A page shows its review date only after that review is complete.
+- **Legal review.** We are having every page reviewed by an independent Portuguese lawyer. A page shows its review date once its review is complete.
 - **Dated.** Every page shows when we last checked it. We log changes on our [status page](/hqa-visa-status).
 
 [Text link] Our methodology → /methodology

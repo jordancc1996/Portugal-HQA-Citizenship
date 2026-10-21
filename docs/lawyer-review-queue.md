@@ -162,4 +162,28 @@ Source: `docs/legal/lawyer-memo-2026-10-21.md`. This memo is not a page approval
 
 `llms.txt` does not say a lawyer reviews every page. That line was not changed.
 
+## Pre-review launch, 2026-10-21
+
+The owner launched before the lawyer's full review. No date was written to `src/data/reviews.ts`. Privacy and terms stay noindex while their review dates are null.
+
+| Page | Before | After |
+|---|---|---|
+| `/`, `/about`, `/methodology` | Pages are reviewed by an independent Portuguese lawyer before launch. A page shows its review date only after that review is complete. | We are having every page reviewed by an independent Portuguese lawyer. A page shows its review date once its review is complete. |
+| `/about` | Date every page, and show a review date only after the lawyer's review is complete. | Date every page, and show a review date once its review is complete. |
+| `/guides` | HQA visa guides for investors in 2026: cost, family, tax, presence and the 10-year path. Pages are reviewed by an independent Portuguese lawyer before launch. | HQA visa guides for investors in 2026: cost, family, tax, presence and the 10-year path. Every page is being reviewed by an independent Portuguese lawyer. |
+| `/about` | About Portugal HQA Citizenship: an independent site for the 2026 HQA visa rules. Pages are reviewed by an independent Portuguese lawyer before launch. | About Portugal HQA Citizenship: an independent site explaining the 2026 HQA visa rules. Every page is being reviewed by an independent Portuguese lawyer. |
+| `/methodology` | How we verify HQA visa information: 4 source levels, using Portuguese law first. Pages are reviewed by an independent Portuguese lawyer before launch. | How we verify HQA visa information: 4 source levels, using Portuguese law first. Every page on this site is being reviewed by an independent Portuguese lawyer. |
+| `/privacy` | Portugal HQA Citizenship is an independent information website at portugalhqacitizenship.com. Contact: hello@portugalhqacitizenship.com. | Portugal HQA Citizenship operates this website. Contact for privacy questions and requests: privacy@portugalhqacitizenship.com. |
+| `/privacy` | To send you the checklist you asked for. | When you request the checklist, we use your name and email to process the request, and the page then shows a link to the checklist. We do not email it. |
+| `/privacy` | We keep your data only as long as needed for the purpose you gave it for, and delete it when you ask us to. | Checklist requests: deleted within 30 days, unless you asked for update emails. Consultation requests: kept while we arrange the introduction you asked for, then deleted within 6 months. Update emails: kept until you unsubscribe, and reviewed after 24 months without activity. |
+| `/privacy` | Service providers process data for us and do not use it for their own purposes. | Formcarry receives the form submissions and Vercel hosts the website. |
+| `/privacy` | Advisors or providers we introduce you to, only if you consent on the consultation form. | We share a consultation request only with the advisor or provider you asked to be introduced to, and only if you ticked the sharing box. We do not sell your data. |
+| `/privacy` | This site does not use advertising cookies. If we add analytics, we will update this policy and ask for your consent where required. | This site does not use analytics or advertising cookies. |
+| `/privacy` | Rights contact: hello@portugalhqacitizenship.com. | Rights contact: privacy@portugalhqacitizenship.com. The CNPD complaint route stays. |
+| `/consultation` | If you mention family members, only include information you are allowed to share. | Please do not include passport numbers, medical details, criminal records or information about children. Share only what is needed for the introduction. |
+| `/terms` | Contact: hello@portugalhqacitizenship.com. | Portugal HQA Citizenship. hello@portugalhqacitizenship.com. Privacy questions: privacy@portugalhqacitizenship.com. |
+| Footer | Contact link only. | privacy@portugalhqacitizenship.com sits next to the Contact link. |
+
+`llms.txt` still has no separate line saying a lawyer reviews every page. The `/guides`, `/about` and `/methodology` descriptions in that file follow the new meta descriptions.
+
 
